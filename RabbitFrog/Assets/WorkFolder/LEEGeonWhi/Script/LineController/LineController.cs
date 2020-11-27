@@ -60,6 +60,7 @@ public class LineController : MonoBehaviour
     void Start()
     {
         MaxLine = 0;
+        is_inkMode = false;
     }
 
     void Update()

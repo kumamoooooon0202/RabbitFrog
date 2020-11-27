@@ -466,6 +466,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4297201210ddf49b82ac67c3e1a1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1088571357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7195202961633909925, guid: c665477f90810da4990c10faf4f4d25e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4421351978691491170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1166025561
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +545,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166025561}
   m_CullTransparentMesh: 0
+--- !u!223 &1215617325 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4421351979475222733, guid: c665477f90810da4990c10faf4f4d25e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4421351978691491170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &1258717470 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 1934120309888948899, guid: d3f1985120186a54b8454368583430e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1571973741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1273585791
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +683,21 @@ PrefabInstance:
       propertyPath: battleController
       value: 
       objectReference: {fileID: 209625939}
+    - target: {fileID: 1934120309888948897, guid: d3f1985120186a54b8454368583430e9,
+        type: 3}
+      propertyPath: endGameCanvas
+      value: 
+      objectReference: {fileID: 1258717470}
+    - target: {fileID: 1934120309888948897, guid: d3f1985120186a54b8454368583430e9,
+        type: 3}
+      propertyPath: BattleSceneUI
+      value: 
+      objectReference: {fileID: 1215617325}
+    - target: {fileID: 1934120309888948897, guid: d3f1985120186a54b8454368583430e9,
+        type: 3}
+      propertyPath: PauseUI
+      value: 
+      objectReference: {fileID: 1088571357}
     - target: {fileID: 1934120309888948898, guid: d3f1985120186a54b8454368583430e9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1316,6 +1349,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1273585793}
+    - target: {fileID: 3113985937918969125, guid: 04a9c7de82329fc4490f609d4cd2b59b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3113985937918969127, guid: 04a9c7de82329fc4490f609d4cd2b59b,
         type: 3}
       propertyPath: enemytowe
@@ -1336,6 +1374,11 @@ PrefabInstance:
       propertyPath: Rabbit_Tower
       value: 
       objectReference: {fileID: 1299844855448129503}
+    - target: {fileID: 3113985937918969127, guid: 04a9c7de82329fc4490f609d4cd2b59b,
+        type: 3}
+      propertyPath: BattleSceneUI
+      value: 
+      objectReference: {fileID: 1215617325}
     - target: {fileID: 3113985937918969131, guid: 04a9c7de82329fc4490f609d4cd2b59b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1480,6 +1523,11 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 558830764}
+    - target: {fileID: 1186671907441796477, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2556986814339885617, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_Color.a
@@ -1525,15 +1573,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4421351979475222732, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4421351979475222733, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1273585793}
+    - target: {fileID: 4421351979475222733, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4421351979475222734, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_Name
       value: BattleSceneUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421351979475222735, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4421351979475222738, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
@@ -1650,6 +1713,11 @@ PrefabInstance:
       propertyPath: preMana
       value: 
       objectReference: {fileID: 853198260}
+    - target: {fileID: 7195202961633909925, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7220989883399130905, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: effect_Sketch
