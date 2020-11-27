@@ -207,7 +207,7 @@ MonoBehaviour:
   summonVol: 1
   cost: 9
   myAttackMethod: 2
-  attackRange: 3.5
+  attackRange: 4
   attackInterval: 2.5
   characterAnim: {fileID: 0}
   attackTrigger: AttackTrigger
@@ -236,7 +236,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 3.7}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!50 &3636339714402739497
 Rigidbody2D:
