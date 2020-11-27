@@ -12,7 +12,7 @@ public class InkMode : MonoBehaviour
     RectTransform Set_rt;
     Vector3 rt_temp;
 
-    private bool Lnow = false;
+    //private bool Lnow = false;
 
     //[SerializeField]
     //float Width;
@@ -35,8 +35,16 @@ public class InkMode : MonoBehaviour
         {
             //image.material.SetFloat("_Width", Width);
             image.color = new Color(image.color.r, image.color.g, image.color.b, 1.0f);
-            Lnow = true;
-            rt_temp.y = 2f;     // ONの状態の時サイズが大きくなる
+            //Lnow = true;
+            // 現状、どこクリックされても反応してしまうことが判明
+            if (Input.GetMouseButtonDown(0))    // クリックした瞬間
+            {
+                rt_temp.y = 1.8f;   // サイズが小さくなる
+            }
+            if (Input.GetMouseButtonUp(0))      // 離した瞬間
+            {
+                rt_temp.y = 2f;     // サイズが大きくなる
+            }
             Set_rt.localScale = rt_temp;
         }
         // 水墨モードOFF
@@ -44,8 +52,15 @@ public class InkMode : MonoBehaviour
         {
             //image.material.SetFloat("_Width", 0);
             image.color = new Color(image.color.r, image.color.g, image.color.b, 0.6f);
-            Lnow = false;
-            rt_temp.y = 1.8f;   // OFFの状態の時サイズが小さくなる
+            //Lnow = false;
+            if (Input.GetMouseButtonDown(0))    // クリックした瞬間
+            {
+                rt_temp.y = 1.8f;   // サイズが小さくなる
+            }
+            if (Input.GetMouseButtonUp(0))      // 離した瞬間
+            {
+                rt_temp.y = 2f;     // サイズが大きくなる
+            }
             Set_rt.localScale = rt_temp;
         }
         //rend.material.SetFloat("_Shininess", shininess);
