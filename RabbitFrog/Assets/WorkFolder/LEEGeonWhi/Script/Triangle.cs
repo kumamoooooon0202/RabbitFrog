@@ -33,19 +33,6 @@ public class Triangle : MonoBehaviour
         }
 
     }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="col"></param>
-    void OnTriggerStay2D(Collider2D col)
-    {
-        if (col.tag == "Enemy")
-        {
-            //敵のHPを減らす処理
-        }
-    }
-
     void Init()
     {
         Box_col = gameObject.AddComponent<BoxCollider2D>();

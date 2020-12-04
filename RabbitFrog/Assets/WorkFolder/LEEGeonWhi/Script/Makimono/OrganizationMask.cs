@@ -7,7 +7,7 @@ public class OrganizationMask : MonoBehaviour
 {
     public Image image;
     public bool is_status = false;
-   //public bool start_anime = false;
+    //public bool start_anime = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,14 +41,32 @@ public class OrganizationMask : MonoBehaviour
     /// </summary>
     /// <param name="Close_Target">閉じるCanvas Target</param>
     /// <returns></returns>
-    public IEnumerator Open(StageSelectMask Close_Target)
+    public IEnumerator Close_Open(StageSelectMask Close_Target)
     {
         OptionController.is_runing = true;
 
-        StartCoroutine(Close_Target.Close());
-        yield return StartCoroutine(Close_Target.Close());
+        //StartCoroutine(Close_Target.Close());
+        //yield return StartCoroutine(Close_Target.Close());
+        
+        while (Close_Target.image.fillAmount >= 0)
+        {
+            if (Close_Target.image.fillAmount <= 0) break;
+            yield return new WaitForSeconds(Time.deltaTime);
+            Close_Target.image.fillAmount -= Time.deltaTime;
+        }
 
+        while (image.fillAmount <= 1)
+        {
+            if (image.fillAmount >= 1) break;
+            yield return new WaitForSeconds(Time.deltaTime);
+            image.fillAmount += Time.deltaTime;
+        }
+        OptionController.is_runing = false;
+    }
 
+    public IEnumerator Open()
+    {
+        OptionController.is_runing = true;
         while (image.fillAmount <= 1)
         {
             if (image.fillAmount >= 1) break;
@@ -60,6 +78,7 @@ public class OrganizationMask : MonoBehaviour
 
     public IEnumerator Close()
     {
+        OptionController.is_runing = true;
 
         while (image.fillAmount >= 0)
         {
@@ -67,5 +86,6 @@ public class OrganizationMask : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
             image.fillAmount -= Time.deltaTime;
         }
+        OptionController.is_runing = false;
     }
 }

@@ -43,13 +43,32 @@ public class StageSelectMask : MonoBehaviour
     /// </summary>
     /// <param name="Close_Target">閉じるCanvas Target</param>
     /// <returns></returns>
-    public IEnumerator Open(OrganizationMask Close_Target)
+    public IEnumerator Close_Open(OrganizationMask Close_Target)
     {
         OptionController.is_runing = true;
-        StartCoroutine(Close_Target.Close());
-        yield return StartCoroutine(Close_Target.Close());
+        //StartCoroutine(Close_Target.Close());
+        //yield return StartCoroutine(Close_Target.Close());
 
-        is_status = true;
+        //is_status = true;
+        while (Close_Target.image.fillAmount >= 0)
+        {
+            if (Close_Target.image.fillAmount <= 0) break;
+            yield return new WaitForSeconds(Time.deltaTime);
+            Close_Target.image.fillAmount -= Time.deltaTime;
+        }
+
+        while (image.fillAmount <= 1)
+        {
+            if (image.fillAmount >= 1) break;
+            yield return new WaitForSeconds(Time.deltaTime);
+            image.fillAmount += Time.deltaTime;
+        }
+        OptionController.is_runing = false;
+    }
+
+    public IEnumerator Open()
+    {
+        OptionController.is_runing = true;
         while (image.fillAmount <= 1)
         {
             if (image.fillAmount >= 1) break;
@@ -61,6 +80,8 @@ public class StageSelectMask : MonoBehaviour
 
     public IEnumerator Close()
     {
+        OptionController.is_runing = true;
+
         is_status = false;
         while (image.fillAmount >= 0)
         {
@@ -68,5 +89,6 @@ public class StageSelectMask : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
             image.fillAmount -= Time.deltaTime;
         }
+        OptionController.is_runing = false;
     }
 }
