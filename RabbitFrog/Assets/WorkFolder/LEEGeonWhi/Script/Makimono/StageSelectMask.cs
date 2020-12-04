@@ -19,27 +19,10 @@ public class StageSelectMask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (image.fillAmount <= 1 && start_anime)
-        //{
-        //    image.fillAmount += Time.deltaTime;
-        //}
-
-        //if (image.fillAmount >= 0 && !start_anime)
-        //{
-        //    image.fillAmount -= Time.deltaTime;
-        //}
-
-
     }
 
-    //public void Open_animation()
-    //{
-    //    //start_anime = !start_anime;
-    //    start_anime = true;
-    //}
-
     /// <summary>
-    /// アニメーション起動
+    /// Close_Targetを閉じてステージ選択画面を開く処理
     /// </summary>
     /// <param name="Close_Target">閉じるCanvas Target</param>
     /// <returns></returns>
@@ -66,6 +49,10 @@ public class StageSelectMask : MonoBehaviour
         OptionController.is_runing = false;
     }
 
+    /// <summary>
+    /// ステージ選択画面を閉じる処理
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator Open()
     {
         OptionController.is_runing = true;
@@ -78,6 +65,10 @@ public class StageSelectMask : MonoBehaviour
         OptionController.is_runing = false;
     }
 
+    /// <summary>
+    /// ステージ選択画面開く処理
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator Close()
     {
         OptionController.is_runing = true;

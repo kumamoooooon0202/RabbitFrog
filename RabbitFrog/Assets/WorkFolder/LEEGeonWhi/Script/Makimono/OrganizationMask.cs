@@ -17,27 +17,10 @@ public class OrganizationMask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (image.fillAmount <= 1 && start_anime)
-        //{
-        //    image.fillAmount += Time.deltaTime;
-        //}
-
-        //if (image.fillAmount >= 0 && !start_anime)
-        //{
-        //    image.fillAmount -= Time.deltaTime;
-        //}
-
-
     }
 
-    //public void Open_animation()
-    //{
-    //    //start_anime = !start_anime;
-    //    start_anime = true;
-    //}
-
     /// <summary>
-    /// アニメーション起動
+    /// Close_Targetを閉じて編成画面を開く処理
     /// </summary>
     /// <param name="Close_Target">閉じるCanvas Target</param>
     /// <returns></returns>
@@ -64,6 +47,10 @@ public class OrganizationMask : MonoBehaviour
         OptionController.is_runing = false;
     }
 
+    /// <summary>
+    /// 編成画面を開く処理
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator Open()
     {
         OptionController.is_runing = true;
@@ -76,6 +63,10 @@ public class OrganizationMask : MonoBehaviour
         OptionController.is_runing = false;
     }
 
+    /// <summary>
+    /// 編成画面を閉じる処理
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator Close()
     {
         OptionController.is_runing = true;

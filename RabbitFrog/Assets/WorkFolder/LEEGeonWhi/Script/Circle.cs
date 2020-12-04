@@ -5,6 +5,7 @@ using UnityEngine;
 public class Circle : MonoBehaviour
 {
     private float circumference;
+    [SerializeField]
     private float HP;
     private float radius;
     private Vector2 circle_center;
@@ -12,6 +13,7 @@ public class Circle : MonoBehaviour
     void Start()
     {
         Init();
+        InkAmout.decrease_Gauge(HP);
         StartCoroutine(obj_destroy());
     }
 
@@ -50,7 +52,11 @@ public class Circle : MonoBehaviour
         transform.localScale = new Vector3(radius, radius, 1);
 
         GetComponent<Circle>().circumference = circumference;
-        GetComponent<Circle>().HP = 1 - (circumference - 1) * 0.2f;
+        
+        //20-12-04 イゴンヒ
+        //GetComponent<Circle>().HP = 1 - (circumference - 1) * 0.2f;
+        //GetComponent<Circle>().HP = circumference * 0.02f;
+        GetComponent<Circle>().HP = radius * 0.2f;
 
 
         if (HP < 0) HP=0.1f;
@@ -64,7 +70,7 @@ public class Circle : MonoBehaviour
             HP -= 0.2f;
         }
 
-        InkAmout.increase_Gauge(0.1f);
+        //InkAmout.increase_Gauge(0.1f);
         Destroy(gameObject);
     }
 }
