@@ -10,6 +10,7 @@ public class BattleSceneUI : MonoBehaviour
 
     void Start()
     {
+        
     }
 
     void Update()
@@ -20,8 +21,8 @@ public class BattleSceneUI : MonoBehaviour
         }
 
         else
-        {
             GetComponent<GraphicRaycaster>().enabled = true;
+        {
         }
     }
 }

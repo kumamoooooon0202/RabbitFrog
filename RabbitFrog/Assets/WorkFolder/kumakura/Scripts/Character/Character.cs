@@ -178,7 +178,11 @@ public class Character : CharacterBase
         //（201030）イゴンヒ修正
         foreach (var chara in targetCharacter)
         {
-            chara.gameObject.GetComponent<CharacterBase>().hp -= 10;
+            //（201127）イゴンヒ修正　敵たけ影響される
+            if (chara.gameObject.tag == "Enemy")
+            {
+                chara.gameObject.GetComponent<CharacterBase>().hp -= 10;
+            }
         }
         IsDeath = true;
         gameObject.SetActive(false);

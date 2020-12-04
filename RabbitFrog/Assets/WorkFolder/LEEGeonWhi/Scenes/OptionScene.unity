@@ -2319,6 +2319,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1861672474}
     m_Modifications:
+    - target: {fileID: 1533790022435153258, guid: db27dd32ede90ce45afabaeb42a4210e,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533790022435153259, guid: db27dd32ede90ce45afabaeb42a4210e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1533790022435153261, guid: db27dd32ede90ce45afabaeb42a4210e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2428,6 +2438,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StageSelectMask
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533790022435153262, guid: db27dd32ede90ce45afabaeb42a4210e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1533790022940330367, guid: db27dd32ede90ce45afabaeb42a4210e,
         type: 3}
@@ -3275,10 +3290,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8945440242070667105, guid: 08c5eacafd006fe4e9adce728f759599,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8945440242070667107, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}
       propertyPath: m_Name
       value: OrganizationMask
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945440242070667107, guid: 08c5eacafd006fe4e9adce728f759599,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8945440242218496425, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}

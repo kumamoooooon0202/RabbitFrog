@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class OrganizationMask : MonoBehaviour
 {
     public Image image;
-   public bool start_anime = false;
+    public bool is_status = false;
+   //public bool start_anime = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,32 +17,55 @@ public class OrganizationMask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (image.fillAmount <= 1 && start_anime)
+        //if (image.fillAmount <= 1 && start_anime)
+        //{
+        //    image.fillAmount += Time.deltaTime;
+        //}
+
+        //if (image.fillAmount >= 0 && !start_anime)
+        //{
+        //    image.fillAmount -= Time.deltaTime;
+        //}
+
+
+    }
+
+    //public void Open_animation()
+    //{
+    //    //start_anime = !start_anime;
+    //    start_anime = true;
+    //}
+
+    /// <summary>
+    /// アニメーション起動
+    /// </summary>
+    /// <param name="Close_Target">閉じるCanvas Target</param>
+    /// <returns></returns>
+    public IEnumerator Open(StageSelectMask Close_Target)
+    {
+        OptionController.is_runing = true;
+
+        StartCoroutine(Close_Target.Close());
+        yield return StartCoroutine(Close_Target.Close());
+
+
+        while (image.fillAmount <= 1)
         {
+            if (image.fillAmount >= 1) break;
+            yield return new WaitForSeconds(Time.deltaTime);
             image.fillAmount += Time.deltaTime;
         }
+        OptionController.is_runing = false;
+    }
 
-        if (image.fillAmount >= 0 && !start_anime)
+    public IEnumerator Close()
+    {
+
+        while (image.fillAmount >= 0)
         {
+            if (image.fillAmount <= 0) break;
+            yield return new WaitForSeconds(Time.deltaTime);
             image.fillAmount -= Time.deltaTime;
         }
-
-
     }
-
-    public void Run_animation()
-    {
-        //start_anime = !start_anime;
-        start_anime = true;
-    }
-
-    //public IEnumerator test1()
-    //{
-    //    yield return new WaitForSeconds(Time.deltaTime);
-    //    while(image.fillAmount <= 1)
-    //    {
-    //        image.fillAmount += Time.deltaTime;
-
-    //    }
-    //}
 }
