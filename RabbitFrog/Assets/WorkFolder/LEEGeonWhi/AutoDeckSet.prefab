@@ -193,16 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac2f77b1d70dee40aaf17df1c0bcbd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deckImage:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  deckObjects:
+  deck:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -220,3 +211,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  autoDeckArray:
+  - autoSet:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
