@@ -664,15 +664,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  cardPoolObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   autoDeckArray: []
 --- !u!4 &471424007
 Transform:
@@ -2493,6 +2484,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1707613124}
     m_Modifications:
+    - target: {fileID: 2461835750074400445, guid: 08c5eacafd006fe4e9adce728f759599,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2461835750074400446, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}
       propertyPath: autoDeckArray.Array.size
