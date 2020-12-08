@@ -57,8 +57,12 @@ public class LineController : MonoBehaviour
     CircleClass circleClass = new CircleClass();
     LineClass lineClass = new LineClass();
 
+    [SerializeField] RectTransform Set_rt;
+    Vector3 rt_temp;
+
     void Start()
     {
+        rt_temp = Set_rt.localScale;
         MaxLine = 0;
         is_inkMode = false;
     }
@@ -72,7 +76,21 @@ public class LineController : MonoBehaviour
     public void OnIsDraw()
     {
         is_inkMode = !is_inkMode;
-;    }
+    }
+
+    public void Down()
+    {
+        rt_temp.y = 1.8f;   // サイズが小さくなる
+        Debug.Log("押されてるよ");
+        Set_rt.localScale = rt_temp;
+    }
+
+    public void Up()
+    {
+        rt_temp.y = 2f;     // サイズが大きくなる
+        Debug.Log("押されてるよPart2!");
+        Set_rt.localScale = rt_temp;
+    }
 
     private void DrawLine()
     {
