@@ -1610,6 +1610,41 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -44.300003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 66.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4191672627597540255, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: enemyTower
@@ -1630,11 +1665,23 @@ PrefabInstance:
       propertyPath: battleCanvas
       value: 
       objectReference: {fileID: 1086229963}
+    - target: {fileID: 4421351978955598913, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: df72079246a56ad45aeb8258266c6ec2,
+        type: 3}
     - target: {fileID: 4421351978955598915, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4421351979057168979, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 91354892ec09a8c43ac7a2f8b7d4eede,
+        type: 3}
     - target: {fileID: 4421351979475222732, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_Enabled
@@ -1765,6 +1812,18 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4421351979685575252, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c008851a3e03e104f8768a29c96ca02a,
+        type: 3}
+    - target: {fileID: 4464910115973713699, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a7c024e0dc75a7e489f77e26c22186ba,
+        type: 3}
     - target: {fileID: 6602609358995856773, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: preMana
