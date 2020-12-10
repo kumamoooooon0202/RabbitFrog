@@ -107,7 +107,7 @@ MonoBehaviour:
   summonVol: 1
   cost: 7
   myAttackMethod: 1
-  attackRange: 2.4
+  attackRange: 2.2
   attackInterval: 1.5
   characterAnim: {fileID: 0}
   attackTrigger: AttackTrigger
@@ -136,7 +136,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2, y: 2.2}
+  m_Size: {x: 2.4, y: 2.4}
   m_EdgeRadius: 0
 --- !u!50 &2764864305794125082
 Rigidbody2D:
@@ -186,14 +186,14 @@ RectTransform:
   m_GameObject: {fileID: 7814899520802291113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.0001}
+  m_LocalScale: {x: 0.0095, y: 0.0095, z: 0.00019}
   m_Children: []
   m_Father: {fileID: 4763451070938044923}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.2}
+  m_AnchoredPosition: {x: 0, y: -1.7}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7481146482064769392
