@@ -14,7 +14,7 @@ public class WallParent : MonoBehaviour
     private Vector3 Dir;
     private Vector2 offset = new Vector2(0, 1.0f);
     private Vector2 temp;
-    
+
     private GameObject obj;
 
     private float LineLength = 0;
@@ -35,6 +35,9 @@ public class WallParent : MonoBehaviour
 
         LineLength = Mathf.Abs(_startPos.y - _endPos.x);
         HP = 1 + 0.2f * (LineLength - 1);
+
+        //20-12-04　イゴンヒ
+        InkAmout.decrease_Gauge(LineLength * 0.1f);
 
         Dir = Vector3.Normalize(_startPos - _endPos);
         for (int i = 0; i < LineController.Points.Count - 1; i++)
@@ -61,7 +64,7 @@ public class WallParent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(HP <= 0)
+        if (HP <= 0)
         {
             Destroy(gameObject);
             LineController.MaxLine--;

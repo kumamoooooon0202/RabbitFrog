@@ -24,7 +24,7 @@ public class Line : MonoBehaviour
     {
         if(HP <= 0)
         {
-            InkAmout.increase_Gauge(0.1f);
+            //InkAmout.increase_Gauge(0.1f);
             Destroy(gameObject);
         }
     }
@@ -44,7 +44,6 @@ public class Line : MonoBehaviour
             //Enemy_obj.Add(col.gameObject);
             col.GetComponent<Enemy>().transform.position += new Vector3(-Time.deltaTime * 3, 0, 0); //壁に衝突するMotion
         }
-
     }
 
     /// <summary>

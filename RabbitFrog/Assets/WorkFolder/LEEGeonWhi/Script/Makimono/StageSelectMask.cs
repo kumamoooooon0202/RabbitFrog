@@ -19,37 +19,27 @@ public class StageSelectMask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (image.fillAmount <= 1 && start_anime)
-        //{
-        //    image.fillAmount += Time.deltaTime;
-        //}
-
-        //if (image.fillAmount >= 0 && !start_anime)
-        //{
-        //    image.fillAmount -= Time.deltaTime;
-        //}
-
-
     }
 
-    //public void Open_animation()
-    //{
-    //    //start_anime = !start_anime;
-    //    start_anime = true;
-    //}
-
     /// <summary>
-    /// アニメーション起動
+    /// Close_Targetを閉じてステージ選択画面を開く処理
     /// </summary>
     /// <param name="Close_Target">閉じるCanvas Target</param>
     /// <returns></returns>
-    public IEnumerator Open(OrganizationMask Close_Target)
+    public IEnumerator Close_Open(OrganizationMask Close_Target)
     {
         OptionController.is_runing = true;
-        StartCoroutine(Close_Target.Close());
-        yield return StartCoroutine(Close_Target.Close());
+        //StartCoroutine(Close_Target.Close());
+        //yield return StartCoroutine(Close_Target.Close());
 
-        is_status = true;
+        //is_status = true;
+        while (Close_Target.image.fillAmount >= 0)
+        {
+            if (Close_Target.image.fillAmount <= 0) break;
+            yield return new WaitForSeconds(Time.deltaTime);
+            Close_Target.image.fillAmount -= Time.deltaTime;
+        }
+
         while (image.fillAmount <= 1)
         {
             if (image.fillAmount >= 1) break;
@@ -59,8 +49,30 @@ public class StageSelectMask : MonoBehaviour
         OptionController.is_runing = false;
     }
 
+    /// <summary>
+    /// ステージ選択画面を閉じる処理
+    /// </summary>
+    /// <returns></returns>
+    public IEnumerator Open()
+    {
+        OptionController.is_runing = true;
+        while (image.fillAmount <= 1)
+        {
+            if (image.fillAmount >= 1) break;
+            yield return new WaitForSeconds(Time.deltaTime);
+            image.fillAmount += Time.deltaTime;
+        }
+        OptionController.is_runing = false;
+    }
+
+    /// <summary>
+    /// ステージ選択画面開く処理
+    /// </summary>
+    /// <returns></returns>
     public IEnumerator Close()
     {
+        OptionController.is_runing = true;
+
         is_status = false;
         while (image.fillAmount >= 0)
         {
@@ -68,5 +80,6 @@ public class StageSelectMask : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
             image.fillAmount -= Time.deltaTime;
         }
+        OptionController.is_runing = false;
     }
 }
