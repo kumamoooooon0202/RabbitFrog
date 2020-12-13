@@ -418,7 +418,7 @@ GameObject:
   - component: {fileID: 8945440242070666910}
   - component: {fileID: 8945440242070667105}
   - component: {fileID: 8945440242070666911}
-  - component: {fileID: 8945440242070666908}
+  - component: {fileID: 3667618247673144213}
   m_Layer: 5
   m_Name: OrganizationMask
   m_TagString: Untagged
@@ -497,7 +497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
---- !u!114 &8945440242070666908
+--- !u!114 &3667618247673144213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8945440242070667107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db29db5d958cb1a4d8c08924c10eda59, type: 3}
+  m_Script: {fileID: 11500000, guid: 838ba93d97174214a9e05c8930099727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 8945440242070667105}

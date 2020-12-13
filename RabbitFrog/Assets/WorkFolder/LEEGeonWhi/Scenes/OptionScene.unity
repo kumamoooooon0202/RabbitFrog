@@ -440,6 +440,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &239091475 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2043312697564378410, guid: db27dd32ede90ce45afabaeb42a4210e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1533790023778760423}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838ba93d97174214a9e05c8930099727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &260512418 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3667618247673144213, guid: 08c5eacafd006fe4e9adce728f759599,
+    type: 3}
+  m_PrefabInstance: {fileID: 8945440241315732894}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838ba93d97174214a9e05c8930099727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &267159117
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,10 +1159,10 @@ MonoBehaviour:
   stageSelectCanvas: {fileID: 1861672473}
   confirmCanvas: {fileID: 358190172}
   preMana: {fileID: 1251059199}
-  organizationMask: {fileID: 1929437954}
-  organization: {fileID: 1100524747}
-  stageSelectMask: {fileID: 1343738763}
-  stageSelect: {fileID: 682134823}
+  organizationMask: {fileID: 260512418}
+  organization: {fileID: 1100524743}
+  stageSelectMask: {fileID: 239091475}
+  stageSelect: {fileID: 682134819}
 --- !u!4 &882966384
 Transform:
   m_ObjectHideFlags: 0
@@ -1549,18 +1573,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1533790023778760423}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1343738763 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1533790022435153260, guid: db27dd32ede90ce45afabaeb42a4210e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1533790023778760423}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc5363d904a09de45b004d500b159527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1404176389 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1419046585131821236, guid: 08c5eacafd006fe4e9adce728f759599,
@@ -2037,18 +2049,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 8945440241315732894}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1929437954 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8945440242070666908, guid: 08c5eacafd006fe4e9adce728f759599,
-    type: 3}
-  m_PrefabInstance: {fileID: 8945440241315732894}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db29db5d958cb1a4d8c08924c10eda59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1941645954
 GameObject:
   m_ObjectHideFlags: 0
@@ -3398,7 +3398,7 @@ PrefabInstance:
     - target: {fileID: 8945440242218496425, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 110
+      value: 109.99998
       objectReference: {fileID: 0}
     - target: {fileID: 8945440242218496425, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}

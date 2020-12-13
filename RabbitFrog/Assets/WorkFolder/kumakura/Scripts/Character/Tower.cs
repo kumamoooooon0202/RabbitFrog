@@ -59,26 +59,26 @@ public class Tower : CharacterBase
         gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (serchFlag) { return; }
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
-        {
-            // 敵の情報を取得
-            targetEnemy = collision.GetComponent<Enemy>();
-            serchFlag = true;
-            enemyPos = collision.transform.position;
-            collision.transform.position -= new Vector3(Time.deltaTime *4 ,0 ,0);
-            Debug.Log(targetEnemy + " : " + enemyPos);
-        }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (serchFlag) { return; }
+    //    if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
+    //    {
+    //        // 敵の情報を取得
+    //        targetEnemy = collision.GetComponent<Enemy>();
+    //        serchFlag = true;
+    //        enemyPos = collision.transform.position;
+    //        collision.transform.position -= new Vector3(Time.deltaTime *4 ,0 ,0);
+    //        Debug.Log(targetEnemy + " : " + enemyPos);
+    //    }
 
-    }
+    //}
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
-        {
-            collision.transform.position -= new Vector3(Time.deltaTime * 4, 0, 0);
-        }
-    }
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
+    //    {
+    //        collision.transform.position -= new Vector3(Time.deltaTime * 4, 0, 0);
+    //    }
+    //}
 }

@@ -12,16 +12,13 @@ public class OptionController : MonoBehaviour
     [SerializeField] private Canvas confirmCanvas;
     [SerializeField] private PreviewManager preMana;
 
-    [SerializeField] private OrganizationMask organizationMask;
-    [SerializeField] private Organization organization;
-    [SerializeField] private StageSelectMask stageSelectMask;
-    [SerializeField] private StageSelect stageSelect;
+    [SerializeField] private MaskControl organizationMask;
+    [SerializeField] private RectTransform organization;
+    [SerializeField] private MaskControl stageSelectMask;
+    [SerializeField] private RectTransform stageSelect;
 
     GraphicRaycaster organization_Canvas_raycaster;
     GraphicRaycaster stageSelect_Canvas_raycaster;
-
-    Image organizationButton;
-    Image stageSelectButton;
 
     static public bool is_runing; // 巻物アニメーション、起動中 確認
 
@@ -39,8 +36,6 @@ public class OptionController : MonoBehaviour
         organization_Canvas_raycaster = organizationCanvas.GetComponent<GraphicRaycaster>();
         stageSelect_Canvas_raycaster = stageSelectCanvas.GetComponent<GraphicRaycaster>();
 
-        organizationButton = organization.GetComponent<Image>();
-        stageSelectButton = stageSelect.GetComponent<Image>();
 
         organization_Canvas_raycaster.enabled = false;
         stageSelect_Canvas_raycaster.enabled = false;
@@ -73,7 +68,7 @@ public class OptionController : MonoBehaviour
             is_organ_Open = true;
             stageSelect_Canvas_raycaster.enabled = false;
             organization_Canvas_raycaster.enabled = true;
-            StartCoroutine(organizationMask.Close_Open(stageSelectMask));//ステージ選択画面を閉じて編成画面を開く
+            StartCoroutine(organizationMask.Close_Open(stageSelectMask, organization, stageSelect));//ステージ選択画面を閉じて編成画面を開く
 
             is_stage_Open = false;
         }
@@ -83,7 +78,7 @@ public class OptionController : MonoBehaviour
             is_organ_Open = true;
             stageSelect_Canvas_raycaster.enabled = false;
             organization_Canvas_raycaster.enabled = true;
-            StartCoroutine(organizationMask.Open());
+            StartCoroutine(organizationMask.Open(organization));
         }
 
         //ステージ選択画面が開いた状態ならステージ選択画面を閉じる
@@ -92,7 +87,7 @@ public class OptionController : MonoBehaviour
             is_organ_Open = false;
             stageSelect_Canvas_raycaster.enabled = false;
             organization_Canvas_raycaster.enabled = true;
-            StartCoroutine(organizationMask.Close());
+            StartCoroutine(organizationMask.Close(organization));
         }
 
         //================================
@@ -114,7 +109,7 @@ public class OptionController : MonoBehaviour
             is_stage_Open = true;
             organization_Canvas_raycaster.enabled = false;
             stageSelect_Canvas_raycaster.enabled = true;
-            StartCoroutine(stageSelectMask.Close_Open(organizationMask));
+            StartCoroutine(stageSelectMask.Close_Open(organizationMask, stageSelect, organization));
 
             is_organ_Open = false;
         }
@@ -124,7 +119,7 @@ public class OptionController : MonoBehaviour
             is_stage_Open = true;
             organization_Canvas_raycaster.enabled = false;
             stageSelect_Canvas_raycaster.enabled = true;
-            StartCoroutine(stageSelectMask.Open());
+            StartCoroutine(stageSelectMask.Open(stageSelect));
         }
 
         else if (is_stage_Open == true)
@@ -133,7 +128,7 @@ public class OptionController : MonoBehaviour
             organization_Canvas_raycaster.enabled = false;
             stageSelect_Canvas_raycaster.enabled = false;
 
-            StartCoroutine(stageSelectMask.Close());
+            StartCoroutine(stageSelectMask.Close(stageSelect));
         }
         //================================
     }

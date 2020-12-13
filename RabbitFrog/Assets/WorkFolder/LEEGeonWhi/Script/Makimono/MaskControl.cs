@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OrganizationMask : MonoBehaviour
+
+public class MaskControl : MonoBehaviour
 {
     public Image image;
     public bool is_status = false;
@@ -24,19 +25,20 @@ public class OrganizationMask : MonoBehaviour
     /// </summary>
     /// <param name="Close_Target">閉じるCanvas Target</param>
     /// <returns></returns>
-    public IEnumerator Close_Open(StageSelectMask Close_Target)
+    public IEnumerator Close_Open(MaskControl Close_Target, RectTransform ObjTarget1, RectTransform ObjTarget2)
     {
         OptionController.is_runing = true;
-
         //StartCoroutine(Close_Target.Close());
         //yield return StartCoroutine(Close_Target.Close());
-        
+
         while (Close_Target.image.fillAmount >= 0)
         {
             if (Close_Target.image.fillAmount <= 0) break;
             yield return new WaitForSeconds(Time.deltaTime);
             Close_Target.image.fillAmount -= Time.deltaTime;
         }
+        ObjTarget2.sizeDelta = new Vector2(75, 450);
+        ObjTarget1.sizeDelta = new Vector2(75, 600);
 
         while (image.fillAmount <= 1)
         {
@@ -51,9 +53,10 @@ public class OrganizationMask : MonoBehaviour
     /// 編成画面を開く処理
     /// </summary>
     /// <returns></returns>
-    public IEnumerator Open()
+    public IEnumerator Open(RectTransform ObjTarget)
     {
         OptionController.is_runing = true;
+        ObjTarget.sizeDelta = new Vector2(75, 600);
         while (image.fillAmount <= 1)
         {
             if (image.fillAmount >= 1) break;
@@ -67,7 +70,7 @@ public class OrganizationMask : MonoBehaviour
     /// 編成画面を閉じる処理
     /// </summary>
     /// <returns></returns>
-    public IEnumerator Close()
+    public IEnumerator Close(RectTransform ObjTarget)
     {
         OptionController.is_runing = true;
 
@@ -77,6 +80,7 @@ public class OrganizationMask : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
             image.fillAmount -= Time.deltaTime;
         }
+        ObjTarget.sizeDelta = new Vector2(75, 450);
         OptionController.is_runing = false;
     }
 }
