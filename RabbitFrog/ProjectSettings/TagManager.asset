@@ -11,6 +11,7 @@ TagManager:
   - hole
   - EnemyTower
   - CardPool
+  - Tower
   layers:
   - Default
   - TransparentFX

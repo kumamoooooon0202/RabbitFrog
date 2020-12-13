@@ -65,13 +65,18 @@ public class LineController : MonoBehaviour
         rt_temp = Set_rt.localScale;
         MaxLine = 0;
         is_inkMode = false;
-        StartCoroutine(GaugeRecovery());
+        //StartCoroutine(GaugeRecovery());
     }
 
     void Update()
     {
         //InkAmout.increase_Gauge(Time.deltaTime / 5);
         DrawLine();
+    }
+
+    private void FixedUpdate()
+    {
+        InkAmout.increase_Gauge(0.001f);
     }
 
     public void OnIsDraw()
