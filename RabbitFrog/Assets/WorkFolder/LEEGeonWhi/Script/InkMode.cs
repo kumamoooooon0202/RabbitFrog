@@ -33,6 +33,7 @@ public class InkMode : MonoBehaviour
             //image.material.SetFloat("_Width", Width);
             image.color = new Color(image.color.r, image.color.g, image.color.b, 1.0f);
             //Lnow = true;
+            InkAmout.ImageOpen();
         }
         // 水墨モードOFF
         if (!LineController.is_inkMode)
@@ -49,6 +50,9 @@ public class InkMode : MonoBehaviour
             //{
             //    rt_temp.y = 2f;     // サイズが大きくなる
             //}
+
+            InkAmout.ImageClose();
+
         }
         //rend.material.SetFloat("_Shininess", shininess);
 

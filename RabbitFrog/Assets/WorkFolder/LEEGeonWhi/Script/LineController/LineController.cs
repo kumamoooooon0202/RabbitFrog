@@ -84,7 +84,7 @@ public class LineController : MonoBehaviour
     public void OnIsDraw()
     {
         is_inkMode = !is_inkMode;
-        ;
+        
     }
     public void Down()
     {
