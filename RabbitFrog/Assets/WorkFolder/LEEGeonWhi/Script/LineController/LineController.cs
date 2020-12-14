@@ -60,6 +60,8 @@ public class LineController : MonoBehaviour
     [SerializeField] RectTransform Set_rt;
     Vector3 rt_temp;
 
+    public InkModeAnim isInkModeAnim;
+
     void Start()
     {
         rt_temp = Set_rt.localScale;
@@ -87,15 +89,14 @@ public class LineController : MonoBehaviour
     public void Down()
     {
         rt_temp.y = 1.8f;   // サイズが小さくなる
-        Debug.Log("押されてるよ");
         Set_rt.localScale = rt_temp;
     }
 
     public void Up()
     {
         rt_temp.y = 2f;     // サイズが大きくなる
-        Debug.Log("押されてるよPart2!");
         Set_rt.localScale = rt_temp;
+        isInkModeAnim.InkAnim();
     }
 
     private void DrawLine()

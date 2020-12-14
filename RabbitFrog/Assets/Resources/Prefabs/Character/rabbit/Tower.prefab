@@ -102,7 +102,7 @@ MonoBehaviour:
   myCharacteristic: 0
   myCardType: 0
   hpText: {fileID: 2065552574351843612}
-  attackRange: 2.4
+  attackRange: 4
   attackInterval: 1.75
   atackTime: 0
 --- !u!61 &-7333941647009370629
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 2.4, y: 2.4}
   m_EdgeRadius: 0
 --- !u!1 &2778539505157633915
 GameObject:

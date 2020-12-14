@@ -665,6 +665,26 @@ PrefabInstance:
       propertyPath: m_Positions.Array.data[49].z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 66.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -44.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645820193893959323, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4078742126717490895, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -705,6 +725,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4421351978955598913, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: df72079246a56ad45aeb8258266c6ec2,
+        type: 3}
     - target: {fileID: 4421351979066372260, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_IsActive
@@ -845,6 +871,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4464910115973713699, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a7c024e0dc75a7e489f77e26c22186ba,
+        type: 3}
     - target: {fileID: 6058622895112345247, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_IsActive
