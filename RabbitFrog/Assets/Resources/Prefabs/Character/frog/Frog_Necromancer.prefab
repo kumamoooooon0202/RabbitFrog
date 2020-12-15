@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 8809007539854018526}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children:
   - {fileID: 4930841584322812185}
   m_Father: {fileID: 0}
@@ -251,7 +251,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f3ebccab965724d4b81bc1581ab5af91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 66eea8ada6b0aa446b0279782df207b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -300,14 +300,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 1.76}
+    oldSize: {x: 2.56, y: 2.55}
     newSize: {x: 2.56, y: 1.76}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 1.76}
+  m_Size: {x: 2.5, y: 2.5}
   m_EdgeRadius: 0
 --- !u!114 &6683341301809900794
 MonoBehaviour:
@@ -331,7 +331,7 @@ MonoBehaviour:
   moveSpeed: 0.005
   summonVol: 1
   myAttackMethod: 0
-  attackRange: 1.5
+  attackRange: 2.3
   attackInterval: 2
   targetFlag: 0
   serchFlag: 0
