@@ -23,10 +23,15 @@ public class ThunderGodCharacter : Character
         CharacterMove(moveSpeed);
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            Debug.Log("-------雷神の情報-------");
+            Debug.Log("TargetEnemies");
             foreach (var i in targetEnemies)
             {
                 Debug.Log(i);
             }
+            Debug.Log("SerchFlag : " + serchFlag);
+            Debug.Log("EnemyPos : " + enemyPos);
+            Debug.Log("------------------------");
         }
     }
 
@@ -36,14 +41,14 @@ public class ThunderGodCharacter : Character
             // 敵の索敵が出来れていれば敵に近づく処理
             if (serchFlag)
             {
-                // 敵との距離を測る
-                var distance = Vector3.Distance(transform.position, enemyPos);
-                // 攻撃範囲に入れば攻撃
-                if (distance < attackRange)
-                {
+                //// 敵との距離を測る
+                //var distance = Vector3.Distance(transform.position, enemyPos);
+                //// 攻撃範囲に入れば攻撃
+                //if (distance < attackRange)
+                //{
                     Attack();
-                    return;
-                }
+                //    return;
+                //}
                 //gameObject.transform.position = Vector2.MoveTowards(gameObject.transform.position, enemyPos, speed);
             }
             else
@@ -56,12 +61,12 @@ public class ThunderGodCharacter : Character
 
     public override void Attack()
     {
-        if (characterAnim != null) { characterAnim.SetBool(isMove, false); }
+        //if (characterAnim != null) { characterAnim.SetBool(isMove, false); }
         atackTime += Time.deltaTime;
         if (serchFlag == true && atackTime > attackInterval)
         {
             Debug.Log("攻撃");
-
+            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
             foreach (var enemy in targetEnemies)
             {
                 if (enemy.IsDeath) { continue; }
@@ -97,7 +102,7 @@ public class ThunderGodCharacter : Character
                         break;
                 }
             }
-            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
+            
             atackTime = 0f;
         }
         // リストの中身のIsDeathが全部trueになったら移動再開
@@ -120,9 +125,21 @@ public class ThunderGodCharacter : Character
             // 敵の情報を取得
             if (collision.GetComponent<Enemy>().myCharacteristic == characteristic.covert) { return; }
             targetEnemies.Add(collision.GetComponent<Enemy>());
-            serchFlag = true;
+            //serchFlag = true;
             // 索敵した敵のPositionを格納
-            enemyPos = collision.transform.position;
+            //enemyPos = collision.transform.position;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
+        {
+            serchFlag = true;
+        }
+        else
+        {
+            serchFlag = false;
         }
     }
 }
