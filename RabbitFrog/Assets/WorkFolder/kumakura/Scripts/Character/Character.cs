@@ -28,6 +28,7 @@ public class Character : CharacterBase
     public Animator characterAnim;
     public string attackTrigger = "AttackTrigger";
     public string isMove = "IsMove";
+    public string isDeath = "IsDeath";
 
     public enum AttackMethod
     {
@@ -105,7 +106,7 @@ public class Character : CharacterBase
     /// </summary>
     public override void Attack()
     {
-        if (characterAnim != null) { characterAnim.SetBool(isMove, false); }
+        //if (characterAnim != null) { characterAnim.SetBool(isMove, false); }
         atackTime += Time.deltaTime;
         if (serchFlag == true && atackTime > attackInterval)
         {
@@ -164,6 +165,9 @@ public class Character : CharacterBase
     {
         // 特徴が爆発ならばここで爆発をする
         //if (myCharacteristic == characteristic.explosion) { explosionFlag = true;}
+
+        // ここで死亡アニメーションの再生
+
         IsDeath = true;
         gameObject.SetActive(false);
 
