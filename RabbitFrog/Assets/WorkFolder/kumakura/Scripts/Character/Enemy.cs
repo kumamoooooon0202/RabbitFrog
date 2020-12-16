@@ -34,7 +34,6 @@ public class Enemy : CharacterBase
     void FixedUpdate()
     {
         hpText.text = hp.ToString("") + "/" + maxHp.ToString("");
-        Debug.Log(characterPos);
     }
 
     public void EnemyMove(float speed)
@@ -122,6 +121,15 @@ public class Enemy : CharacterBase
             targetCharacter = collision.GetComponent<CharacterBase>();
             serchFlag = true;
             characterPos = collision.transform.position;
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (serchFlag)
+        {
+            serchFlag = false;
         }
 
     }
