@@ -117,6 +117,7 @@ MonoBehaviour:
   characterAnim: {fileID: 0}
   attackTrigger: AttackTrigger
   isMove: IsMove
+  isDeath: IsDeath
   effect: {fileID: 3365695966788552371, guid: 0a5129f51b892b94ca89753e9ef08524, type: 3}
   hitColliders: []
   radius: 2
@@ -236,7 +237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2.15}
+  m_AnchoredPosition: {x: 0, y: -0.65}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7653165393436290917
