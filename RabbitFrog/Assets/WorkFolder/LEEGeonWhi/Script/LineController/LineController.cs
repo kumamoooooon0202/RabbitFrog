@@ -78,7 +78,7 @@ public class LineController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        InkAmout.increase_Gauge(0.0005f);
+        InkAmout.increase_Gauge(Time.deltaTime * 0.02f);
     }
 
     public void OnIsDraw()
