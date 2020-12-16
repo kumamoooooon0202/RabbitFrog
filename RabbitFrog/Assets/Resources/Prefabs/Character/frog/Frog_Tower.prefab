@@ -131,7 +131,7 @@ MonoBehaviour:
   moveSpeed: 0
   summonVol: 0
   myAttackMethod: 0
-  attackRange: 3
+  attackRange: 4
   attackInterval: 1.75
   targetFlag: 0
   serchFlag: 0
