@@ -6,19 +6,27 @@ public class Triangle : MonoBehaviour
 {
     private BoxCollider2D Box_col;
 
-    public float HP = 0;
+    public float HP;
+
+    private float DeleyTime = 3.0f;
+    private float TempTime;
 
     // Start is called before the first frame update
     void Start()
     {
         Init();
-        Destroy(gameObject, 3.0f);
+        //Destroy(gameObject, 3.0f);
     }
 
     // Update is called once per frame
     void Update()
-    {
-        
+    { 
+        if(DeleyTime < 0)
+        {
+            Destroy(gameObject);
+            InkAmout.increase_Gauge(HP);
+        }
+        DeleyTime -= Time.deltaTime;
     }
 
     /// <summary>

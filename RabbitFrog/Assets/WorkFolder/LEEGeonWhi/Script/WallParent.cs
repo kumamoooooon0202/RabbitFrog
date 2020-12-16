@@ -31,7 +31,8 @@ public class WallParent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Destroy(gameObject, 5.0f);
+        //自動解除
+        Destroy(gameObject, 10.0f);
 
         LineLength = Mathf.Abs(_startPos.y - _endPos.x);
         HP = 1 + 0.2f * (LineLength - 1);
@@ -68,7 +69,7 @@ public class WallParent : MonoBehaviour
         {
             Destroy(gameObject);
             LineController.MaxLine--;
-            //InkAmout.increase_Gauge(0.1f);
+            InkAmout.increase_Gauge(0.1f);
         }
     }
 }
