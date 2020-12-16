@@ -11,6 +11,8 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     private GameObject dragObject;
     public Character character;
     public PreviewManager preMana;
+    public Image characterIconImage = null;
+    public Text costText = null;
 
     void Awake()
     {
@@ -18,6 +20,9 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
         GetComponent<Image>().preserveAspect = true;
         parentObject = transform.parent.parent.parent.parent;
         preMana = FindObjectOfType<PreviewManager>();
+
+        characterIconImage.sprite = character.characteristicIcon;
+        costText.text = character.cost.ToString(); ;
     }
 
     /// <summary>

@@ -14,6 +14,9 @@ public class HandObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     private Image dragImage;
     private Image souceImage;
 
+    public Image characterIconImage = null;
+    public Text costText = null;
+
     [SerializeField] private PreviewManager preMana;
 
     void Awake()

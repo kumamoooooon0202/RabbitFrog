@@ -237,6 +237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   character: {fileID: 0}
   preMana: {fileID: 0}
+  characterIconImage: {fileID: 3913676372215525421}
+  costText: {fileID: 3535120036247908542}
 --- !u!1 &7513159386183380148
 GameObject:
   m_ObjectHideFlags: 0

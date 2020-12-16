@@ -1126,6 +1126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myHandNumber: 0
+  characterIconImage: {fileID: 8393725769803285491}
+  costText: {fileID: 9085125998621115966}
   preMana: {fileID: 0}
 --- !u!1 &4421351979475222734
 GameObject:
@@ -1421,6 +1423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myHandNumber: 1
+  characterIconImage: {fileID: 3843406748201343131}
+  costText: {fileID: 7855210533054960597}
   preMana: {fileID: 0}
 --- !u!1 &4421351980373080327
 GameObject:
@@ -1589,6 +1593,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myHandNumber: 2
+  characterIconImage: {fileID: 8257516107094952291}
+  costText: {fileID: 189693212704775332}
   preMana: {fileID: 0}
 --- !u!1 &4421351980519486402
 GameObject:
@@ -1754,6 +1760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myHandNumber: 3
+  characterIconImage: {fileID: 2136892877208743511}
+  costText: {fileID: 6650948170367003692}
   preMana: {fileID: 0}
 --- !u!1 &5535866442906844477
 GameObject:
@@ -2766,6 +2774,11 @@ MonoBehaviour:
   - {fileID: 4421351980687738412}
   nextHand: {fileID: 4421351980519486402}
   battleController: {fileID: 4191672627597540255}
+  characterIconImage:
+  - {fileID: 8393725769803285491}
+  - {fileID: 3843406748201343131}
+  - {fileID: 8257516107094952291}
+  - {fileID: 2136892877208743511}
   minRandomPos_x: -0.5
   maxRandomPos_x: 0.5
   minRandomPos_y: -0.5

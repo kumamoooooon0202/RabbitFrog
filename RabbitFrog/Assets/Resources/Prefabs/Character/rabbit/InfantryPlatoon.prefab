@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "\u6B69\u5175\u5C0F\u968A"
   image: {fileID: 21300000, guid: 816f10024e976c94f982c2d21ac84346, type: 3}
+  characteristicIcon: {fileID: 21300000, guid: 0df348e3980422f4c8cc93835f9017c8, type: 3}
   hp: 10
   power: 3
   myCharacteristic: 0

@@ -9,6 +9,7 @@ public class HandManager : MonoBehaviour
     [SerializeField] private GameObject[] handObjects = new GameObject[4];
     [SerializeField] private GameObject nextHand;
     [SerializeField] private BattleController battleController;
+    [SerializeField] private Image[] characterIconImage = new Image[4];
     [SerializeField] private float minRandomPos_x;
     [SerializeField] private float maxRandomPos_x;
     [SerializeField] private float minRandomPos_y;
@@ -103,6 +104,8 @@ public class HandManager : MonoBehaviour
         // 画像を次手札から参照した後、Cost更新 // イゴンヒ
         text[myHandNumber].text = "" + DeckManager.deckObjects[myHandNumber].cardPoolObject.character.cost;
         _handBackGround[myHandNumber].cost = DeckManager.deckObjects[myHandNumber].cardPoolObject.character.cost;
+        // アイコンの更新
+        characterIconImage[myHandNumber].sprite = DeckManager.deckObjects[myHandNumber].cardPoolObject.character.characteristicIcon;
         // デッキのリストからランダムに次手札に補充
         int randomHandInt = Random.Range(5, DeckManager.deckObjects.Length);
         DeckManager.deckObjects[4] = DeckManager.deckObjects[randomHandInt];

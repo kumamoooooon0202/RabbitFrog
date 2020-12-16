@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "\u96F7\u795E"
   image: {fileID: 21300000, guid: 750ef3e146065d044a1c2cb17329b6e7, type: 3}
+  characteristicIcon: {fileID: 21300000, guid: 8de732c8ea5b9924e9a88811ab5552ba, type: 3}
   hp: 200
   power: 55
   myCharacteristic: 5
@@ -208,7 +209,7 @@ MonoBehaviour:
   cost: 9
   myAttackMethod: 2
   attackRange: 3
-  attackInterval: 2.5
+  attackInterval: 4
   characterAnim: {fileID: 0}
   attackTrigger: AttackTrigger
   isMove: IsMove

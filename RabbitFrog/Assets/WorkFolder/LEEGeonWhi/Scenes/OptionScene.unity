@@ -712,6 +712,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac2f77b1d70dee40aaf17df1c0bcbd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deckSetImage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   deck:
   - {fileID: 0}
   - {fileID: 0}
@@ -1429,7 +1433,7 @@ PrefabInstance:
     - target: {fileID: 2298381521404522256, guid: 3a83b2f8641984444a841c141023adfc,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7554589850665048221, guid: 3a83b2f8641984444a841c141023adfc,
         type: 3}
@@ -2691,12 +2695,7 @@ PrefabInstance:
     - target: {fileID: 2461835750074400445, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2461835750074400446, guid: 08c5eacafd006fe4e9adce728f759599,
-        type: 3}
-      propertyPath: autoDeckArray.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2913349767421606985, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}
@@ -3595,6 +3594,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8945440240929303391, guid: 08c5eacafd006fe4e9adce728f759599,
+        type: 3}
+      propertyPath: m_Value
+      value: 2.1578941
+      objectReference: {fileID: 0}
+    - target: {fileID: 8945440240929303391, guid: 08c5eacafd006fe4e9adce728f759599,
+        type: 3}
+      propertyPath: m_Size
+      value: 0.69841266
+      objectReference: {fileID: 0}
     - target: {fileID: 8945440241407385628, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3793,7 +3802,7 @@ PrefabInstance:
     - target: {fileID: 8945440242218496425, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 110.00001
+      value: 110.000015
       objectReference: {fileID: 0}
     - target: {fileID: 8945440242218496425, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}

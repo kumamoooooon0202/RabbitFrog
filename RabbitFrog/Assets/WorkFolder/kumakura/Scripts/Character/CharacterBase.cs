@@ -7,6 +7,7 @@ public abstract class CharacterBase : MonoBehaviour
 {
     [Header("キャラクターの名前")] public string characterName;         // キャラクターの名前
     [Header("キャラクター画像")] public Sprite image;          // キャラクター画像
+    [Header("アイコン")] public Sprite characteristicIcon; 　　// キャラクター画像
     [Header("体力")] public int hp;                            // 体力
     [Header("攻撃力")] public int power;                       // 攻撃力
     [Header("特徴")] public characteristic myCharacteristic;   // 特徴
