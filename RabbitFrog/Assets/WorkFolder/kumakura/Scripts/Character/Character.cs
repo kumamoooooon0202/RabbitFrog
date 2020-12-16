@@ -28,6 +28,7 @@ public class Character : CharacterBase
     public Animator characterAnim;
     public string attackTrigger = "AttackTrigger";
     public string isMove = "IsMove";
+    public string isDeath = "IsDeath";
 
     public enum AttackMethod
     {
@@ -105,11 +106,12 @@ public class Character : CharacterBase
     /// </summary>
     public override void Attack()
     {
-        if (characterAnim != null) { characterAnim.SetBool(isMove, false); }
+        //if (characterAnim != null) { characterAnim.SetBool(isMove, false); }
         atackTime += Time.deltaTime;
         if (serchFlag == true && atackTime > attackInterval)
         {
             Debug.Log("攻撃");
+            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
             switch (targetEnemy.myCharacteristic)
             {
                 // 敵の特徴 : 無し
@@ -149,7 +151,7 @@ public class Character : CharacterBase
                     Debug.LogError("特徴が不適切です");
                     break;
             }
-            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
+            
             atackTime = 0f;
         }
 
@@ -164,6 +166,9 @@ public class Character : CharacterBase
     {
         // 特徴が爆発ならばここで爆発をする
         //if (myCharacteristic == characteristic.explosion) { explosionFlag = true;}
+
+        // ここで死亡アニメーションの再生
+
         IsDeath = true;
         gameObject.SetActive(false);
 

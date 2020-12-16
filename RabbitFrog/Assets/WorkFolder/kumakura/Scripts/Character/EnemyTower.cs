@@ -63,7 +63,7 @@ public class EnemyTower : Enemy
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (serchFlag) { return; }
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
+        if (collision.gameObject.tag == "Character" || collision.gameObject.tag == "Tower")
         {
             // 敵の情報を取得
             targetCharacter = collision.GetComponent<Character>();

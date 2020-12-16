@@ -722,7 +722,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 26
   m_TargetDisplay: 0
 --- !u!224 &359222587
 RectTransform:
@@ -1830,6 +1830,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421351979685575255, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -507.40002
       objectReference: {fileID: 0}
     - target: {fileID: 4421351980237473796, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}

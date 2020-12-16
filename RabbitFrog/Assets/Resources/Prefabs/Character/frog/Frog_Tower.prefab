@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: 
   image: {fileID: 0}
+  characteristicIcon: {fileID: 0}
   hp: 800
   power: 15
   myCharacteristic: 0
@@ -135,6 +136,7 @@ MonoBehaviour:
   attackInterval: 1.75
   targetFlag: 0
   serchFlag: 0
+  atackTime: 0
 --- !u!1 &6724420519111117443
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +201,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: fbef1f41da85a084aad73cbf781c204f, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
