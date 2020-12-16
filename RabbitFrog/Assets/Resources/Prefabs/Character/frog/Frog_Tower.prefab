@@ -107,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!114 &7795088318685906406
 MonoBehaviour:
@@ -131,7 +131,7 @@ MonoBehaviour:
   moveSpeed: 0
   summonVol: 0
   myAttackMethod: 0
-  attackRange: 4
+  attackRange: 3
   attackInterval: 1.75
   targetFlag: 0
   serchFlag: 0
