@@ -8,7 +8,7 @@ public class Enemy : CharacterBase
     [Header("召喚数")] public int summonVol;                   // 召喚数
     [Header("攻撃方法")] public AttackMethod myAttackMethod;   // 攻撃方法
     [Header("攻撃範囲")] public float attackRange = 1.5f;
-    [SerializeField, Header("攻撃速度")] private float attackInterval = 1.75f;
+    [SerializeField, Header("攻撃速度")] protected float attackInterval = 1.75f;
 
     public bool targetFlag = false;
 
