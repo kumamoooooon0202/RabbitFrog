@@ -111,6 +111,7 @@ public class Character : CharacterBase
         if (serchFlag == true && atackTime > attackInterval)
         {
             Debug.Log("攻撃");
+            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
             switch (targetEnemy.myCharacteristic)
             {
                 // 敵の特徴 : 無し
@@ -150,7 +151,7 @@ public class Character : CharacterBase
                     Debug.LogError("特徴が不適切です");
                     break;
             }
-            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
+            
             atackTime = 0f;
         }
 
