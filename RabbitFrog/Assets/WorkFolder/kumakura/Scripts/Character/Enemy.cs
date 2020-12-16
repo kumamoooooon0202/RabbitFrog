@@ -117,7 +117,7 @@ public class Enemy : CharacterBase
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (serchFlag) { return; }
-        if (collision.gameObject.tag == "Character")
+        if (collision.gameObject.tag == "Character" || collision.gameObject.tag == "Tower")
         {
             targetCharacter = collision.GetComponent<CharacterBase>();
             serchFlag = true;
