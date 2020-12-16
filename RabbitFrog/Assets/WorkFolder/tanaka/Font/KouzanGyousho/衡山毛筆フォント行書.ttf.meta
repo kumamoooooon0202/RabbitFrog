@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: fbef1f41da85a084aad73cbf781c204f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: KouzanBrushFontGyousyo
+  fontNames:
+  - KouzanBrushFontGyousyo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 652fdf062db9f264ca18c9127e3d6831, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
