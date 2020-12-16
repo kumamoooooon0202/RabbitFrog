@@ -37,6 +37,7 @@ public class HandManager : MonoBehaviour
         for (int i = 0; i < handObjects.Length; i++)
         {
             handObjects[count].GetComponent<Image>().sprite = DeckManager.deckObjects[count].iconImage.sprite;
+            characterIconImage[count].sprite = DeckManager.deckObjects[count].cardPoolObject.character.characteristicIcon;
 
             var deckObj = DeckManager.deckObjects[count];
             var cost = deckObj.cardPoolObject.character.cost;
