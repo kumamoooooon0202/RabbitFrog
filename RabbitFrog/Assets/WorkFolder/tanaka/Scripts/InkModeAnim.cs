@@ -29,7 +29,7 @@ public class InkModeAnim : MonoBehaviour
     public void InkAnim()
     {
         modeSwitch = !modeSwitch;
-        Debug.Log("isModeSwitchが" + modeSwitch + "isModeSwitchが" + modeSwitch);
+        //Debug.Log("isModeSwitchが" + modeSwitch + "isModeSwitchが" + modeSwitch);
         if (modeSwitch)
         {
             anim.SetBool(isModeSwitch, true);
