@@ -1176,6 +1176,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frog_Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 7609813808480386392, guid: 6f568bbaa58bbcc4596d633510cd5a7e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609813808480386392, guid: 6f568bbaa58bbcc4596d633510cd5a7e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7795088318685906406, guid: 6f568bbaa58bbcc4596d633510cd5a7e,
+        type: 3}
+      propertyPath: attackRange
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f568bbaa58bbcc4596d633510cd5a7e, type: 3}
 --- !u!114 &2121669971 stripped
@@ -1200,7 +1215,7 @@ PrefabInstance:
     - target: {fileID: 1299844854549235027, guid: 1524616025204da4a824c7b1cf2cb022,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 1299844854549235027, guid: 1524616025204da4a824c7b1cf2cb022,
         type: 3}
