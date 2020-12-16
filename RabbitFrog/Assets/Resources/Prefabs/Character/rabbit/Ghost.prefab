@@ -117,6 +117,7 @@ MonoBehaviour:
   characterAnim: {fileID: 0}
   attackTrigger: AttackTrigger
   isMove: IsMove
+  isDeath: IsDeath
   effect: {fileID: 3365695966788552371, guid: 0a5129f51b892b94ca89753e9ef08524, type: 3}
   hitColliders: []
   radius: 2
@@ -236,7 +237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2.15}
+  m_AnchoredPosition: {x: 0, y: -0.65}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7653165393436290917
@@ -266,7 +267,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: fbef1f41da85a084aad73cbf781c204f, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
