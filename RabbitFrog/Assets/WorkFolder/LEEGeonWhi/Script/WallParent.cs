@@ -26,12 +26,15 @@ public class WallParent : MonoBehaviour
     {
         _startPos = LineController.startPos;
         _endPos = LineController.endPos;
+        Debug.Log(_startPos + "==" + _endPos);
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        //Destroy(gameObject, 5.0f);
+        //自動解除
+        StartCoroutine(obj_destroy());
 
         LineLength = Mathf.Abs(_startPos.y - _endPos.x);
         HP = 1 + 0.2f * (LineLength - 1);
@@ -64,11 +67,25 @@ public class WallParent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      
+    }
+
+    private void FixedUpdate()
+    {
         if (HP <= 0)
         {
             Destroy(gameObject);
             LineController.MaxLine--;
-            //InkAmout.increase_Gauge(0.1f);
+            InkAmout.increase_Gauge(LineLength * 0.1f);
         }
+    }
+
+    IEnumerator obj_destroy()
+    {
+        yield return new WaitForSeconds(10.0f);
+
+        LineController.MaxLine--;
+        InkAmout.increase_Gauge(LineLength * 0.1f);
+        Destroy(gameObject);
     }
 }

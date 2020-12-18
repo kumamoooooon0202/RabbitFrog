@@ -78,7 +78,7 @@ public class LineController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        InkAmout.increase_Gauge(0.001f);
+        InkAmout.increase_Gauge(Time.deltaTime * 0.02f);
     }
 
     public void OnIsDraw()
@@ -184,13 +184,14 @@ public class LineController : MonoBehaviour
                 Vector3 Center = Vector3.Lerp(startPos, endPos, 0.5f);
                 var Tri_obj = Instantiate(Triangle, new Vector2(0, 0), Quaternion.identity);
                 //20-12-04 修正
-                Tri_obj.GetComponent<Triangle>().HP = 10.0f;
+                Tri_obj.GetComponent<Triangle>().HP = Tri_area * 0.1f;
 
                 Tri_linRenderer = Tri_obj.GetComponent<LineRenderer>();
                 Tri_linRenderer.SetPosition(0, Center);
                 Center.y += Tri_Height;
                 Tri_linRenderer.SetPosition(1, Center);
                 //20-12-04 修正
+
                 InkAmout.decrease_Gauge(Tri_area * 0.1f);
             }
 
