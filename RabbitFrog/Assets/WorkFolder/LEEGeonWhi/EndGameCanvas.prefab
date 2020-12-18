@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1934120309776655682}
   - component: {fileID: 1934120309776655683}
   - component: {fileID: 1934120309776655681}
+  - component: {fileID: 3812519034568253846}
   m_Layer: 5
   m_Name: Clear_img
   m_TagString: Untagged
@@ -102,6 +103,27 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!223 &3812519034568253846
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934120309776655685}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 36
+  m_TargetDisplay: 0
 --- !u!1 &1934120309809342754
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,6 +136,7 @@ GameObject:
   - component: {fileID: 1934120309809342815}
   - component: {fileID: 1934120309809342752}
   - component: {fileID: 1934120309809342814}
+  - component: {fileID: 2603876427022141812}
   m_Layer: 5
   m_Name: Fail_img
   m_TagString: Untagged
@@ -204,6 +227,27 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!223 &2603876427022141812
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934120309809342754}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 36
+  m_TargetDisplay: 0
 --- !u!1 &1934120309888948902
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,6 +367,7 @@ MonoBehaviour:
   Rabbit_Tower: {fileID: 0}
   Frog_Tower: {fileID: 0}
   battleController: {fileID: 0}
+  PauseUI: {fileID: 0}
   Fail: {fileID: 1934120309809342754}
   TimeOut: {fileID: 1934120310953567384}
   Clear: {fileID: 1934120309776655685}
@@ -338,6 +383,7 @@ GameObject:
   - component: {fileID: 1934120310953567381}
   - component: {fileID: 1934120310953567382}
   - component: {fileID: 1934120310953567380}
+  - component: {fileID: 4509653337495066009}
   m_Layer: 5
   m_Name: TimeOut_img
   m_TagString: Untagged
@@ -428,3 +474,24 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!223 &4509653337495066009
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934120310953567384}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 36
+  m_TargetDisplay: 0

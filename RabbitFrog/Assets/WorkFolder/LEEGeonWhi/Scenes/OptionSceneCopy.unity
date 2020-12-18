@@ -808,8 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35630877dea4c2c45be2299d537ef60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 2100000, guid: 5a637bf83aa68474787ee19c34316d9c, type: 2}
-  ScrollPaper: {fileID: 1702530164}
+  Panel: {fileID: 0}
   Speed: 1
   Scene_changing: 0
 --- !u!114 &271205743 stripped
@@ -2640,6 +2639,10 @@ MonoBehaviour:
   stageSelectCanvas: {fileID: 1861672473}
   confirmCanvas: {fileID: 885275466}
   preMana: {fileID: 0}
+  organizationMask: {fileID: 0}
+  organization: {fileID: 0}
+  stageSelectMask: {fileID: 0}
+  stageSelect: {fileID: 0}
 --- !u!4 &882966384
 Transform:
   m_ObjectHideFlags: 0
@@ -3432,7 +3435,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 198852344}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.71428573
+  m_Size: 0.35714287
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5385,12 +5388,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1702530162}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1702530164 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 455109384276271012, guid: f3356ede4b85ac4449f7e945fe44bca9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1702530162}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1707613120
 GameObject:
   m_ObjectHideFlags: 0
@@ -6087,6 +6084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effect_Sketch: {fileID: 267159121}
   confirmCanvas: {fileID: 885275466}
+  StagePanel: []
 --- !u!114 &1920466323 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3357235503523256568, guid: 0c6a2e9ad71a1b64499916635315ed88,
