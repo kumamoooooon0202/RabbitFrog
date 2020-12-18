@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f2638d9b6775b2843b57fcdac15ab8c8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - randomImage: {instanceID: 0}
+  - chara0: {fileID: 21300000, guid: 750ef3e146065d044a1c2cb17329b6e7, type: 3}
+  - chara1: {fileID: 21300000, guid: ae3990e1a69305a4b9a9911ad7b9059c, type: 3}
+  - chara2: {fileID: 21300000, guid: 2be1d5e50e9ef3740a09d3e63344de06, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
