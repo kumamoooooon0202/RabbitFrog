@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndGame : MonoBehaviour
 {
@@ -19,9 +20,13 @@ public class EndGame : MonoBehaviour
 
     [SerializeField]
     BattleController battleController;
-    
+
+    //201127 イゴンヒ
+    [SerializeField]
+    GameObject PauseUI;
+
     //==================================
-      //Panel用イメージ
+    //Panel用イメージ
     [SerializeField]
     GameObject Fail;
     [SerializeField]
@@ -36,6 +41,7 @@ public class EndGame : MonoBehaviour
     {
         is_Click = false;
         endGameCanvas.rootCanvas.enabled = false;
+        PauseUI.SetActive(true);
     }
 
     void Update()
@@ -46,22 +52,27 @@ public class EndGame : MonoBehaviour
             endGameCanvas.rootCanvas.enabled = true;
             is_Click = true;
             Fail.SetActive(true);
+            PauseUI.SetActive(false);
         }
 
         //勝ったら
-        if (Frog_Tower.IsDeath && !is_Click)
+        else if (Frog_Tower.IsDeath && !is_Click)
         {
             endGameCanvas.rootCanvas.enabled = true;
             is_Click = true;
             Clear.SetActive(true);
+            PauseUI.SetActive(false);
+
         }
 
         //TimeOut
-        if (battleController.is_Time_out && !is_Click)
+        else if (battleController.is_Time_out && !is_Click)
         {
             endGameCanvas.rootCanvas.enabled = true;
             is_Click = true;
             TimeOut.SetActive(true);
+            PauseUI.SetActive(false);
+
         }
     }
 

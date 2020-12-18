@@ -14,7 +14,7 @@ public class WallParent : MonoBehaviour
     private Vector3 Dir;
     private Vector2 offset = new Vector2(0, 1.0f);
     private Vector2 temp;
-    
+
     private GameObject obj;
 
     private float LineLength = 0;
@@ -26,15 +26,21 @@ public class WallParent : MonoBehaviour
     {
         _startPos = LineController.startPos;
         _endPos = LineController.endPos;
+        Debug.Log(_startPos + "==" + _endPos);
+
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        //Destroy(gameObject, 5.0f);
+        //自動解除
+        StartCoroutine(obj_destroy());
 
         LineLength = Mathf.Abs(_startPos.y - _endPos.x);
         HP = 1 + 0.2f * (LineLength - 1);
+
+        //20-12-04　イゴンヒ
+        InkAmout.decrease_Gauge(LineLength * 0.1f);
 
         Dir = Vector3.Normalize(_startPos - _endPos);
         for (int i = 0; i < LineController.Points.Count - 1; i++)
@@ -61,11 +67,25 @@ public class WallParent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(HP <= 0)
+      
+    }
+
+    private void FixedUpdate()
+    {
+        if (HP <= 0)
         {
             Destroy(gameObject);
             LineController.MaxLine--;
-            //InkAmout.increase_Gauge(0.1f);
+            InkAmout.increase_Gauge(LineLength * 0.1f);
         }
+    }
+
+    IEnumerator obj_destroy()
+    {
+        yield return new WaitForSeconds(10.0f);
+
+        LineController.MaxLine--;
+        InkAmout.increase_Gauge(LineLength * 0.1f);
+        Destroy(gameObject);
     }
 }

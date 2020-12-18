@@ -15,11 +15,13 @@ public class NecromancerCharacter : Character
 
     private BattleController battlecontroller;
     Vector3 ghostSummonPos;
+    private int ghostCount;
 
     // Start is called before the first frame update
     void Start()
     {
         battlecontroller = FindObjectOfType<BattleController>();
+        ghostCount = 0;
         //SummonGhost(transform.position);
     }
 
@@ -30,10 +32,12 @@ public class NecromancerCharacter : Character
         if (hp <= 0) { Death(); }
         CharacterMove(moveSpeed);
         summonTime += Time.deltaTime;
-        if (ghostSummonInterval < summonTime)
+        //ghostCount追加　イゴンヒ
+        if (ghostSummonInterval < summonTime && ghostCount <= 10)
         {
             summonTime = 0;
             SummonGhost(transform.position);
+            ghostCount++;
         }
     }
 

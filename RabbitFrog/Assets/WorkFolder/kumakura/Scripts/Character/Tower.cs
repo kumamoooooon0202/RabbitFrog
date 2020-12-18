@@ -41,10 +41,17 @@ public class Tower : CharacterBase
     public override void Attack()
     {
         atackTime += Time.deltaTime;
-        if (serchFlag == true && atackTime > attackInterval)
+        if (serchFlag && atackTime > attackInterval)
         {
             Debug.Log("攻撃");
-            targetEnemy.hp -= power;
+            if (targetEnemy.myCharacteristic == characteristic.ironWall)
+            {
+                targetEnemy.hp -= 1;
+            }
+            else
+            {
+                targetEnemy.hp -= power;
+            }
             atackTime = 0f;
         }
 
@@ -68,17 +75,15 @@ public class Tower : CharacterBase
             targetEnemy = collision.GetComponent<Enemy>();
             serchFlag = true;
             enemyPos = collision.transform.position;
-            collision.transform.position -= new Vector3(Time.deltaTime *4 ,0 ,0);
             Debug.Log(targetEnemy + " : " + enemyPos);
         }
-
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
-        {
-            collision.transform.position -= new Vector3(Time.deltaTime * 4, 0, 0);
-        }
-    }
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
+    //    {
+    //        collision.transform.position -= new Vector3(Time.deltaTime * 4, 0, 0);
+    //    }
+    //}
 }

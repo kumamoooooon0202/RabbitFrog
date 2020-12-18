@@ -8,7 +8,7 @@ public class Enemy : CharacterBase
     [Header("召喚数")] public int summonVol;                   // 召喚数
     [Header("攻撃方法")] public AttackMethod myAttackMethod;   // 攻撃方法
     [Header("攻撃範囲")] public float attackRange = 1.5f;
-    [SerializeField, Header("攻撃速度")] private float attackInterval = 1.75f;
+    [SerializeField, Header("攻撃速度")] protected float attackInterval = 1.75f;
 
     public bool targetFlag = false;
 
@@ -34,7 +34,6 @@ public class Enemy : CharacterBase
     void FixedUpdate()
     {
         hpText.text = hp.ToString("") + "/" + maxHp.ToString("");
-        Debug.Log(characterPos);
     }
 
     public void EnemyMove(float speed)
@@ -117,11 +116,20 @@ public class Enemy : CharacterBase
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (serchFlag) { return; }
-        if (collision.gameObject.tag == "Character")
+        if (collision.gameObject.tag == "Character" || collision.gameObject.tag == "Tower")
         {
             targetCharacter = collision.GetComponent<CharacterBase>();
             serchFlag = true;
             characterPos = collision.transform.position;
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (serchFlag)
+        {
+            serchFlag = false;
         }
 
     }

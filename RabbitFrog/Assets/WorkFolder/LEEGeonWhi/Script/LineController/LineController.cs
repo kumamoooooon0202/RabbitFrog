@@ -15,7 +15,7 @@ public class LineController : MonoBehaviour
     private Vector2 tempPos;
     private Vector2 circle_center;
 
-    static public  List<Vector2> Points = new List<Vector2>(); //マウス移動経路　
+    static public List<Vector2> Points = new List<Vector2>(); //マウス移動経路　
     private List<Vector2> Points_X = new List<Vector2>(); //Pointsをposition.xを基準にしてlist整列   
     private List<Vector2> Points_Y = new List<Vector2>(); //Pointsをposition.Yを基準にしてlist整列
 
@@ -57,21 +57,47 @@ public class LineController : MonoBehaviour
     CircleClass circleClass = new CircleClass();
     LineClass lineClass = new LineClass();
 
+    [SerializeField] RectTransform Set_rt;
+    Vector3 rt_temp;
+
+    public InkModeAnim isInkModeAnim;
+
     void Start()
     {
+        rt_temp = Set_rt.localScale;
         MaxLine = 0;
+        is_inkMode = false;
+        //StartCoroutine(GaugeRecovery());
     }
 
     void Update()
     {
-        InkAmout.increase_Gauge(Time.deltaTime / 5);
+        //InkAmout.increase_Gauge(Time.deltaTime / 5);
         DrawLine();
+    }
+
+    private void FixedUpdate()
+    {
+        InkAmout.increase_Gauge(Time.deltaTime * 0.02f);
     }
 
     public void OnIsDraw()
     {
         is_inkMode = !is_inkMode;
-;    }
+        
+    }
+    public void Down()
+    {
+        rt_temp.y = 1.8f;   // サイズが小さくなる
+        Set_rt.localScale = rt_temp;
+    }
+
+    public void Up()
+    {
+        rt_temp.y = 2f;     // サイズが大きくなる
+        Set_rt.localScale = rt_temp;
+        isInkModeAnim.InkAnim();
+    }
 
     private void DrawLine()
     {
@@ -142,7 +168,7 @@ public class LineController : MonoBehaviour
             {
                 if (MaxLine > 3 || InkAmout.image.fillAmount < 0.3f) return;
                 Instantiate(Wallparent, startPos, Quaternion.identity);
-                InkAmout.decrease_Gauge(0.3f);
+                //InkAmout.decrease_Gauge(0.3f);
                 MaxLine++;
             }
 
@@ -157,13 +183,16 @@ public class LineController : MonoBehaviour
 
                 Vector3 Center = Vector3.Lerp(startPos, endPos, 0.5f);
                 var Tri_obj = Instantiate(Triangle, new Vector2(0, 0), Quaternion.identity);
-                Tri_obj.GetComponent<Triangle>().HP = 10.0f;
+                //20-12-04 修正
+                Tri_obj.GetComponent<Triangle>().HP = Tri_area * 0.1f;
 
                 Tri_linRenderer = Tri_obj.GetComponent<LineRenderer>();
                 Tri_linRenderer.SetPosition(0, Center);
                 Center.y += Tri_Height;
                 Tri_linRenderer.SetPosition(1, Center);
-                InkAmout.decrease_Gauge(0.3f);
+                //20-12-04 修正
+
+                InkAmout.decrease_Gauge(Tri_area * 0.1f);
             }
 
             // draw circle
@@ -172,11 +201,11 @@ public class LineController : MonoBehaviour
 
                 if (Points.Count < 8 || Points.Count > 20 || InkAmout.image.fillAmount < 0.5f) return;
                 circle_center = new Vector2(
-                                             (Points_Y[0].x + Points_Y[Points_Y.Count - 1].x) / 2 ,
+                                             (Points_Y[0].x + Points_Y[Points_Y.Count - 1].x) / 2,
                                              (Points_X[0].y + Points_X[Points_X.Count - 1].y) / 2
                                             );
                 Instantiate(circle, circle_center, Quaternion.identity);
-                InkAmout.decrease_Gauge(0.5f);
+                //InkAmout.decrease_Gauge(0.5f);
             }
 
 
@@ -204,7 +233,7 @@ public class LineController : MonoBehaviour
             return false;
         }
     }
-   
+
     /// <summary>
     /// 
     /// </summary>
@@ -212,7 +241,7 @@ public class LineController : MonoBehaviour
     {
         float temp = 0;
         for (int i = 0; i < Points.Count - 1; i++)
-        {   
+        {
             Points_normal.Add(Vector3.Normalize(Points[i + 1] - Points[i]));
             if (Points_normal[i].y < 0 && temp > 0)
             {
@@ -223,7 +252,13 @@ public class LineController : MonoBehaviour
         }
     }
 
-
+    //2秒で－1回復　ゲージ
+    IEnumerator GaugeRecovery()
+    {
+        InkAmout.increase_Gauge(0.1f);
+        yield return new WaitForSeconds(1.0f);
+        StartCoroutine(GaugeRecovery());
+    }
     //=============================================================================================
     /// <summary>
     /// Debug用(ゲーム実行には影響はなし)

@@ -12,6 +12,9 @@ public class DeckObject : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPo
     public CardPoolObject cardPoolObject;
     public PreviewManager preMana;
 
+    public Image characterIconImage = null;
+    public Text costText = null;
+
     //2010225　イゴンヒ
     void Awake()
     {
@@ -63,7 +66,10 @@ public class DeckObject : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPo
         nowSprite = dropImage.sprite;
         iconImage.color = Vector4.one;
 
-        
+        characterIconImage.sprite = cardPoolObject.character.characteristicIcon;
+        costText.text = cardPoolObject.character.cost.ToString(); ;
+
+
         //==============
         int index  = this.gameObject.name.IndexOf("(") + 1;
         Debug.Log(this.gameObject.name[index]);

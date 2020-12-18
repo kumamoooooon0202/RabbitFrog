@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 
@@ -22,6 +23,15 @@ public class ScenarioTextControl : MonoBehaviour
 
     Image[] CharPosTemp = new Image[2];
 
+    //--------------------------------------------------
+    // キャラの描画順を変える
+    [SerializeField] private Canvas[] sortingGroup;
+    //public List<SortingGroup> sortingGroups = new List<SortingGroup>(); 
+
+    //public RectTransform InfantryRectTransform; // 歩兵
+    //public RectTransform CavalryRectTransform;  // 騎兵
+    //public RectTransform SamuraiRectTransform;  // 侍
+    //--------------------------------------------------
 
     private int currentLine = 0;
     private string currentText = string.Empty;  // 現在の文字列
@@ -102,7 +112,8 @@ public class ScenarioTextControl : MonoBehaviour
 
         for (int i = 0; i < CharPos.Length; i++)
         {
-            CharPos[i].color = new Color(0.5f, 0.5f, 0.5f, 0.6f);
+            CharPos[i].color = new Color(0.5f, 0.5f, 0.5f,1.0f);
+            sortingGroup[i].sortingOrder = 1;
         }
 
         switch (name)
@@ -110,18 +121,22 @@ public class ScenarioTextControl : MonoBehaviour
             case "歩兵":
                 //CharPos[1].sprite = CharImage[0];
                 CharPos[0].color = new Color(1, 1, 1, 1.0f);
+                sortingGroup[0].sortingOrder = 10;
                 break;
             
             case "群兵":
                 //CharPos[1].sprite = CharImage[2];
                 CharPos[1].color = new Color(1, 1, 1, 1.0f);
+                sortingGroup[1].sortingOrder = 10;
                 break;
             
             case "侍":
                 //CharPos[2].sprite = CharImage[4];
                 CharPos[2].color = new Color(1, 1, 1, 1.0f);
+                sortingGroup[2].sortingOrder = 10;
                 break;
             default:
+                Debug.Log(name);
                 break;
         }
 

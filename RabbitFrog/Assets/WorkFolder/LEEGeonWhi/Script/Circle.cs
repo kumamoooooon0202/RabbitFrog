@@ -5,20 +5,34 @@ using UnityEngine;
 public class Circle : MonoBehaviour
 {
     private float circumference;
+    [SerializeField]
     private float HP;
+    private float TempHP;
     private float radius;
     private Vector2 circle_center;
 
     void Start()
     {
         Init();
+        InkAmout.decrease_Gauge(HP);
         StartCoroutine(obj_destroy());
     }
 
     void Update()
     {
-
+    
     }
+
+    //void FixedUpdate()
+    //{
+    //    if (HP < 0)
+    //    {
+    //        Destroy(gameObject);
+    //        InkAmout.increase_Gauge(0.1f);
+    //    }
+
+    //    HP -= Time.deltaTime;
+    //}
 
     private void OnTriggerStay2D(Collider2D col)
     {
@@ -37,6 +51,8 @@ public class Circle : MonoBehaviour
     /// </summary>
     void Init()
     {
+
+
         circumference = 0;
         radius = 0;
         //円の長さを計算する
@@ -50,8 +66,12 @@ public class Circle : MonoBehaviour
         transform.localScale = new Vector3(radius, radius, 1);
 
         GetComponent<Circle>().circumference = circumference;
-        GetComponent<Circle>().HP = 1 - (circumference - 1) * 0.2f;
-
+        
+        //20-12-04 イゴンヒ
+        //GetComponent<Circle>().HP = 1 - (circumference - 1) * 0.2f;
+        //GetComponent<Circle>().HP = circumference * 0.02f;
+        GetComponent<Circle>().HP = radius * 0.2f;
+        TempHP = HP;
 
         if (HP < 0) HP=0.1f;
     }
@@ -64,7 +84,7 @@ public class Circle : MonoBehaviour
             HP -= 0.2f;
         }
 
-        InkAmout.increase_Gauge(0.1f);
+        InkAmout.increase_Gauge(TempHP);
         Destroy(gameObject);
     }
 }

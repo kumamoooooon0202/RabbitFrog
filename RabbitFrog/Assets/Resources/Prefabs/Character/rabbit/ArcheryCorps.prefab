@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 498814580006076787}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 6708796005493590978}
   m_Father: {fileID: 0}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "\u5F13\u8853\u968A"
   image: {fileID: 21300000, guid: 46c00102f4540c8428c847b376867d9e, type: 3}
+  characteristicIcon: {fileID: 21300000, guid: 0df348e3980422f4c8cc93835f9017c8, type: 3}
   hp: 15
   power: 5
   myCharacteristic: 0
@@ -107,7 +108,7 @@ MonoBehaviour:
   summonVol: 3
   cost: 3
   myAttackMethod: 2
-  attackRange: 2.35
+  attackRange: 2.5
   attackInterval: 1.75
   characterAnim: {fileID: 0}
   attackTrigger: AttackTrigger
@@ -136,7 +137,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2.35}
+  m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
 --- !u!50 &4445382284601848674
 Rigidbody2D:
@@ -186,14 +187,14 @@ RectTransform:
   m_GameObject: {fileID: 4293250583931297404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.0001}
+  m_LocalScale: {x: 0.015, y: 0.015, z: 0}
   m_Children: []
   m_Father: {fileID: 6708796005493590978}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1.2}
+  m_AnchoredPosition: {x: 0, y: -2}
   m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5666050778180270591
@@ -223,7 +224,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: fbef1f41da85a084aad73cbf781c204f, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0

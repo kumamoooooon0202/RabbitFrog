@@ -9,8 +9,8 @@ public class InkMode : MonoBehaviour
     [SerializeField]
     Image image;
 
-    RectTransform Set_rt;
-    Vector3 rt_temp;
+
+    //private bool Lnow = false;
 
     //[SerializeField]
     //float Width;
@@ -19,8 +19,6 @@ public class InkMode : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Set_rt = GetComponent<RectTransform>();
-        rt_temp = Set_rt.localScale;
         //rend = GetComponent<Renderer>();
         //image.material.shader = Shader.Find("Unlit/OutLine");
     }
@@ -28,19 +26,33 @@ public class InkMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 水墨モードON
         if (LineController.is_inkMode)
         {
+            
             //image.material.SetFloat("_Width", Width);
-            image.color = new Color(image.color.r, image.color.g, image.color.b, 0.6f);
-            rt_temp.y = 1.8f;
-            Set_rt.localScale = rt_temp;
+            image.color = new Color(image.color.r, image.color.g, image.color.b, 1.0f);
+            //Lnow = true;
+            InkAmout.ImageOpen();
         }
+        // 水墨モードOFF
         if (!LineController.is_inkMode)
         {
+            
             //image.material.SetFloat("_Width", 0);
-            image.color = new Color(image.color.r, image.color.g, image.color.b, 1.0f);
-            rt_temp.y = 2f;
-            Set_rt.localScale = rt_temp;
+            image.color = new Color(image.color.r, image.color.g, image.color.b, 0.6f);
+            //Lnow = false;
+            //if (Input.GetMouseButtonDown(0))    // クリックした瞬間
+            //{
+            //    rt_temp.y = 1.8f;   // サイズが小さくなる
+            //}
+            //if (Input.GetMouseButtonUp(0))      // 離した瞬間
+            //{
+            //    rt_temp.y = 2f;     // サイズが大きくなる
+            //}
+
+            InkAmout.ImageClose();
+
         }
         //rend.material.SetFloat("_Shininess", shininess);
 
