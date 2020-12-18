@@ -46,6 +46,8 @@ public class EndGame : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0)) { Clear_img(); }
+        Debug.Log(confirmcanvas_battle.enabled + " / " + endGameCanvas.rootCanvas.enabled);
         //負けたら
         if (Rabbit_Tower.IsDeath && !is_Click)
         {
