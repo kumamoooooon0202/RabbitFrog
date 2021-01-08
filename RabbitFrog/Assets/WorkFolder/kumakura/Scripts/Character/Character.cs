@@ -168,7 +168,7 @@ public class Character : CharacterBase
         //if (myCharacteristic == characteristic.explosion) { explosionFlag = true;}
 
         // ここで死亡アニメーションの再生
-
+        if (characterAnim != null) { characterAnim.SetTrigger(isDeath); }
         IsDeath = true;
         gameObject.SetActive(false);
 
