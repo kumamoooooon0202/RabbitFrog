@@ -68,6 +68,11 @@ public class OptionController : MonoBehaviour
             is_organ_Open = true;
             stageSelect_Canvas_raycaster.enabled = false;
             organization_Canvas_raycaster.enabled = true;
+            
+            organizationCanvas.sortingOrder = 1;
+            stageSelectCanvas.sortingOrder = 0;
+            //StartCoroutine(organizationMask.Open(stageSelectMask, organization));
+
             StartCoroutine(organizationMask.Close_Open(stageSelectMask, organization, stageSelect));//ステージ選択画面を閉じて編成画面を開く
 
             is_stage_Open = false;
@@ -109,6 +114,11 @@ public class OptionController : MonoBehaviour
             is_stage_Open = true;
             organization_Canvas_raycaster.enabled = false;
             stageSelect_Canvas_raycaster.enabled = true;
+
+            stageSelectCanvas.sortingOrder = 1;
+            organizationCanvas.sortingOrder = 0;
+            StartCoroutine(organizationMask.Open(organization));
+
             StartCoroutine(stageSelectMask.Close_Open(organizationMask, stageSelect, organization));
 
             is_organ_Open = false;
