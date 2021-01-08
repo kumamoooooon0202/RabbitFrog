@@ -2643,6 +2643,7 @@ MonoBehaviour:
   organization: {fileID: 0}
   stageSelectMask: {fileID: 0}
   stageSelect: {fileID: 0}
+  makimono: {fileID: 0}
 --- !u!4 &882966384
 Transform:
   m_ObjectHideFlags: 0
@@ -2772,6 +2773,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect_sketch: {fileID: 267159121}
+  yesSE: {fileID: 0}
+  noSE: {fileID: 0}
 --- !u!1001 &891138191
 PrefabInstance:
   m_ObjectHideFlags: 0
