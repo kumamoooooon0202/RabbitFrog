@@ -21,8 +21,6 @@ public class ScenarioTextControl : MonoBehaviour
     [SerializeField]
     Sprite[] CharImage;
 
-    Image[] CharPosTemp = new Image[2];
-
     //--------------------------------------------------
     // キャラの描画順を変える
     [SerializeField] private Canvas[] sortingGroup;
@@ -55,7 +53,8 @@ public class ScenarioTextControl : MonoBehaviour
 
     void Awake()
     {
-        CSVReader("story_01", TextContant, Character_Name, Character_num);
+        scenarioInit();
+        //CSVReader("story_01", TextContant, Character_Name, Character_num);
     }
 
     void Start()
@@ -69,7 +68,8 @@ public class ScenarioTextControl : MonoBehaviour
         if (currentLine == TextContant.Count && Input.GetMouseButtonDown(0) && !effect_Sketch.Scene_changing)
         {
             effect_Sketch.Scene_changing = true;
-            StartCoroutine(effect_Sketch.NextScene("OptionScene"));
+            //StartCoroutine(effect_Sketch.NextScene("OptionScene"));
+            StartCoroutine(effect_Sketch.NextScene(SceneNameControll()));
         }
 
         if (IsCompleteDisplayText)
@@ -99,6 +99,19 @@ public class ScenarioTextControl : MonoBehaviour
             uiText.text = currentText.Substring(0, displayCharacterCount);
             lastUpdateCharacter = displayCharacterCount;
         }
+    }
+
+    private void charImgInit()
+    {
+        int num = int.Parse(Character_num[currentLine]);
+        switch (num)
+        {
+            case 0:
+                break;
+            default:
+                break;
+        }
+
     }
 
     private void SetNextLine()
@@ -152,6 +165,33 @@ public class ScenarioTextControl : MonoBehaviour
     }
 
     //=========================================================イゴンヒ
+    //=========================================================
+    /// <summary>
+    /// 
+    /// </summary>
+    void scenarioInit()
+    {
+        //CSVReader("story_01", TextContant, Character_Name, Character_num);
+        if (SaveData.StageClear[3])
+        {
+            CSVReader("story_04", TextContant, Character_Name, Character_num);
+        }
+
+        else if (SaveData.StageClear[2])
+        {
+            CSVReader("story_03", TextContant, Character_Name, Character_num);
+        }
+
+        else if (SaveData.StageClear[1])
+        {
+            CSVReader("story_02", TextContant, Character_Name, Character_num);
+        }
+
+        else if (SaveData.StageClear[0])
+        {
+            CSVReader("story_01", TextContant, Character_Name, Character_num);
+        }
+    }
     /// <summary>
     /// CSV FIle読み込む
     /// </summary>
@@ -184,5 +224,44 @@ public class ScenarioTextControl : MonoBehaviour
         text.RemoveAt(0);
         Name.RemoveAt(0);
         num.RemoveAt(0);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    string SceneNameControll()
+    {
+        string name = "OptionScene";
+        if (SaveData.StageClear[3])
+        {
+            name = "BattleBoss";
+        }
+
+        else if(SaveData.StageClear[2])
+        {
+            name = "BattleThird";
+        }
+
+        else if (SaveData.StageClear[1])
+        {
+            name = "BattleSecond";
+        }
+
+        else if (SaveData.StageClear[0])
+        {
+            name = "OptionScene";
+        }
+        return name;
+    }
+
+
+    //==================================================
+    //==================================================
+    public void skipButton()
+    {
+        effect_Sketch.Scene_changing = true;
+        //StartCoroutine(effect_Sketch.NextScene("OptionScene"));
+        StartCoroutine(effect_Sketch.NextScene(SceneNameControll()));
     }
 }

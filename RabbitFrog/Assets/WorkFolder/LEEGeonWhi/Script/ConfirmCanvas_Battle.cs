@@ -73,7 +73,8 @@ public class ConfirmCanvas_Battle : MonoBehaviour
     }
     public void NextStage()
     {
-        StartCoroutine(effect_Sketch.NextScene(NextSceneName()));
+        //StartCoroutine(effect_Sketch.NextScene(NextSceneName()));
+        StartCoroutine(effect_Sketch.NextScene("ScenarioScene"));
         GetComponent<GraphicRaycaster>().enabled = false;
     }
 
