@@ -119,7 +119,7 @@ public class ConfirmCanvas_Battle : MonoBehaviour
                 SaveData.StageClear[3] = true;
                 break;
             case "BattleBoss":
-                //SaveData.StageClear[3] = true;
+                SaveData.StageClear[4] = true;
                 break;
             default:
                 break;

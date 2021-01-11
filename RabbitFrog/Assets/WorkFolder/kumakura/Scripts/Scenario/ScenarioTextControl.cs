@@ -21,6 +21,9 @@ public class ScenarioTextControl : MonoBehaviour
     [SerializeField]
     Sprite[] CharImage;
 
+
+    string NedtSceneName = "OptionScene";
+
     //--------------------------------------------------
     // キャラの描画順を変える
     [SerializeField] private Canvas[] sortingGroup;
@@ -51,9 +54,13 @@ public class ScenarioTextControl : MonoBehaviour
     private List<string> Character_Name = new List<string>();
     private List<string> Character_num = new List<string>();
 
+    public List<string> Character_IMG = new List<string>();
+    public List<string> Character_IMG_Position = new List<string>();
+
+
     void Awake()
     {
-        scenarioInit();
+        SceneDataInit();
         //CSVReader("story_01", TextContant, Character_Name, Character_num);
     }
 
@@ -69,7 +76,7 @@ public class ScenarioTextControl : MonoBehaviour
         {
             effect_Sketch.Scene_changing = true;
             //StartCoroutine(effect_Sketch.NextScene("OptionScene"));
-            StartCoroutine(effect_Sketch.NextScene(SceneNameControll()));
+            StartCoroutine(effect_Sketch.NextScene(NedtSceneName));
         }
 
         if (IsCompleteDisplayText)
@@ -103,15 +110,14 @@ public class ScenarioTextControl : MonoBehaviour
 
     private void charImgInit()
     {
-        int num = int.Parse(Character_num[currentLine]);
-        switch (num)
-        {
-            case 0:
-                break;
-            default:
-                break;
-        }
-
+        //int num = int.Parse(Character_num[currentLine]);
+        //switch (num)
+        //{
+        //    case 0:
+        //        break;
+        //    default:
+        //        break;
+        //}
     }
 
     private void SetNextLine()
@@ -127,6 +133,7 @@ public class ScenarioTextControl : MonoBehaviour
         {
             CharPos[i].color = new Color(0.5f, 0.5f, 0.5f,1.0f);
             sortingGroup[i].sortingOrder = 1;
+
         }
 
         switch (name)
@@ -169,27 +176,39 @@ public class ScenarioTextControl : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    void scenarioInit()
+    void SceneDataInit()
     {
         //CSVReader("story_01", TextContant, Character_Name, Character_num);
-        if (SaveData.StageClear[3])
+        if (SaveData.StageClear[4])
         {
+            NedtSceneName = "ClearScene";
+            CSVReader("clear", TextContant, Character_Name, Character_num);
+        }
+
+        else if (SaveData.StageClear[3])
+        {
+            NedtSceneName = "BattleBoss";
             CSVReader("story_04", TextContant, Character_Name, Character_num);
         }
 
         else if (SaveData.StageClear[2])
         {
+            NedtSceneName = "BattleThird";
+
             CSVReader("story_03", TextContant, Character_Name, Character_num);
         }
 
         else if (SaveData.StageClear[1])
         {
+            NedtSceneName = "BattleSecond";
             CSVReader("story_02", TextContant, Character_Name, Character_num);
         }
 
         else if (SaveData.StageClear[0])
         {
+            NedtSceneName = "OptionScene";
             CSVReader("story_01", TextContant, Character_Name, Character_num);
+            //CSVReader("stroy/story_01(ver2)", TextContant, Character_Name, Character_num);
         }
     }
     /// <summary>
@@ -212,6 +231,17 @@ public class ScenarioTextControl : MonoBehaviour
         string[] text_split;
         line = sr.ReadLine();
 
+        //for(int i = 0; i < 4; i++)
+        //{
+        //    text_split = line.Split(',');
+        //    Character_IMG_Position.Add(text_split[0]); //char, null, position_num
+        //    Character_IMG.Add(text_split[2]);          //0   ,     , 2
+        //    line = sr.ReadLine();
+        //}
+
+        //Character_IMG_Position.RemoveAt(0);
+        //Character_IMG.RemoveAt(0);
+
         while (line != null)
         {
             text_split = line.Split(',');
@@ -230,30 +260,30 @@ public class ScenarioTextControl : MonoBehaviour
     /// 
     /// </summary>
     /// <returns></returns>
-    string SceneNameControll()
-    {
-        string name = "OptionScene";
-        if (SaveData.StageClear[3])
-        {
-            name = "BattleBoss";
-        }
+    //string SceneNameControll()
+    //{
+    //    string name = "OptionScene";
+    //    if (SaveData.StageClear[3])
+    //    {
+    //        name = "BattleBoss";
+    //    }
 
-        else if(SaveData.StageClear[2])
-        {
-            name = "BattleThird";
-        }
+    //    else if(SaveData.StageClear[2])
+    //    {
+    //        name = "BattleThird";
+    //    }
 
-        else if (SaveData.StageClear[1])
-        {
-            name = "BattleSecond";
-        }
+    //    else if (SaveData.StageClear[1])
+    //    {
+    //        name = "BattleSecond";
+    //    }
 
-        else if (SaveData.StageClear[0])
-        {
-            name = "OptionScene";
-        }
-        return name;
-    }
+    //    else if (SaveData.StageClear[0])
+    //    {
+    //        name = "OptionScene";
+    //    }
+    //    return name;
+    //}
 
 
     //==================================================
@@ -262,6 +292,6 @@ public class ScenarioTextControl : MonoBehaviour
     {
         effect_Sketch.Scene_changing = true;
         //StartCoroutine(effect_Sketch.NextScene("OptionScene"));
-        StartCoroutine(effect_Sketch.NextScene(SceneNameControll()));
+        StartCoroutine(effect_Sketch.NextScene(NedtSceneName));
     }
 }
