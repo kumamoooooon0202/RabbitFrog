@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 3411759370954812878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 570490118797221313}
   m_Father: {fileID: 3635861298629384402}
@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 5485350772410532782}
   - component: {fileID: 2169498541764755444}
   - component: {fileID: 1455260323522643024}
+  - component: {fileID: 212779535201835338}
   m_Layer: 0
   m_Name: Frog_Monster
   m_TagString: Enemy
@@ -128,9 +129,10 @@ Transform:
   m_GameObject: {fileID: 5013091934582245978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 968166258268353593}
+  - {fileID: 2353920540868152533}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -172,7 +174,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 967c7fe7d2a68104cb4cd753428c0dcf, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,7 +182,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 0.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &5485350772410532782
@@ -257,6 +259,25 @@ MonoBehaviour:
   attackInterval: 2.5
   targetFlag: 0
   serchFlag: 0
+--- !u!95 &212779535201835338
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013091934582245978}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf515001389cc844eb11e5b3b321a552, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9030898682553626219
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,3 +357,79 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!1001 &8271555417996847181
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3635861298629384402}
+    m_Modifications:
+    - target: {fileID: -2592072455739268057, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_Name
+      value: frog_monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 5714301501338096972, guid: 8f3e14634b0771a4193ab5db6c21a960,
+    type: 3}
+--- !u!4 &2353920540868152533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5935948342878659736, guid: 8f3e14634b0771a4193ab5db6c21a960,
+    type: 3}
+  m_PrefabInstance: {fileID: 8271555417996847181}
+  m_PrefabAsset: {fileID: 0}

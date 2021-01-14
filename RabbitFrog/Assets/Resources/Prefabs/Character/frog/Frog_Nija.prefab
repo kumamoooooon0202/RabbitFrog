@@ -28,7 +28,7 @@ RectTransform:
   m_GameObject: {fileID: 5870635391235526758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 58813150541651259}
   m_Father: {fileID: 6010644063425982225}
@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 920090502939021214}
   - component: {fileID: 6759540461492308208}
   - component: {fileID: 1156033582981680902}
+  - component: {fileID: 2790282687148003706}
   m_Layer: 0
   m_Name: Frog_Nija
   m_TagString: Enemy
@@ -128,9 +129,10 @@ Transform:
   m_GameObject: {fileID: 5915686008672964401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: -0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 3834090092262433749}
+  - {fileID: 4374794306037551809}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -172,7 +174,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 61534128f95932d4faf70b491e44ec94, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,7 +182,7 @@ SpriteRenderer:
   m_Size: {x: 0.72, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &920090502939021214
@@ -257,6 +259,25 @@ MonoBehaviour:
   attackInterval: 1.5
   targetFlag: 0
   serchFlag: 0
+--- !u!95 &2790282687148003706
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5915686008672964401}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 155b34477371b9449ab1e72b9b7563de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6349998189466856249
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,3 +357,79 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!1001 &5878395231999152438
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6010644063425982225}
+    m_Modifications:
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -92461257068160252, guid: 4127767b2c2a96b458855ae8e616833f,
+        type: 3}
+      propertyPath: m_Name
+      value: frog_ninja
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 4531526752889706177, guid: 4127767b2c2a96b458855ae8e616833f,
+    type: 3}
+--- !u!4 &4374794306037551809 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5878395231999152438}
+  m_PrefabAsset: {fileID: 0}

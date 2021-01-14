@@ -453,12 +453,12 @@ PrefabInstance:
     - target: {fileID: -6650665047608806623, guid: e8820a978f23994458f6e2b8e9ca6d79,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.031
       objectReference: {fileID: 0}
     - target: {fileID: -6650665047608806623, guid: e8820a978f23994458f6e2b8e9ca6d79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.169
       objectReference: {fileID: 0}
     - target: {fileID: -6650665047608806623, guid: e8820a978f23994458f6e2b8e9ca6d79,
         type: 3}
@@ -509,6 +509,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: baozha
+      objectReference: {fileID: 0}
+    - target: {fileID: 7965368647756386029, guid: e8820a978f23994458f6e2b8e9ca6d79,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -3812261313258990760, guid: e8820a978f23994458f6e2b8e9ca6d79,

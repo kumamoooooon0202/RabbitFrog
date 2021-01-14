@@ -373,15 +373,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: texiao
       objectReference: {fileID: 0}
-    - target: {fileID: 7888732695670381064, guid: 5c06c9af85faef64887ca6914b7a69e4,
+    - target: {fileID: 2124870198589254988, guid: 5c06c9af85faef64887ca6914b7a69e4,
         type: 3}
-      propertyPath: m_LocalPosition.x
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7888732695670381064, guid: 5c06c9af85faef64887ca6914b7a69e4,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888732695670381064, guid: 5c06c9af85faef64887ca6914b7a69e4,
+        type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 7888732695670381064, guid: 5c06c9af85faef64887ca6914b7a69e4,
         type: 3}
@@ -448,6 +453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: thundergod_00
+      objectReference: {fileID: 0}
+    - target: {fileID: -3428279464185171912, guid: 0d236aea5565d1f498821ea56857b8e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7949445213383368588, guid: 0d236aea5565d1f498821ea56857b8e9,
         type: 3}

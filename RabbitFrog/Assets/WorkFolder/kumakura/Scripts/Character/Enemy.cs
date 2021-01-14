@@ -19,6 +19,12 @@ public class Enemy : CharacterBase
 
     private int maxHp;
 
+    // Animation変数
+    public Animator characterAnim;
+    public string attackTrigger = "AttackTrigger";
+    public string isMove = "IsMove";
+    public string isDeath = "IsDeath";
+
     public enum AttackMethod
     {
         shortDistance,
@@ -28,6 +34,10 @@ public class Enemy : CharacterBase
 
     void Awake()
     {
+        if (GetComponent<Animator>() != null)
+        {
+            characterAnim = GetComponent<Animator>();
+        }
         maxHp = hp;
     }
 
@@ -52,6 +62,7 @@ public class Enemy : CharacterBase
         else
         {
             transform.Translate(speed, 0f, 0f);
+            if (characterAnim != null) { characterAnim.SetBool(isMove, true); }
         }
     }
 
@@ -61,6 +72,7 @@ public class Enemy : CharacterBase
         if (serchFlag&& time > attackInterval)
         {
             Debug.Log("攻撃");
+            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
             switch (targetCharacter.myCharacteristic)
             {
                 // 敵の特徴 : 無し
@@ -109,6 +121,7 @@ public class Enemy : CharacterBase
 
     public override void Death()
     {
+        if (characterAnim != null) { characterAnim.SetTrigger(isDeath); }
         IsDeath = true;
         gameObject.SetActive(false);
     }
