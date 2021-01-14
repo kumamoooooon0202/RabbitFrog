@@ -73,7 +73,8 @@ public class ConfirmCanvas_Battle : MonoBehaviour
     }
     public void NextStage()
     {
-        StartCoroutine(effect_Sketch.NextScene(NextSceneName()));
+        //StartCoroutine(effect_Sketch.NextScene(NextSceneName()));
+        StartCoroutine(effect_Sketch.NextScene("ScenarioScene"));
         GetComponent<GraphicRaycaster>().enabled = false;
     }
 
@@ -118,7 +119,7 @@ public class ConfirmCanvas_Battle : MonoBehaviour
                 SaveData.StageClear[3] = true;
                 break;
             case "BattleBoss":
-                //SaveData.StageClear[3] = true;
+                SaveData.StageClear[4] = true;
                 break;
             default:
                 break;

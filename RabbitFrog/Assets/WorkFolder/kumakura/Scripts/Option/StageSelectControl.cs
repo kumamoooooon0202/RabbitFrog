@@ -52,7 +52,15 @@ public class StageSelectControl : MonoBehaviour
         //if (DeckCheck()) GameSceneManager.LoadBattleSecondScene();
         if (DeckCheck() && !effect_Sketch.Scene_changing && SaveData.StageClear[1])
         {
-            NextScene = "BattleSecond";
+            if (SaveData.StageClear[2] == false)
+            {
+                NextScene = "ScenarioSceneq";
+            }
+
+            else
+            {
+                NextScene = "BattleSecond";
+            }
             confirmCanvas.rootCanvas.enabled = !confirmCanvas.rootCanvas.enabled;
         }
     }
@@ -62,9 +70,16 @@ public class StageSelectControl : MonoBehaviour
         //if (DeckCheck()) GameSceneManager.LoadBattleThirdScene();
         if (DeckCheck() && !effect_Sketch.Scene_changing && SaveData.StageClear[2])
         {
-            NextScene = "BattleThird";
-            confirmCanvas.rootCanvas.enabled = !confirmCanvas.rootCanvas.enabled;
+            if(SaveData.StageClear[3] == false)
+            {
+                NextScene = "ScenarioScene";
+            }
 
+            else
+            {
+                NextScene = "BattleThird";
+            }
+            confirmCanvas.rootCanvas.enabled = !confirmCanvas.rootCanvas.enabled;
         }
     }
 
@@ -73,7 +88,15 @@ public class StageSelectControl : MonoBehaviour
         //if (DeckCheck()) GameSceneManager.LoadBattleBossScene();
         if (DeckCheck() && !effect_Sketch.Scene_changing && SaveData.StageClear[3])
         {
-            NextScene = "BattleBoss";
+            if (SaveData.StageClear[4] == false)
+            {
+                NextScene = "ScenarioScene";
+            }
+            else
+            {
+                NextScene = "BattleBoss";
+            }
+
             confirmCanvas.rootCanvas.enabled = !confirmCanvas.rootCanvas.enabled;
         }
     }
