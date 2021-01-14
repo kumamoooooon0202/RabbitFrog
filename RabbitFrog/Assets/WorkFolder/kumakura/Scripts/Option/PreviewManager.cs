@@ -11,6 +11,7 @@ public class PreviewManager : MonoBehaviour
     public Text explanationText;
     public Text costText;
     public Image characterImage;
+    public Image iconImage;
     public CharacterDeta data;
 
     public bool isPreview = false;

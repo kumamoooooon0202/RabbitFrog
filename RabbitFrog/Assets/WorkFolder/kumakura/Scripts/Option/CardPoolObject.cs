@@ -66,6 +66,7 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
         preMana.nameText.text = cardInfo.character.characterName;
         preMana.costText.text = cardInfo.character.cost.ToString();
         preMana.characterImage.sprite = cardInfo.character.image;
+        preMana.iconImage.sprite = cardInfo.character.characteristicIcon; ;
         preMana.explanationText.text = preMana.data.GetExplanation((int)cardInfo.character.myCardType);
     }
 
