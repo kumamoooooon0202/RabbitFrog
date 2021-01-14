@@ -30,6 +30,9 @@ public class Character : CharacterBase
     public string isMove = "IsMove";
     public string isDeath = "IsDeath";
 
+    private AudioSource audio;
+    [SerializeField] private AudioClip attackSE;
+
     public enum AttackMethod
     {
         shortDistance,
@@ -42,6 +45,10 @@ public class Character : CharacterBase
         if (GetComponent<Animator>() != null)
         {
             characterAnim = GetComponent<Animator>();
+        }
+        if (GetComponent<AudioSource>() != null)
+        {
+            audio = GetComponent<AudioSource>();
         }
         maxHp = hp;
     }
@@ -112,6 +119,7 @@ public class Character : CharacterBase
         {
             Debug.Log("攻撃");
             if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
+            if (attackSE != null) { audio.PlayOneShot(attackSE); }
             switch (targetEnemy.myCharacteristic)
             {
                 // 敵の特徴 : 無し

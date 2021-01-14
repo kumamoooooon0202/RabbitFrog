@@ -19,6 +19,9 @@ public class HandObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
 
     [SerializeField] private PreviewManager preMana;
 
+    [SerializeField] private AudioClip dragSE;
+    [SerializeField] private AudioSource audioSource;
+
     void Awake()
     {
         parentObject = transform.parent;
@@ -29,6 +32,7 @@ public class HandObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     {
         CreateCharacterObject();
         dragObject.transform.position = GetMousePosition();
+        audioSource.PlayOneShot(dragSE);
     }
 
     public void OnDrag(PointerEventData pointerEventData)

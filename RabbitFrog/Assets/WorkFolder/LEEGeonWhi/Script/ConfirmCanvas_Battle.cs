@@ -26,6 +26,9 @@ public class ConfirmCanvas_Battle : MonoBehaviour
 
     private bool is_Click = false;
 
+    [SerializeField] private AudioSource audio;
+    [SerializeField] private AudioClip tapSE;
+
     void Start()
     {
         confirmcanvas_battle.rootCanvas.enabled = false;
@@ -63,16 +66,19 @@ public class ConfirmCanvas_Battle : MonoBehaviour
     ///========================================================
     public void MoveTitle()
     {
+        audio.PlayOneShot(tapSE);
         StartCoroutine(effect_Sketch.NextScene("TitleScene"));
         GetComponent<GraphicRaycaster>().enabled = false;
     }
     public void MoveOption()
     {
+        audio.PlayOneShot(tapSE);
         StartCoroutine(effect_Sketch.NextScene("OptionScene"));
         GetComponent<GraphicRaycaster>().enabled = false;
     }
     public void NextStage()
     {
+        audio.PlayOneShot(tapSE);
         //StartCoroutine(effect_Sketch.NextScene(NextSceneName()));
         StartCoroutine(effect_Sketch.NextScene("ScenarioScene"));
         GetComponent<GraphicRaycaster>().enabled = false;
