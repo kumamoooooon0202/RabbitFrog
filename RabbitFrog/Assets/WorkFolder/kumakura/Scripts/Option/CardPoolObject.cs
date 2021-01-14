@@ -14,6 +14,11 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     public Image characterIconImage = null;
     public Text costText = null;
 
+    //------------------------------------------------------------
+    [SerializeField] AudioClip dragSE;
+    AudioSource audioSource;
+    //------------------------------------------------------------
+
     void Awake()
     {
         GetComponent<Image>().sprite = character.image;
@@ -23,6 +28,10 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
 
         characterIconImage.sprite = character.characteristicIcon;
         costText.text = character.cost.ToString(); ;
+
+        //------------------------------------------------------------
+        audioSource = GetComponent<AudioSource>();
+        //------------------------------------------------------------
     }
 
     /// <summary>
@@ -33,6 +42,7 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     {
         CreateDragObject();
         dragObject.transform.position = GetMousePosition();
+        audioSource.PlayOneShot(dragSE);
     }
 
     /// <summary>

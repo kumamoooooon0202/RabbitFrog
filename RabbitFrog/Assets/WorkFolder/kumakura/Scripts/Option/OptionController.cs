@@ -25,6 +25,11 @@ public class OptionController : MonoBehaviour
     private bool is_organ_Open; // 編成画面が開いだ状態 確認
     private bool is_stage_Open; // ステージ選択画面が開いだ状態 確認
 
+    //------------------------------------------------------------
+    [SerializeField] AudioClip makimono;
+    AudioSource audioSouce;
+    //------------------------------------------------------------
+
     void Start()
     {
         //organizationCanvas.enabled = false;
@@ -49,6 +54,11 @@ public class OptionController : MonoBehaviour
         is_organ_Open = false;
         is_stage_Open = false;
         //============================================================
+
+        //21/01/08 田中
+        //------------------------------------------------------------
+        audioSouce = GetComponent<AudioSource>();
+        //------------------------------------------------------------
     }
 
     //================================
@@ -76,6 +86,10 @@ public class OptionController : MonoBehaviour
             StartCoroutine(organizationMask.Close_Open(stageSelectMask, organization, stageSelect));//ステージ選択画面を閉じて編成画面を開く
 
             is_stage_Open = false;
+            
+            //------------------------------------------------------------
+            audioSouce.PlayOneShot(makimono);
+            //------------------------------------------------------------
         }
         //ステージ選択画面が閉じた状態ならステージ選択画面を開く
         else if (is_organ_Open == false)
@@ -84,6 +98,10 @@ public class OptionController : MonoBehaviour
             stageSelect_Canvas_raycaster.enabled = false;
             organization_Canvas_raycaster.enabled = true;
             StartCoroutine(organizationMask.Open(organization));
+            
+            //------------------------------------------------------------
+            audioSouce.PlayOneShot(makimono);
+            //------------------------------------------------------------
         }
 
         //ステージ選択画面が開いた状態ならステージ選択画面を閉じる
@@ -93,6 +111,10 @@ public class OptionController : MonoBehaviour
             stageSelect_Canvas_raycaster.enabled = false;
             organization_Canvas_raycaster.enabled = true;
             StartCoroutine(organizationMask.Close(organization));
+            
+            //------------------------------------------------------------
+            audioSouce.PlayOneShot(makimono);
+            //------------------------------------------------------------
         }
 
         //================================
@@ -122,6 +144,10 @@ public class OptionController : MonoBehaviour
             StartCoroutine(stageSelectMask.Close_Open(organizationMask, stageSelect, organization));
 
             is_organ_Open = false;
+            
+            //------------------------------------------------------------
+            audioSouce.PlayOneShot(makimono);
+            //------------------------------------------------------------
         }
 
         else if (is_stage_Open == false)
@@ -130,6 +156,10 @@ public class OptionController : MonoBehaviour
             organization_Canvas_raycaster.enabled = false;
             stageSelect_Canvas_raycaster.enabled = true;
             StartCoroutine(stageSelectMask.Open(stageSelect));
+            
+            //------------------------------------------------------------
+            audioSouce.PlayOneShot(makimono);
+            //------------------------------------------------------------
         }
 
         else if (is_stage_Open == true)
@@ -139,6 +169,10 @@ public class OptionController : MonoBehaviour
             stageSelect_Canvas_raycaster.enabled = false;
 
             StartCoroutine(stageSelectMask.Close(stageSelect));
+            
+            //------------------------------------------------------------
+            audioSouce.PlayOneShot(makimono);
+            //------------------------------------------------------------
         }
         //================================
     }
