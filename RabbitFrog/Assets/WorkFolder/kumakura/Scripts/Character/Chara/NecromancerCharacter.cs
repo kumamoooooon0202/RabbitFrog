@@ -33,7 +33,7 @@ public class NecromancerCharacter : Character
         CharacterMove(moveSpeed);
         summonTime += Time.deltaTime;
         //ghostCount追加　イゴンヒ
-        if (ghostSummonInterval < summonTime && ghostCount <= 10)
+        if (ghostSummonInterval < summonTime && ghostCount <= 10 && !battlecontroller.isGameSet)
         {
             summonTime = 0;
             SummonGhost(transform.position);

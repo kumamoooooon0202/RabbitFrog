@@ -19,6 +19,22 @@ public class BattleController : MonoBehaviour
 
     public bool is_Time_out = false;
 
+    // バトルが終了しているかどうか
+    public bool isGameSet
+    {
+        get
+        {
+            if (gameTime <= 0 || enemyTower.hp <= 0 || rabbitTower.hp <= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+
     public float SummonGageVal
     {
         get { return summonGageVal; }
@@ -37,6 +53,7 @@ public class BattleController : MonoBehaviour
         // 時間処理
         if (gameTime <= 0 || enemyTower.hp <= 0 || rabbitTower.hp <= 0)
         {
+            enemyManager.enabled = false;
             //イゴンヒ（20201030）
             if (gameTime <= 0)
             {
@@ -63,7 +80,6 @@ public class BattleController : MonoBehaviour
                     chara.GetComponent<Animator>().SetBool(chara.GetComponent<Character>().isMove, false);
                 }
             }
-            enemyManager.enabled = false;
             return;
         }
         gameTime -= Time.deltaTime;
