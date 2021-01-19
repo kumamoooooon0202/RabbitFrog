@@ -723,11 +723,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac2f77b1d70dee40aaf17df1c0bcbd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deckSetImage:
+  deckImage: {fileID: 0}
+  deckSetImages:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  deck:
+  - {fileID: 0}
+  decks:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -3098,12 +3100,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2461835750074400444, guid: 08c5eacafd006fe4e9adce728f759599,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 882db77f3887e3a4595ec689496d201c,
-        type: 3}
     - target: {fileID: 2461835750074400445, guid: 08c5eacafd006fe4e9adce728f759599,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
