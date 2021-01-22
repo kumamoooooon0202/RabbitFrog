@@ -216,6 +216,7 @@ MonoBehaviour:
   attackTrigger: AttackTrigger
   isMove: IsMove
   isDeath: IsDeath
+  attackSE: {fileID: 0}
 --- !u!61 &3527963435847059095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -361,6 +362,20 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!114 &1931811935910312983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3475593032667748061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088099c77ebebd04f8b70200f8ebf11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent_script: {fileID: 0}
+  sp: []
 --- !u!1001 &7207507031992188397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,6 +522,12 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 1350508413089990301, guid: 0859b66def3b1fa45be16ffd3003cbe4,
     type: 3}
+--- !u!1 &3475593032667748061 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4243644405770574173, guid: 0859b66def3b1fa45be16ffd3003cbe4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8439818919325429886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8643964942628731316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 204292310393145802, guid: 0859b66def3b1fa45be16ffd3003cbe4,

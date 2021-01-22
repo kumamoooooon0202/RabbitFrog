@@ -33,7 +33,8 @@ public class Char_Color_change : MonoBehaviour
         {
             for (int i = 0; i < sp.Length; i++)
             {
-                sp[i].color = new Color(0.5803922f, 0.172549f, 0.1176471f, 1);
+                Color color = new Color(0.5803922f, 0.3805103f, 0.3805103f, 0.0f);
+                sp[i].color = color;
             }
             colorChanged = true;
         }
