@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
+
 
 
 //namespace UnityEngine { }
@@ -14,6 +14,7 @@ public class optionCharCon : MonoBehaviour
     [SerializeField]
     public Image randomImage;
     [SerializeField] private Sprite[] images = new Sprite[3];
+    public bool hf = true;
     private void Start()
     {
         Debug.Log(SceneManager.GetActiveScene().name);
@@ -26,13 +27,19 @@ public class optionCharCon : MonoBehaviour
     {
         if (scene == "OptionScene 1")
         {
-            int num = UnityEngine.Random.Range(0, images.Length);
+            int num = Random.Range(0, images.Length);
             randomImage.sprite = images[num];
-        }  
+        } 
+        //else if(hf == true)
+        //{
+            
+        //}
+        //else
+        //{
+
+        //}
      
     }
-
-    
 
 
 
