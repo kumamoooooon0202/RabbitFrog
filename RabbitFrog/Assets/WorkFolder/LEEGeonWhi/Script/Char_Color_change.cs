@@ -17,8 +17,8 @@ public class Char_Color_change : MonoBehaviour
     void Start()
     {
         Parent_script = transform.parent.gameObject.GetComponent<Character>();
-        sp = new SpriteRenderer[transform.GetChildCount() - 1];
-        for (int i = 0; i < transform.GetChildCount() - 1; i++)
+        sp = new SpriteRenderer[transform.childCount - 1];
+        for (int i = 0; i < transform.childCount - 1; i++)
         {
             sp[i] = transform.GetChild(i).GetComponent<SpriteRenderer>();
         }
