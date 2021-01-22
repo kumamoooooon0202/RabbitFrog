@@ -99,6 +99,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4352478961549223848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3396773685395163698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088099c77ebebd04f8b70200f8ebf11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent_script: {fileID: 0}
+  sp: []
 --- !u!1 &5915686008672964401
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +273,10 @@ MonoBehaviour:
   attackInterval: 1.5
   targetFlag: 0
   serchFlag: 0
+  characterAnim: {fileID: 0}
+  attackTrigger: AttackTrigger
+  isMove: IsMove
+  isDeath: IsDeath
 --- !u!95 &2790282687148003706
 Animator:
   serializedVersion: 3
@@ -427,6 +445,12 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 4531526752889706177, guid: 4127767b2c2a96b458855ae8e616833f,
     type: 3}
+--- !u!1 &3396773685395163698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -92461257068160252, guid: 4127767b2c2a96b458855ae8e616833f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5878395231999152438}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4374794306037551809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1359482976082213897, guid: 4127767b2c2a96b458855ae8e616833f,

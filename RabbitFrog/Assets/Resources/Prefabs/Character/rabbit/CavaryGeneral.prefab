@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Parent_script: {fileID: 0}
-  sp: []
+  sp2: []
 --- !u!1 &5818266423135181039
 GameObject:
   m_ObjectHideFlags: 0
