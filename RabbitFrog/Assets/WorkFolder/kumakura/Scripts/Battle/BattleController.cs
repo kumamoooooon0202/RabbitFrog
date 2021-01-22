@@ -74,10 +74,11 @@ public class BattleController : MonoBehaviour
             foreach (var chara in characterList)
             {
                 chara.GetComponent<CharacterBase>().IsMove = false;
-                
-                if (chara.GetComponent<Animator>() != null)
+                var anim = chara.GetComponent<Animator>();
+                if (anim != null)
                 {
-                    chara.GetComponent<Animator>().SetBool(chara.GetComponent<Character>().isMove, false);
+                    anim.SetBool(chara.GetComponent<Character>().isMove, false);
+                    anim.enabled = false;
                 }
             }
             return;
