@@ -77,7 +77,7 @@ public class BattleController : MonoBehaviour
                 var anim = chara.GetComponent<Animator>();
                 if (anim != null)
                 {
-                    anim.SetBool(chara.GetComponent<Character>().isMove, false);
+                    //anim.SetBool(chara.GetComponent<Character>().isMove, false);
                     anim.enabled = false;
                 }
             }
