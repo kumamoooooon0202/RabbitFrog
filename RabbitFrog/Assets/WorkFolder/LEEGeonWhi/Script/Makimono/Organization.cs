@@ -37,7 +37,7 @@ public class Organization : MonoBehaviour
             rt.sizeDelta = default_Size;
         }
     }
-
+    
     public void Open()
     {
         rt.sizeDelta = Change_Size;

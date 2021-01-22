@@ -37,7 +37,7 @@ public class MaskControl : MonoBehaviour
         //    Close_Target.image.fillAmount -= Time.deltaTime;
         //}
 
-        ObjTarget1.sizeDelta = new Vector2(75, 600);
+        ObjTarget1.sizeDelta = new Vector2(75, 650);
 
         while (image.fillAmount <= 1)
         {
@@ -57,7 +57,7 @@ public class MaskControl : MonoBehaviour
     public IEnumerator Open(RectTransform ObjTarget)
     {
         OptionController.is_runing = true;
-        ObjTarget.sizeDelta = new Vector2(75, 600);
+        ObjTarget.sizeDelta = new Vector2(75, 650);
         while (image.fillAmount <= 1)
         {
             if (image.fillAmount >= 1) break;
