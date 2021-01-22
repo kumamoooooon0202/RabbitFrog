@@ -99,6 +99,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1919206967729382466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7522735947319515595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088099c77ebebd04f8b70200f8ebf11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent_script: {fileID: 0}
+  sp: []
 --- !u!1 &6364739107273175023
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +230,7 @@ MonoBehaviour:
   attackTrigger: AttackTrigger
   isMove: IsMove
   isDeath: IsDeath
+  attackSE: {fileID: 0}
 --- !u!61 &362925956304462999
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -517,6 +532,12 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 1844586251891547475, guid: 0d236aea5565d1f498821ea56857b8e9,
     type: 3}
+--- !u!1 &7522735947319515595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3428279464185171912, guid: 0d236aea5565d1f498821ea56857b8e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 4038160417203382771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6221854606026503807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7949445213383368588, guid: 0d236aea5565d1f498821ea56857b8e9,
