@@ -40,7 +40,7 @@ public class InkMode : MonoBehaviour
         {
             
             //image.material.SetFloat("_Width", 0);
-            image.color = new Color(image.color.r, image.color.g, image.color.b, 0.6f);
+            image.color = new Color(image.color.r, image.color.g, image.color.b, 1.0f);
             //Lnow = false;
             //if (Input.GetMouseButtonDown(0))    // クリックした瞬間
             //{
