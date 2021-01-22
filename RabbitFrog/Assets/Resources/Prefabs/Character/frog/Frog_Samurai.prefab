@@ -400,6 +400,10 @@ MonoBehaviour:
   attackInterval: 1.75
   targetFlag: 0
   serchFlag: 0
+  characterAnim: {fileID: 0}
+  attackTrigger: AttackTrigger
+  isMove: IsMove
+  isDeath: IsDeath
 --- !u!95 &7447899448118465104
 Animator:
   serializedVersion: 3
@@ -578,6 +582,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1739720964177088604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2835915628919464170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088099c77ebebd04f8b70200f8ebf11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent_script: {fileID: 0}
+  sp: []
 --- !u!1 &5327873914345005481
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +754,12 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 4254714368811398842, guid: 59b6b4c95a988a04a99b92d3f00143e3,
     type: 3}
+--- !u!1 &2835915628919464170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1813526515931152974, guid: 59b6b4c95a988a04a99b92d3f00143e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 4723780143218351448}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4726307611004792255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7048660155674855, guid: 59b6b4c95a988a04a99b92d3f00143e3,

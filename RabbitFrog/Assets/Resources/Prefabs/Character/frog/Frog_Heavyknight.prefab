@@ -339,6 +339,10 @@ MonoBehaviour:
   attackInterval: 2.25
   targetFlag: 0
   serchFlag: 0
+  characterAnim: {fileID: 0}
+  attackTrigger: AttackTrigger
+  isMove: IsMove
+  isDeath: IsDeath
 --- !u!95 &6634586006773273053
 Animator:
   serializedVersion: 3
@@ -358,6 +362,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4284694786311520039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7889424291560215438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088099c77ebebd04f8b70200f8ebf11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent_script: {fileID: 0}
+  sp: []
 --- !u!1001 &4860928188967488854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,6 +446,12 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 5078294555797884190, guid: fd24ca0a69f8db8459b0d18c0a53ca3c,
     type: 3}
+--- !u!1 &7889424291560215438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3317360691939106520, guid: fd24ca0a69f8db8459b0d18c0a53ca3c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4860928188967488854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9110474129204408752 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4820087875401253658, guid: fd24ca0a69f8db8459b0d18c0a53ca3c,

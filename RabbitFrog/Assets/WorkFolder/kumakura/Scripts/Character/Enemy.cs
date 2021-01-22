@@ -44,6 +44,10 @@ public class Enemy : CharacterBase
     void FixedUpdate()
     {
         hpText.text = hp.ToString("") + "/" + maxHp.ToString("");
+        if (hp <= maxHp / 3)
+        {
+            hpText.color = new Color(1.0f, 0.0f, 1.0f, 1.0f);
+        }
     }
 
     public void EnemyMove(float speed)
