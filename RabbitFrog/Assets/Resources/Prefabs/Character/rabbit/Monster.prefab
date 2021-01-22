@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u602A\u7269"
-  image: {fileID: 21300000, guid: cbed704ae24c398449c69b4e02c900f1, type: 3}
+  image: {fileID: 21300000, guid: e186fcbdf62b8b148ac1182ec72df215, type: 3}
   characteristicIcon: {fileID: 21300000, guid: 8de732c8ea5b9924e9a88811ab5552ba, type: 3}
   hp: 300
   power: 75
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Parent_script: {fileID: 0}
-  sp: []
+  sp2: []
 --- !u!1001 &8010758997690320482
 PrefabInstance:
   m_ObjectHideFlags: 0

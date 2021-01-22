@@ -237,8 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  image: {fileID: 0}
-  characteristicIcon: {fileID: 0}
+  image: {fileID: 21300000, guid: 15442dd28f0ded34d894697ff7af189b, type: 3}
+  characteristicIcon: {fileID: 21300000, guid: 0df348e3980422f4c8cc93835f9017c8, type: 3}
   hp: 15
   power: 5
   myCharacteristic: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Parent_script: {fileID: 0}
-  sp: []
+  sp2: []
 --- !u!1 &1935571387037943027
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,8 +161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  image: {fileID: 0}
-  characteristicIcon: {fileID: 0}
+  image: {fileID: 21300000, guid: 8d338032e2f83fd45ae929281ae14d03, type: 3}
+  characteristicIcon: {fileID: 21300000, guid: 8de732c8ea5b9924e9a88811ab5552ba, type: 3}
   hp: 200
   power: 55
   myCharacteristic: 5

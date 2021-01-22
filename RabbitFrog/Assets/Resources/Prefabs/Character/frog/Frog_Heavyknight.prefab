@@ -325,8 +325,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  image: {fileID: 0}
-  characteristicIcon: {fileID: 0}
+  image: {fileID: 21300000, guid: ab72029923b03d64d994c43a08323120, type: 3}
+  characteristicIcon: {fileID: 21300000, guid: 7d66c201443c26e49834bd837baed346, type: 3}
   hp: 35
   power: 40
   myCharacteristic: 2
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Parent_script: {fileID: 0}
-  sp: []
+  sp2: []
 --- !u!1001 &4860928188967488854
 PrefabInstance:
   m_ObjectHideFlags: 0

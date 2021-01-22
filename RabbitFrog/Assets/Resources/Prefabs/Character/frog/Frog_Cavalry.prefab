@@ -240,8 +240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: 
-  image: {fileID: 0}
-  characteristicIcon: {fileID: 0}
+  image: {fileID: 21300000, guid: 895b6cf80ebe0904f8a04aba824fae6b, type: 3}
+  characteristicIcon: {fileID: 21300000, guid: 99dfe1d8350b0d34f96444a757bf8cd2, type: 3}
   hp: 135
   power: 15
   myCharacteristic: 0

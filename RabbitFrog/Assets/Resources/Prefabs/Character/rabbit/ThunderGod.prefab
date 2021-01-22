@@ -99,20 +99,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1919206967729382466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7522735947319515595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 088099c77ebebd04f8b70200f8ebf11a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Parent_script: {fileID: 0}
-  sp: []
 --- !u!1 &6364739107273175023
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: "\u96F7\u795E"
-  image: {fileID: 21300000, guid: 750ef3e146065d044a1c2cb17329b6e7, type: 3}
+  image: {fileID: 21300000, guid: 60cc9e68814c4d6489a3dfa27000bb2d, type: 3}
   characteristicIcon: {fileID: 21300000, guid: 8de732c8ea5b9924e9a88811ab5552ba, type: 3}
   hp: 200
   power: 55
@@ -297,6 +283,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1919206967729382466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7522735947319515595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088099c77ebebd04f8b70200f8ebf11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent_script: {fileID: 0}
+  sp2: []
 --- !u!1 &7763144517947810421
 GameObject:
   m_ObjectHideFlags: 0
