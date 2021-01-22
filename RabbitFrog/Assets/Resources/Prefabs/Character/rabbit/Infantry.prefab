@@ -117,6 +117,7 @@ MonoBehaviour:
   attackTrigger: AttackTrigger
   isMove: IsMove
   isDeath: IsDeath
+  attackSE: {fileID: 0}
 --- !u!50 &1020412521329885864
 Rigidbody2D:
   serializedVersion: 4
@@ -183,6 +184,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8951324662718419680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431417683842123416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088099c77ebebd04f8b70200f8ebf11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent_script: {fileID: 0}
+  sp: []
 --- !u!1 &1344523902766376763
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +446,12 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 1350508413089990301, guid: 0859b66def3b1fa45be16ffd3003cbe4,
     type: 3}
+--- !u!1 &5431417683842123416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4243644405770574173, guid: 0859b66def3b1fa45be16ffd3003cbe4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1043654782865629243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &913672966070610417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 204292310393145802, guid: 0859b66def3b1fa45be16ffd3003cbe4,
