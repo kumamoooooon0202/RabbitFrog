@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character : CharacterBase
 {
@@ -51,6 +52,10 @@ public class Character : CharacterBase
             audio = GetComponent<AudioSource>();
         }
         maxHp = hp;
+        if (iconImage != null)
+        {
+            iconImage.sprite = characteristicIcon;
+        }
     }
 
     void FixedUpdate()
@@ -123,52 +128,96 @@ public class Character : CharacterBase
         {
             Debug.Log("攻撃");
             if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
-            if (attackSE != null) { audio.PlayOneShot(attackSE); }
-            switch (targetEnemy.myCharacteristic)
-            {
-                // 敵の特徴 : 無し
-                // 敵の特徴 : 俊足
-                // 敵の特徴 : 爆発
-                // 敵の特徴 : 感電
-                case characteristic.none:
-                case characteristic.quickness:
-                case characteristic.explosion:
-                case characteristic.electricShock:
-                    targetEnemy.hp -= power;
-                    break;
+            //if (attackSE != null) { audio.PlayOneShot(attackSE); }
+            //switch (targetEnemy.myCharacteristic)
+            //{
+            //    // 敵の特徴 : 無し
+            //    // 敵の特徴 : 俊足
+            //    // 敵の特徴 : 爆発
+            //    // 敵の特徴 : 感電
+            //    case characteristic.none:
+            //    case characteristic.quickness:
+            //    case characteristic.explosion:
+            //    case characteristic.electricShock:
+            //        targetEnemy.hp -= power;
+            //        break;
 
-                // 敵の特徴 : 隠密
-                case characteristic.covert:
-                    // 自身の攻撃方法が中距離、遠距離であれば攻撃不可
-                    if (this.myAttackMethod == AttackMethod.longDistance || this.myAttackMethod == AttackMethod.middleDistance)
-                    {
-                        Debug.Log("隠密だから攻撃できないよ！");
-                        break;
-                    }
-                    targetEnemy.hp -= power;
-                    break;
+            //    // 敵の特徴 : 隠密
+            //    case characteristic.covert:
+            //        // 自身の攻撃方法が中距離、遠距離であれば攻撃不可
+            //        if (this.myAttackMethod == AttackMethod.longDistance || this.myAttackMethod == AttackMethod.middleDistance)
+            //        {
+            //            Debug.Log("隠密だから攻撃できないよ！");
+            //            break;
+            //        }
+            //        targetEnemy.hp -= power;
+            //        break;
 
-                // 敵の特徴 : 鉄壁
-                case characteristic.ironWall:
-                    // 自身の特徴が俊足であれば鉄壁を無視
-                    if (this.myCharacteristic == characteristic.quickness)
-                    {
-                        Debug.Log("鉄壁無視するよ！");
-                        break;
-                    }
-                    targetEnemy.hp -= 1;
-                    break;
+            //    // 敵の特徴 : 鉄壁
+            //    case characteristic.ironWall:
+            //        // 自身の特徴が俊足であれば鉄壁を無視
+            //        if (this.myCharacteristic == characteristic.quickness)
+            //        {
+            //            Debug.Log("鉄壁無視するよ！");
+            //            break;
+            //        }
+            //        targetEnemy.hp -= 1;
+            //        break;
 
-                default:
-                    Debug.LogError("特徴が不適切です");
-                    break;
-            }
+            //    default:
+            //        Debug.LogError("特徴が不適切です");
+            //        break;
+            //}
             
             atackTime = 0f;
         }
 
         // 攻撃している敵が死んだら再び索敵の開始
         if (targetEnemy.IsDeath) { serchFlag = false; }
+    }
+
+    public void Damege()
+    {
+        if (attackSE != null) { audio.PlayOneShot(attackSE); }
+        switch (targetEnemy.myCharacteristic)
+        {
+            // 敵の特徴 : 無し
+            // 敵の特徴 : 俊足
+            // 敵の特徴 : 爆発
+            // 敵の特徴 : 感電
+            case characteristic.none:
+            case characteristic.quickness:
+            case characteristic.explosion:
+            case characteristic.electricShock:
+                targetEnemy.hp -= power;
+                break;
+
+            // 敵の特徴 : 隠密
+            case characteristic.covert:
+                // 自身の攻撃方法が中距離、遠距離であれば攻撃不可
+                if (this.myAttackMethod == AttackMethod.longDistance || this.myAttackMethod == AttackMethod.middleDistance)
+                {
+                    Debug.Log("隠密だから攻撃できないよ！");
+                    break;
+                }
+                targetEnemy.hp -= power;
+                break;
+
+            // 敵の特徴 : 鉄壁
+            case characteristic.ironWall:
+                // 自身の特徴が俊足であれば鉄壁を無視
+                if (this.myCharacteristic == characteristic.quickness)
+                {
+                    Debug.Log("鉄壁無視するよ！");
+                    break;
+                }
+                targetEnemy.hp -= 1;
+                break;
+
+            default:
+                Debug.LogError("特徴が不適切です");
+                break;
+        }
     }
 
     /// <summary>

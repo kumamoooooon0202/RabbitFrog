@@ -13,6 +13,7 @@ public abstract class CharacterBase : MonoBehaviour
     [Header("特徴")] public characteristic myCharacteristic;   // 特徴
     [Header("自身のカード名")] public CardType myCardType;     // 種類
     [Header("表示するHPのText")] public Text hpText;           // HP用のText
+    [Header("アイコン用のImage")] public Image iconImage;      // Icon用のImage
 
     public enum CardType
     {
