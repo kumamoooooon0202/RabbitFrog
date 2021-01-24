@@ -63,7 +63,7 @@ public class EnemyTower : Enemy
         if (targetCharacter.IsDeath) { serchFlag = false; }
     }
 
-    public void Damege()
+    public override void Damege()
     {
         if (targetCharacter.myCharacteristic == characteristic.ironWall)
         {
