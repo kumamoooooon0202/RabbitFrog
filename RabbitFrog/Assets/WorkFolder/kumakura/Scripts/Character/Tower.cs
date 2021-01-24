@@ -12,6 +12,11 @@ public class Tower : CharacterBase
     private Vector2 enemyPos;
     private int maxHp;
 
+    public Animator characterAnim;
+    public string attackTrigger = "AttackTrigger";
+    public string isMove = "IsMove";
+    public string isDeath = "IsDeath";
+
     void Awake()
     {
         maxHp = hp;
@@ -19,6 +24,10 @@ public class Tower : CharacterBase
 
     void FixedUpdate()
     {
+        if (GetComponent<Animator>() != null)
+        {
+            characterAnim = GetComponent<Animator>();
+        }
         hpText.text = hp.ToString("") + "/" + maxHp.ToString("");
     }
 
@@ -44,14 +53,15 @@ public class Tower : CharacterBase
         if (serchFlag && atackTime > attackInterval)
         {
             Debug.Log("攻撃");
-            if (targetEnemy.myCharacteristic == characteristic.ironWall)
-            {
-                targetEnemy.hp -= 1;
-            }
-            else
-            {
-                targetEnemy.hp -= power;
-            }
+            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
+            //if (targetEnemy.myCharacteristic == characteristic.ironWall)
+            //{
+            //    targetEnemy.hp -= 1;
+            //}
+            //else
+            //{
+            //    targetEnemy.hp -= power;
+            //}
             atackTime = 0f;
         }
 
@@ -59,8 +69,21 @@ public class Tower : CharacterBase
         if (targetEnemy.IsDeath) { serchFlag = false; }
     }
 
+    public void Damege()
+    {
+        if (targetEnemy.myCharacteristic == characteristic.ironWall)
+        {
+            targetEnemy.hp -= 1;
+        }
+        else
+        {
+            targetEnemy.hp -= power;
+        }
+    }
+
     public override void Death()
     {
+        if (characterAnim != null) { characterAnim.SetTrigger(isDeath); }
         IsDeath = true;
         // 編成画面に戻るか聞くUIの表示
         gameObject.SetActive(false);

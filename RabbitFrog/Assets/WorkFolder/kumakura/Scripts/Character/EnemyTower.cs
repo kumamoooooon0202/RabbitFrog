@@ -6,6 +6,7 @@ public class EnemyTower : Enemy
 {
 
     [SerializeField] private float atackTime = 0.0f;
+    
 
 
     void Start()
@@ -34,6 +35,7 @@ public class EnemyTower : Enemy
     /// </summary>
     public override void Death()
     {
+        if (characterAnim != null) { characterAnim.SetTrigger(isDeath); }
         IsDeath = true;
         gameObject.SetActive(false);
         //WGameSceneManager.LoadClearScene();
@@ -45,19 +47,32 @@ public class EnemyTower : Enemy
         if (serchFlag && atackTime > attackInterval)
         {
             Debug.Log("攻撃");
-            if (targetCharacter.myCharacteristic == characteristic.ironWall)
-            {
-                targetCharacter.hp -= 1;
-            }
-            else
-            {
-                targetCharacter.hp -= power;
-            }
+            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
+            //if (targetCharacter.myCharacteristic == characteristic.ironWall)
+            //{
+            //    targetCharacter.hp -= 1;
+            //}
+            //else
+            //{
+            //    targetCharacter.hp -= power;
+            //}
             atackTime = 0f;
         }
 
         // 攻撃している敵が死んだら再び索敵の開始
         if (targetCharacter.IsDeath) { serchFlag = false; }
+    }
+
+    public void Damege()
+    {
+        if (targetCharacter.myCharacteristic == characteristic.ironWall)
+        {
+            targetCharacter.hp -= 1;
+        }
+        else
+        {
+            targetCharacter.hp -= power;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
