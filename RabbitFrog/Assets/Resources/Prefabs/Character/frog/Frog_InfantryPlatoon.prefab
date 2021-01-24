@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &9179256425805094128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6772473100508850930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 088099c77ebebd04f8b70200f8ebf11a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Parent_script: {fileID: 0}
-  sp: []
 --- !u!1 &3693941499249511816
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +154,7 @@ MonoBehaviour:
   myCharacteristic: 0
   myCardType: 1
   hpText: {fileID: 2258119104707235385}
+  iconImage: {fileID: 0}
   moveSpeed: 0.005
   summonVol: 10
   myAttackMethod: 0
@@ -179,6 +166,7 @@ MonoBehaviour:
   attackTrigger: AttackTrigger
   isMove: IsMove
   isDeath: IsDeath
+  attackSE: {fileID: 8300000, guid: f8d14664c3477c04a9cd018397f89737, type: 3}
 --- !u!95 &468432928559165903
 Animator:
   serializedVersion: 3
@@ -277,6 +265,20 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!114 &9179256425805094128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6772473100508850930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088099c77ebebd04f8b70200f8ebf11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent_script: {fileID: 0}
+  sp2: []
 --- !u!1 &8337222090952972538
 GameObject:
   m_ObjectHideFlags: 0

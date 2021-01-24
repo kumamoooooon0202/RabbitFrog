@@ -168,6 +168,7 @@ MonoBehaviour:
   myCharacteristic: 0
   myCardType: 3
   hpText: {fileID: 1529269497716382908}
+  iconImage: {fileID: 0}
   moveSpeed: 0.0035
   summonVol: 1
   myAttackMethod: 0
@@ -179,6 +180,7 @@ MonoBehaviour:
   attackTrigger: AttackTrigger
   isMove: IsMove
   isDeath: IsDeath
+  attackSE: {fileID: 8300000, guid: ec82660d77a8f8b41968eeea9ed7e3aa, type: 3}
 --- !u!95 &7427753403472728836
 Animator:
   serializedVersion: 3
