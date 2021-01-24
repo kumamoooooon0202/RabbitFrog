@@ -220,6 +220,7 @@ MonoBehaviour:
   myCharacteristic: 0
   myCardType: 1
   hpText: {fileID: 8612742587721744812}
+  iconImage: {fileID: 0}
   moveSpeed: 0.005
   summonVol: 10
   cost: 4
@@ -230,7 +231,7 @@ MonoBehaviour:
   attackTrigger: AttackTrigger
   isMove: IsMove
   isDeath: IsDeath
-  attackSE: {fileID: 0}
+  attackSE: {fileID: 8300000, guid: f8d14664c3477c04a9cd018397f89737, type: 3}
 --- !u!61 &3527963435847059095
 BoxCollider2D:
   m_ObjectHideFlags: 0
