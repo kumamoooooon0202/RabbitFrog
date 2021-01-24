@@ -143,6 +143,7 @@ MonoBehaviour:
   attackTrigger: AttackTrigger
   isMove: IsMove
   isDeath: IsDeath
+  attackSE: {fileID: 0}
   atackTime: 0
 --- !u!95 &7508229771119593469
 Animator:
@@ -361,12 +362,12 @@ PrefabInstance:
     - target: {fileID: 7890259151537118841, guid: a506a093d3cbd414a83fd78f7fa0b082,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.146
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7890259151537118841, guid: a506a093d3cbd414a83fd78f7fa0b082,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.158
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: 7890259151537118841, guid: a506a093d3cbd414a83fd78f7fa0b082,
         type: 3}
