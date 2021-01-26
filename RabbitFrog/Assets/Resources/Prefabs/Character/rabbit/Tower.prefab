@@ -107,7 +107,7 @@ MonoBehaviour:
   myCardType: 0
   hpText: {fileID: 2065552574351843612}
   iconImage: {fileID: 0}
-  attackRange: 3
+  attackRange: 3.1
   attackInterval: 1.75
   atackTime: 0
   characterAnim: {fileID: 0}
