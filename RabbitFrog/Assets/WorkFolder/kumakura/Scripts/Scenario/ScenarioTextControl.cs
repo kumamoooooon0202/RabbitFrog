@@ -182,32 +182,32 @@ public class ScenarioTextControl : MonoBehaviour
         if (SaveData.StageClear[4])
         {
             NedtSceneName = "ClearScene";
-            CSVReader("clear", TextContant, Character_Name, Character_num);
+            CSVReader("BattleBossClear", TextContant, Character_Name, Character_num);
         }
 
         else if (SaveData.StageClear[3])
         {
             NedtSceneName = "BattleBoss";
-            CSVReader("story_04", TextContant, Character_Name, Character_num);
+            CSVReader("story_03Clear", TextContant, Character_Name, Character_num);
         }
 
         else if (SaveData.StageClear[2])
         {
             NedtSceneName = "BattleThird";
 
-            CSVReader("story_03", TextContant, Character_Name, Character_num);
+            CSVReader("story_02Clear", TextContant, Character_Name, Character_num);
         }
 
         else if (SaveData.StageClear[1])
         {
             NedtSceneName = "BattleSecond";
-            CSVReader("story_02", TextContant, Character_Name, Character_num);
+            CSVReader("story_01Clear", TextContant, Character_Name, Character_num);
         }
 
         else if (SaveData.StageClear[0])
         {
             NedtSceneName = "OptionScene";
-            CSVReader("story_01", TextContant, Character_Name, Character_num);
+            CSVReader("story_Start", TextContant, Character_Name, Character_num);
             //CSVReader("stroy/story_01(ver2)", TextContant, Character_Name, Character_num);
         }
     }
