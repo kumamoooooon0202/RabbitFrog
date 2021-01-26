@@ -89,7 +89,7 @@ MonoBehaviour:
   battleController: {fileID: 4191672627597540255}
   HandBG: {fileID: 4871894210140515464}
   chara_:
-  - {fileID: 21300000, guid: c9d320fae138d7b428a16019a022e81e, type: 3}
+  - {fileID: 21300000, guid: 3dc2e0d6cffa81e4ab38506e700581c1, type: 3}
   - {fileID: 21300000, guid: a83c83e3ce5c7d446910442b5a1339f5, type: 3}
   cost: 0
 --- !u!1 &431844888755266825
@@ -836,7 +836,7 @@ MonoBehaviour:
   battleController: {fileID: 4191672627597540255}
   HandBG: {fileID: 8649146785876612025}
   chara_:
-  - {fileID: 21300000, guid: c9d320fae138d7b428a16019a022e81e, type: 3}
+  - {fileID: 21300000, guid: 3dc2e0d6cffa81e4ab38506e700581c1, type: 3}
   - {fileID: 21300000, guid: a83c83e3ce5c7d446910442b5a1339f5, type: 3}
   cost: 0
 --- !u!1 &4421351978955598915
@@ -2526,7 +2526,7 @@ MonoBehaviour:
   battleController: {fileID: 4191672627597540255}
   HandBG: {fileID: 8748987766086963975}
   chara_:
-  - {fileID: 21300000, guid: c9d320fae138d7b428a16019a022e81e, type: 3}
+  - {fileID: 21300000, guid: 3dc2e0d6cffa81e4ab38506e700581c1, type: 3}
   - {fileID: 21300000, guid: a83c83e3ce5c7d446910442b5a1339f5, type: 3}
   cost: 0
 --- !u!1 &6241064194365184337
@@ -3339,7 +3339,7 @@ MonoBehaviour:
   battleController: {fileID: 4191672627597540255}
   HandBG: {fileID: 6628125351481538959}
   chara_:
-  - {fileID: 21300000, guid: c9d320fae138d7b428a16019a022e81e, type: 3}
+  - {fileID: 21300000, guid: 3dc2e0d6cffa81e4ab38506e700581c1, type: 3}
   - {fileID: 21300000, guid: a83c83e3ce5c7d446910442b5a1339f5, type: 3}
   cost: 0
 --- !u!1 &8841744929810951457
