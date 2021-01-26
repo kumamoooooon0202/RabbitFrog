@@ -46,6 +46,10 @@ public class Enemy : CharacterBase
             audio = GetComponent<AudioSource>();
         }
         maxHp = hp;
+        if (iconImage != null)
+        {
+            iconImage.sprite = characteristicIcon;
+        }
     }
 
     void FixedUpdate()
