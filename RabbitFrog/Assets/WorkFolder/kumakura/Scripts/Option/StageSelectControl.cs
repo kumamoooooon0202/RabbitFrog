@@ -54,7 +54,7 @@ public class StageSelectControl : MonoBehaviour
         {
             if (SaveData.StageClear[2] == false)
             {
-                NextScene = "ScenarioSceneq";
+                NextScene = "ScenarioScene";
             }
 
             else

@@ -14,6 +14,7 @@ public class HandObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     private Image dragImage;
     private Image souceImage;
 
+
     public Image characterIconImage = null;
     public Text costText = null;
 
@@ -21,6 +22,7 @@ public class HandObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
 
     [SerializeField] private AudioClip dragSE;
     [SerializeField] private AudioSource audioSource;
+
 
     void Awake()
     {
