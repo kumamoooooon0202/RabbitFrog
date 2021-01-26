@@ -87,6 +87,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleController: {fileID: 4191672627597540255}
+  HandBG: {fileID: 4871894210140515464}
+  chara_:
+  - {fileID: 21300000, guid: c9d320fae138d7b428a16019a022e81e, type: 3}
+  - {fileID: 21300000, guid: a83c83e3ce5c7d446910442b5a1339f5, type: 3}
   cost: 0
 --- !u!1 &431844888755266825
 GameObject:
@@ -164,7 +168,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4421351980495703749}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -237,7 +241,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4421351979066372261}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -619,7 +623,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4421351980237473797}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -696,7 +700,7 @@ RectTransform:
   m_LocalScale: {x: 0.99985117, y: 0.99985117, z: 0.99985117}
   m_Children: []
   m_Father: {fileID: 4421351980687738413}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -830,6 +834,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleController: {fileID: 4191672627597540255}
+  HandBG: {fileID: 8649146785876612025}
+  chara_:
+  - {fileID: 21300000, guid: c9d320fae138d7b428a16019a022e81e, type: 3}
+  - {fileID: 21300000, guid: a83c83e3ce5c7d446910442b5a1339f5, type: 3}
   cost: 0
 --- !u!1 &4421351978955598915
 GameObject:
@@ -1113,8 +1121,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 213084941464915958}
   - {fileID: 5432316765157541416}
+  - {fileID: 213084941464915958}
   - {fileID: 3166563413340761516}
   m_Father: {fileID: 4421351979475222738}
   m_RootOrder: 9
@@ -1510,8 +1518,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2088448584075822878}
   - {fileID: 7975792422278415001}
+  - {fileID: 2088448584075822878}
   - {fileID: 5284202392799970281}
   m_Father: {fileID: 4421351979475222738}
   m_RootOrder: 10
@@ -1779,8 +1787,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5650054848730246806}
   - {fileID: 3656303824275005267}
+  - {fileID: 5650054848730246806}
   - {fileID: 1666567248268717752}
   m_Father: {fileID: 4421351979475222738}
   m_RootOrder: 11
@@ -2045,8 +2053,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4166928091866778895}
   - {fileID: 4438344019105746430}
+  - {fileID: 4166928091866778895}
   - {fileID: 7598585172131092643}
   m_Father: {fileID: 4421351979475222738}
   m_RootOrder: 12
@@ -2313,7 +2321,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4421351980687738413}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2516,6 +2524,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleController: {fileID: 4191672627597540255}
+  HandBG: {fileID: 8748987766086963975}
+  chara_:
+  - {fileID: 21300000, guid: c9d320fae138d7b428a16019a022e81e, type: 3}
+  - {fileID: 21300000, guid: a83c83e3ce5c7d446910442b5a1339f5, type: 3}
   cost: 0
 --- !u!1 &6241064194365184337
 GameObject:
@@ -2547,7 +2559,7 @@ RectTransform:
   m_LocalScale: {x: 0.99985117, y: 0.99985117, z: 0.99985117}
   m_Children: []
   m_Father: {fileID: 4421351980495703749}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2624,7 +2636,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4421351979066372261}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3032,7 +3044,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4421351980237473797}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3325,6 +3337,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleController: {fileID: 4191672627597540255}
+  HandBG: {fileID: 6628125351481538959}
+  chara_:
+  - {fileID: 21300000, guid: c9d320fae138d7b428a16019a022e81e, type: 3}
+  - {fileID: 21300000, guid: a83c83e3ce5c7d446910442b5a1339f5, type: 3}
   cost: 0
 --- !u!1 &8841744929810951457
 GameObject:
