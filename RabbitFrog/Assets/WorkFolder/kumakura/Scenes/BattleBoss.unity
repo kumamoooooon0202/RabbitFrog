@@ -1023,6 +1023,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4421351980373080324, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 62.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421351980373080324, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -42.300003
+      objectReference: {fileID: 0}
     - target: {fileID: 4421351980495703748, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_IsActive
@@ -1057,7 +1067,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a7c024e0dc75a7e489f77e26c22186ba,
+      objectReference: {fileID: 21300000, guid: 41c330c3d219b6d45ad3b3b51f405238,
         type: 3}
     - target: {fileID: 4537465834059314276, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
@@ -1650,6 +1660,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndGameCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1934120309888948902, guid: d3f1985120186a54b8454368583430e9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3f1985120186a54b8454368583430e9, type: 3}
 --- !u!1 &974764816
@@ -1828,6 +1843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ConfirmCanvas_Battle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113985937918969120, guid: 04a9c7de82329fc4490f609d4cd2b59b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3113985937918969124, guid: 04a9c7de82329fc4490f609d4cd2b59b,
         type: 3}
@@ -2045,6 +2065,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299844854549235029, guid: 1524616025204da4a824c7b1cf2cb022,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7472550728817559206, guid: 1524616025204da4a824c7b1cf2cb022,
         type: 3}
