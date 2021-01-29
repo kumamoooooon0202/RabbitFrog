@@ -68,9 +68,7 @@ public class OptionController : MonoBehaviour
     /// </summary>
     public void OnOpenOrganization()
     {
-        //if (is_runing == true || is_organ_Open) return;
         if (is_runing == true) return;
-        //is_organ_Open = true;
 
         //ステージ選択画面が開いた状態と編成画面が閉じた状態なら
         if (is_stage_Open == true && is_organ_Open == false)
@@ -81,9 +79,9 @@ public class OptionController : MonoBehaviour
             
             organizationCanvas.sortingOrder = 1;
             stageSelectCanvas.sortingOrder = 0;
-            //StartCoroutine(organizationMask.Open(stageSelectMask, organization));
-
-            StartCoroutine(organizationMask.Close_Open(stageSelectMask, organization, stageSelect));//ステージ選択画面を閉じて編成画面を開く
+            
+            //ステージ選択画面を閉じて編成画面を開く
+            StartCoroutine(organizationMask.Close_Open(stageSelectMask, organization, stageSelect));
 
             is_stage_Open = false;
             

@@ -41,13 +41,22 @@ public class Char_Color_change : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Parent_script.hp < Max_HP / 3 && !colorChanged)
+        if(Parent_script.hp > Max_HP / 3 && !colorChanged)
         {
             //for (int i = 0; i < sp.Length; i++)
             for (int i = 0; i < sp2.Count; i++)
             {
+                Color tmp = sp2[i].color;
+                tmp.r = 0.5803922f;
+                tmp.g = 0.3805103f;
+                tmp.b = 0.3805103f;
+                tmp.a = 0.5f;
+                sp2[i].color = tmp;
+                //sp2[i].enabled = false;
+
+
                 //sp[i].color = new Color(0.5803922f, 0.3805103f, 0.3805103f, 0.0f);
-                sp2[i].color = new Color(0.5803922f, 0.3805103f, 0.3805103f, 0.0f);
+                //sp2[i].color = new Color(0.5803922f, 0.3805103f, 0.3805103f, 0.0f);
             }
             colorChanged = true;
         }

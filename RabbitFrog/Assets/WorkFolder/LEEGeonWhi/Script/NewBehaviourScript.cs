@@ -9,6 +9,8 @@ public class NewBehaviourScript : MonoBehaviour
     [SerializeField]
     SpriteRenderer[] sp;
 
+    [SerializeField]
+    SpriteRenderer test;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,20 +25,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            for(int i = 0; i < sp.Length; i++)
-            {
-                sp[i].color = new Color(1, 0, 0, 1);
-            }
-        }
+        test.color = new Color(1, 0, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            for (int i = 0; i < sp.Length; i++)
-            {
-                sp[i].color = new Color(1, 1, 1, 1);
-            }
-        }
     }
 }
