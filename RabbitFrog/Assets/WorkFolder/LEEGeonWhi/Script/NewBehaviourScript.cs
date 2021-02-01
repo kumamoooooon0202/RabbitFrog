@@ -14,18 +14,17 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sp = new SpriteRenderer[transform.childCount - 1];
-        for (int i = 0; i < transform.childCount - 1; i++)
-        {
-            sp[i] = transform.GetChild(i).GetComponent<SpriteRenderer>();
-        }
+        //sp = new SpriteRenderer[transform.childCount - 1];
+        //for (int i = 0; i < transform.childCount - 1; i++)
+        //{
+        //    sp[i] = transform.GetChild(i).GetComponent<SpriteRenderer>();
+        //}
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        test.color = new Color(1, 0, 0, 0);
 
     }
 }

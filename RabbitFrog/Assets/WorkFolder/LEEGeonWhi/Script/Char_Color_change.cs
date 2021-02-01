@@ -43,22 +43,35 @@ public class Char_Color_change : MonoBehaviour
     {
         if(Parent_script.hp > Max_HP / 3 && !colorChanged)
         {
-            //for (int i = 0; i < sp.Length; i++)
-            for (int i = 0; i < sp2.Count; i++)
-            {
-                Color tmp = sp2[i].color;
-                tmp.r = 0.5803922f;
-                tmp.g = 0.3805103f;
-                tmp.b = 0.3805103f;
-                tmp.a = 0.5f;
-                sp2[i].color = tmp;
-                //sp2[i].enabled = false;
+            ////for (int i = 0; i < sp.Length; i++)
+            //for (int i = 0; i < sp2.Count; i++)
+            //{
+            //    //sp2[i].enabled = false;
+            //    //sp[i].color = new Color(0.5803922f, 0.3805103f, 0.3805103f, 0.0f);
+            //    sp2[i].color = new Color(0.5803922f, 0.3805103f, 0.3805103f, 0.0f);
+            //}
+            //colorChanged = true;
 
-
-                //sp[i].color = new Color(0.5803922f, 0.3805103f, 0.3805103f, 0.0f);
-                //sp2[i].color = new Color(0.5803922f, 0.3805103f, 0.3805103f, 0.0f);
-            }
+            StartCoroutine(Fade());
             colorChanged = true;
         }
     }
+
+
+    IEnumerator Fade()
+    {
+        for (int i = 0; i < sp2.Count; i++)
+        {
+                sp2[i].enabled = false;
+        }
+        yield return new WaitForSeconds(0.5f);
+        for (int i = 0; i < sp2.Count; i++)
+        {
+            sp2[i].enabled = true;
+        }
+        yield return new WaitForSeconds(0.5f);
+
+        StartCoroutine(Fade());
+    }
+
 }
