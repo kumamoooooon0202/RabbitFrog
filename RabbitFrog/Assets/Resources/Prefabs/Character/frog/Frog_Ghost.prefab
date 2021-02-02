@@ -97,7 +97,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5172342441463588058
 RectTransform:
   m_ObjectHideFlags: 0
@@ -332,6 +332,7 @@ MonoBehaviour:
   myCharacteristic: 4
   myCardType: 12
   hpText: {fileID: 1347927902250873002}
+  iconImage: {fileID: 0}
   moveSpeed: 0.005
   summonVol: 1
   myAttackMethod: 0
@@ -343,6 +344,7 @@ MonoBehaviour:
   attackTrigger: AttackTrigger
   isMove: IsMove
   isDeath: IsDeath
+  attackSE: {fileID: 0}
 --- !u!95 &8590248254091050360
 Animator:
   serializedVersion: 3

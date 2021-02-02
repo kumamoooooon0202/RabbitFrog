@@ -11,6 +11,7 @@ public class Char_Color_change : MonoBehaviour
     //SpriteRenderer[] sp;
 
     private int Max_HP;
+    private float BlinkSpeed = 0.5f;
     bool colorChanged = false;
 
     [SerializeField]
@@ -41,7 +42,7 @@ public class Char_Color_change : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Parent_script.hp > Max_HP / 3 && !colorChanged)
+        if(Parent_script.hp < Max_HP / 3 && !colorChanged)
         {
             ////for (int i = 0; i < sp.Length; i++)
             //for (int i = 0; i < sp2.Count; i++)
@@ -52,26 +53,26 @@ public class Char_Color_change : MonoBehaviour
             //}
             //colorChanged = true;
 
-            StartCoroutine(Fade());
+            StartCoroutine(Blinke());
             colorChanged = true;
         }
     }
 
 
-    IEnumerator Fade()
+    IEnumerator Blinke()
     {
         for (int i = 0; i < sp2.Count; i++)
         {
                 sp2[i].enabled = false;
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         for (int i = 0; i < sp2.Count; i++)
         {
             sp2[i].enabled = true;
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
 
-        StartCoroutine(Fade());
+        StartCoroutine(Blinke());
     }
 
 }
