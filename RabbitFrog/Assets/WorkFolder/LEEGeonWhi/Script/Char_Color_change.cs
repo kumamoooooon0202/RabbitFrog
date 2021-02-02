@@ -14,6 +14,8 @@ public class Char_Color_change : MonoBehaviour
     private float BlinkSpeed = 0.5f;
     bool colorChanged = false;
 
+    Color temp;
+
     [SerializeField]
     List<SpriteRenderer> sp2 = new List<SpriteRenderer>();
 
@@ -25,7 +27,7 @@ public class Char_Color_change : MonoBehaviour
         for (int i = 0; i < transform.GetChildCount() - 1; i++)
         {
             //sp[i] = transform.GetChild(i).GetComponent<SpriteRenderer>();
-            
+
             SpriteRenderer thisSP = transform.GetChild(i).GetComponent<SpriteRenderer>();
             if (thisSP != null)
                 sp2.Add(thisSP);
@@ -36,43 +38,59 @@ public class Char_Color_change : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Parent_script.hp < Max_HP / 3 && !colorChanged)
+        if (Parent_script.hp < Max_HP * 0.10f)
         {
-            ////for (int i = 0; i < sp.Length; i++)
-            //for (int i = 0; i < sp2.Count; i++)
-            //{
-            //    //sp2[i].enabled = false;
-            //    //sp[i].color = new Color(0.5803922f, 0.3805103f, 0.3805103f, 0.0f);
-            //    sp2[i].color = new Color(0.5803922f, 0.3805103f, 0.3805103f, 0.0f);
-            //}
-            //colorChanged = true;
+            ColorChange(0, 0, 0);
+        }
 
-            StartCoroutine(Blinke());
-            colorChanged = true;
+        else if (Parent_script.hp < Max_HP * 0.20f)
+        {
+            ColorChange(0.176f, 0.176f, 0.176f);
+        }
+
+        else if (Parent_script.hp < Max_HP * 0.35f)
+        {
+            ColorChange(0.525f, 0.525f, 0.525f);
+        }
+
+        else if (Parent_script.hp < Max_HP * 0.5f)
+        {
+            ColorChange(0.694f, 0.694f, 0.694f);
         }
     }
 
-
-    IEnumerator Blinke()
+    void ColorChange(float R, float G, float B)
     {
-        for (int i = 0; i < sp2.Count; i++)
-        {
-                sp2[i].enabled = false;
-        }
-        yield return new WaitForSeconds(0.1f);
-        for (int i = 0; i < sp2.Count; i++)
-        {
-            sp2[i].enabled = true;
-        }
-        yield return new WaitForSeconds(0.1f);
+        if (temp == new Color(R, G, B, 1.0f)) return;
 
-        StartCoroutine(Blinke());
+            for (int i = 0; i < sp2.Count; i++)
+            {
+                sp2[i].color = new Color(R, G, B, 1.0f);
+            }
+
+        temp = new Color(R, G, B, 1.0f);
     }
+
+    //IEnumerator Blinke()
+    //{
+    //    for (int i = 0; i < sp2.Count; i++)
+    //    {
+    //            sp2[i].enabled = false;
+    //    }
+    //    yield return new WaitForSeconds(0.1f);
+    //    for (int i = 0; i < sp2.Count; i++)
+    //    {
+    //        sp2[i].enabled = true;
+    //    }
+    //    yield return new WaitForSeconds(0.1f);
+
+    //    StartCoroutine(Blinke());
+    //}
 
 }
