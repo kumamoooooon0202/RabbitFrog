@@ -21,7 +21,6 @@ public class PreviewCon : MonoBehaviour, IPointerClickHandler
     GameObject CharacterBase;
 
     //int i = 0;
-
     public enum CardType
     {
         none = -1,
@@ -39,9 +38,6 @@ public class PreviewCon : MonoBehaviour, IPointerClickHandler
         ghost,
         thunderGod,
     }
-
-
-
     public void Start()
     {
         //string[] Description = { "" };
