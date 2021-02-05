@@ -13,6 +13,7 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     public PreviewManager preMana;
     public Image characterIconImage = null;
     public Text costText = null;
+    public Image characterImage = null;
 
     //------------------------------------------------------------
     [SerializeField] AudioClip dragSE;
@@ -21,7 +22,7 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
 
     void Awake()
     {
-        GetComponent<Image>().sprite = character.image;
+        //GetComponent<Image>().sprite = character.image;
         GetComponent<Image>().preserveAspect = true;
         parentObject = transform.parent.parent.parent.parent;
         preMana = FindObjectOfType<PreviewManager>();
@@ -60,7 +61,8 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
     /// <param name="pointerEventData"></param>
     public void OnEndDrag(PointerEventData pointerEventData)
     {
-        gameObject.GetComponent<Image>().color = Vector4.one;
+        //gameObject.GetComponent<Image>().color = Vector4.one;
+        characterImage.GetComponent<Image>().color = Vector4.one;
         Destroy(dragObject);
     }
 
@@ -109,7 +111,7 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
         canvasGroup.blocksRaycasts = false;
 
         Image dragImage = dragObject.AddComponent<Image>();
-        Image souceImage = GetComponent<Image>();
+        Image souceImage = GetComponent<CardPoolObject>().characterImage;
 
         dragImage.sprite = souceImage.sprite;
         dragImage.rectTransform.sizeDelta = souceImage.rectTransform.sizeDelta;
@@ -117,7 +119,8 @@ public class CardPoolObject : MonoBehaviour, IDragHandler, IBeginDragHandler, IE
         dragImage.material = souceImage.material;
         dragImage.preserveAspect = true;
 
-        gameObject.GetComponent<Image>().color = Vector4.one * 0.6f;
+        //gameObject.GetComponent<Image>().color = Vector4.one * 0.6f;
+        characterImage.GetComponent<Image>().color = Vector4.one * 0.6f;
     }
 
 

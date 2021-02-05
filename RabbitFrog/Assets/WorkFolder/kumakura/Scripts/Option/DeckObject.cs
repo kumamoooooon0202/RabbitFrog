@@ -36,7 +36,7 @@ public class DeckObject : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPo
     {
         if (pointerEventData.pointerDrag == null || pointerEventData.pointerDrag.tag != "CardPool") return;
         Debug.Log(pointerEventData.pointerDrag.tag);
-        Image dropImage = pointerEventData.pointerDrag.GetComponent<Image>();
+        Image dropImage = pointerEventData.pointerDrag.GetComponent<CardPoolObject>().characterImage;
         iconImage.sprite = dropImage.sprite;
         iconImage.color = Vector4.one;
     }
@@ -60,7 +60,7 @@ public class DeckObject : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPo
     public void OnDrop(PointerEventData pointerEventData)
     {
         if (pointerEventData.pointerDrag.tag != "CardPool") return;
-        Image dropImage = pointerEventData.pointerDrag.GetComponent<Image>();
+        Image dropImage = pointerEventData.pointerDrag.GetComponent<CardPoolObject>().characterImage;
         cardPoolObject = pointerEventData.pointerDrag.GetComponent<CardPoolObject>();
         cardPoolObject.character.myCardType = pointerEventData.pointerDrag.GetComponent<CardPoolObject>().character.myCardType;
         iconImage.sprite = dropImage.sprite;
