@@ -231,8 +231,13 @@ public class Character : CharacterBase
         // ここで死亡アニメーションの再生
         if (characterAnim != null) { characterAnim.SetTrigger(isDeath); }
         IsDeath = true;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
 
+    }
+
+    public void CharacterHide()
+    {
+        gameObject.SetActive(false);
     }
 
     /// <summary>

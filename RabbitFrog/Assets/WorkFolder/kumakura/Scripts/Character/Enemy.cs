@@ -182,6 +182,11 @@ public class Enemy : CharacterBase
     {
         if (characterAnim != null) { characterAnim.SetTrigger(isDeath); }
         IsDeath = true;
+        //gameObject.SetActive(false);
+    }
+    
+    public void CharacterHide()
+    {
         gameObject.SetActive(false);
     }
 
