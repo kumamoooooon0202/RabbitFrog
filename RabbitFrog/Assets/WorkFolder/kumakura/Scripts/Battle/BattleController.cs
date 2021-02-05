@@ -82,6 +82,8 @@ public class BattleController : MonoBehaviour
                     anim.enabled = false;
                 }
             }
+            rabbitTower.GetComponent<Animator>().enabled = false;
+            enemyTower.GetComponent<Animator>().enabled = false;
             return;
         }
         gameTime -= Time.deltaTime;
