@@ -7,6 +7,7 @@ public class InkModeAnim : MonoBehaviour
 
     [SerializeField] GameObject InkMode;
     [SerializeField] private bool modeSwitch = false;
+    [SerializeField] GameObject InkConceal;
 
     Animator anim;
 
@@ -18,12 +19,13 @@ public class InkModeAnim : MonoBehaviour
     void Start()
     {
         anim = InkMode.GetComponent<Animator>();
+        InkConceal.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void InkAnim()
@@ -33,10 +35,20 @@ public class InkModeAnim : MonoBehaviour
         if (modeSwitch)
         {
             anim.SetBool(isModeSwitch, true);
+            InkConceal.SetActive(false);
+            //Debug.Log("aaaaaaaaa");
         }
         if (!modeSwitch)
         {
             anim.SetBool(isModeSwitch, false);
+            Invoke("DelayAnimMethod", 0.29f);
         }
     }
+
+    void DelayAnimMethod()
+    {
+        InkConceal.SetActive(true);
+        Debug.Log("呼ばれたよ！");
+    }
+
 }
