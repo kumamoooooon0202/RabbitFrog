@@ -166,7 +166,7 @@ MonoBehaviour:
   characteristicIcon: {fileID: 21300000, guid: 7d66c201443c26e49834bd837baed346, type: 3}
   hp: 21
   power: 15
-  myCharacteristic: 0
+  myCharacteristic: 2
   myCardType: 3
   hpText: {fileID: 1529269497716382908}
   iconImage: {fileID: 6244048574121853946}
