@@ -44,7 +44,7 @@ public class Char_Color_change : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Parent_script.hp < Max_HP * 0.10f)
+        if (Parent_script.hp < Max_HP * 0.05f)
         {
             ColorChange(0, 0, 0);
         }
