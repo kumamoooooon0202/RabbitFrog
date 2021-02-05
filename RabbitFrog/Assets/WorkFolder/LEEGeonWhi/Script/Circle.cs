@@ -11,10 +11,18 @@ public class Circle : MonoBehaviour
     private float radius;
     private Vector2 circle_center;
 
+    
+    private float HP_Magnification;
+
+    void Awake()
+    {
+        HP_Magnification = LineController.HP_Magnification;
+    }
+
     void Start()
     {
         Init();
-        InkAmout.decrease_Gauge(HP);
+        InkAmout.decrease_Gauge(HP * HP_Magnification);
         StartCoroutine(obj_destroy());
     }
 
@@ -84,7 +92,7 @@ public class Circle : MonoBehaviour
             HP -= 0.2f;
         }
 
-        InkAmout.increase_Gauge(TempHP);
+        InkAmout.increase_Gauge(TempHP * HP_Magnification);
         Destroy(gameObject);
     }
 }

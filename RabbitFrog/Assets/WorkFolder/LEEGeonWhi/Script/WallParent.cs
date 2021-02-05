@@ -22,11 +22,17 @@ public class WallParent : MonoBehaviour
     [SerializeField]
     private GameObject Wall_prefab;
 
+    [HideInInspector]
+    public float HP_Magnification;
+
     void Awake()
     {
         _startPos = LineController.startPos;
         _endPos = LineController.endPos;
         Debug.Log(_startPos + "==" + _endPos);
+
+        HP_Magnification = LineController.HP_Magnification;
+
 
     }
 
@@ -40,7 +46,7 @@ public class WallParent : MonoBehaviour
         HP = 1 + 0.2f * (LineLength - 1);
 
         //20-12-04　イゴンヒ
-        InkAmout.decrease_Gauge(LineLength * 0.1f);
+        InkAmout.decrease_Gauge(LineLength * 0.1f * HP_Magnification);
 
         Dir = Vector3.Normalize(_startPos - _endPos);
         for (int i = 0; i < LineController.Points.Count - 1; i++)
@@ -76,7 +82,7 @@ public class WallParent : MonoBehaviour
         {
             Destroy(gameObject);
             LineController.MaxLine--;
-            InkAmout.increase_Gauge(LineLength * 0.1f);
+            InkAmout.increase_Gauge(LineLength * 0.1f * HP_Magnification);
         }
     }
 
@@ -85,7 +91,7 @@ public class WallParent : MonoBehaviour
         yield return new WaitForSeconds(10.0f);
 
         LineController.MaxLine--;
-        InkAmout.increase_Gauge(LineLength * 0.1f);
+        InkAmout.increase_Gauge(LineLength * 0.1f * HP_Magnification);
         Destroy(gameObject);
     }
 }
