@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class InkAmout : MonoBehaviour
 {
+ 
     public static Image image;
     private static RectTransform rectTransform;
 
     //Vector2 InkClose = new Vector2(30, 70);
     //Vector2 InkOpen  = new Vector2(30, 20);
 
-    static Vector2 InkClose = new Vector2(30, 20);
+    static Vector2 InkClose = new Vector2(30, 12);
     //Inspectorから修正
     static Vector2 InkOpen;
 
@@ -70,7 +71,7 @@ public class InkAmout : MonoBehaviour
     static public void ImageOpen()
     {
 
-        rectTransform.sizeDelta = InkOpen;
+        rectTransform.sizeDelta = InkOpen;      
     }
 
     /// <summary>

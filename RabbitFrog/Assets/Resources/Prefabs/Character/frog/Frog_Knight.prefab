@@ -166,7 +166,7 @@ MonoBehaviour:
   characteristicIcon: {fileID: 21300000, guid: 7d66c201443c26e49834bd837baed346, type: 3}
   hp: 21
   power: 15
-  myCharacteristic: 0
+  myCharacteristic: 2
   myCardType: 3
   hpText: {fileID: 1529269497716382908}
   iconImage: {fileID: 6244048574121853946}
@@ -388,7 +388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &433750494665935608
 RectTransform:
   m_ObjectHideFlags: 0

@@ -1238,6 +1238,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2932326222504193156, guid: c665477f90810da4990c10faf4f4d25e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c665477f90810da4990c10faf4f4d25e, type: 3}
+--- !u!1 &623374538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5909828246625768690, guid: c665477f90810da4990c10faf4f4d25e,
+    type: 3}
+  m_PrefabInstance: {fileID: 623374537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &623374539 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4191672627597540255, guid: c665477f90810da4990c10faf4f4d25e,
@@ -1281,6 +1287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InkMode: {fileID: 1840517775}
   modeSwitch: 0
+  InkConceal: {fileID: 623374538}
   _inkMode: {fileID: 1840517776}
 --- !u!4 &624016359
 Transform:
@@ -2212,6 +2219,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 974764817}
+    - target: {fileID: 8235931163628232990, guid: 545b30127b22a934bbc604fc6d062f95,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 545b30127b22a934bbc604fc6d062f95, type: 3}
 --- !u!1 &1710590373

@@ -345,11 +345,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2493852708222708551, guid: 32187554392481846b3e1c37c43894fb,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2493852708222708551, guid: 32187554392481846b3e1c37c43894fb,
-        type: 3}
       propertyPath: m_PixelPerfect
       value: 0
       objectReference: {fileID: 0}
@@ -528,6 +523,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c820b97d4afa8cd45ab7eb97339c4876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1042502009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5909828246625768690, guid: c665477f90810da4990c10faf4f4d25e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4421351978691491170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1086229963 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3113985937918969127, guid: 04a9c7de82329fc4490f609d4cd2b59b,
@@ -902,6 +903,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4247510320439784001, guid: d3f1985120186a54b8454368583430e9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -30.200012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3f1985120186a54b8454368583430e9, type: 3}
 --- !u!1 &1672071902
@@ -1163,6 +1169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InkMode: {fileID: 4421351978691491171}
   modeSwitch: 0
+  InkConceal: {fileID: 1042502009}
   _inkMode: {fileID: 1692401574}
 --- !u!4 &2111403444
 Transform:
@@ -1487,6 +1494,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1273585793}
+    - target: {fileID: 8235931163628232990, guid: 545b30127b22a934bbc604fc6d062f95,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 545b30127b22a934bbc604fc6d062f95, type: 3}
 --- !u!1001 &3113985938607886387
@@ -1992,7 +2004,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e2ce9f2827ff6bb439785af339f4ec1c,
+      objectReference: {fileID: 21300000, guid: 70c6251c92f971f40a3252d23d53de8d,
         type: 3}
     - target: {fileID: 4421351978955598915, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
@@ -2278,6 +2290,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 21
       objectReference: {fileID: 0}
+    - target: {fileID: 5905909020631129324, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: InkConceal
+      value: 
+      objectReference: {fileID: 1042502009}
+    - target: {fileID: 5909828246625768690, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6602609358995856773, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: preMana
@@ -2286,17 +2308,22 @@ PrefabInstance:
     - target: {fileID: 6702308505784639398, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 60
+      value: 52.49
       objectReference: {fileID: 0}
     - target: {fileID: 6702308505784639398, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 6702308505784639398, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 30
+      value: 26.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702308505784639398, guid: c665477f90810da4990c10faf4f4d25e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.17
       objectReference: {fileID: 0}
     - target: {fileID: 7116091469631503367, guid: c665477f90810da4990c10faf4f4d25e,
         type: 3}

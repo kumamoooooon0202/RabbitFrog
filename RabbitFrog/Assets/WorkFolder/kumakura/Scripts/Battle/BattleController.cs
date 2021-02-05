@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class BattleController : MonoBehaviour
 {
     [SerializeField] private float gameTime = 90;   // 残り時間
@@ -81,6 +82,8 @@ public class BattleController : MonoBehaviour
                     anim.enabled = false;
                 }
             }
+            rabbitTower.GetComponent<Animator>().enabled = false;
+            enemyTower.GetComponent<Animator>().enabled = false;
             return;
         }
         gameTime -= Time.deltaTime;
@@ -108,19 +111,41 @@ public class BattleController : MonoBehaviour
         summonGage.fillAmount = summonGageVal / 10.0f;
 
         #region チートコマンド
-        if (Input.GetKey(KeyCode.Return))
-        {
-            // ボス即死
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Return))
             {
-                var enemy = FindObjectOfType<EnemyTower>();
-                enemy.hp = 0;
-            }
-            if (Input.GetKeyDown(KeyCode.Backspace))
-            {
+                // ボス即死
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    var enemy = FindObjectOfType<EnemyTower>();
+                    enemy.hp = 0;
+                }
+                if (Input.GetKeyDown(KeyCode.Backspace))
+                {
                 
+                }
             }
-        }
+
+        #if UNITY_EDITOR
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                Time.timeScale = 3;
+            }
+        
+            if (Input.GetKeyDown(KeyCode.RightShift))
+            {
+                Time.timeScale = 0.5f;
+            }
+
+            if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
+            {
+                Time.timeScale = 1;
+            }
+        #endif
         #endregion
     }
 }

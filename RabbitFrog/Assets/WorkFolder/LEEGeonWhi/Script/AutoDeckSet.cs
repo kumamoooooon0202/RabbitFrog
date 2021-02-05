@@ -37,13 +37,14 @@ public class AutoDeckSet : MonoBehaviour
             //deck[i].GetComponent<DeckObject>().cardPoolObject = cardPoolObjects[i];
             decks[i].GetComponent<DeckObject>().cardPoolObject = autoDeckArray[deckNumber].autoSet[i];
             //deckObjects[i].cardPoolObject = cardPoolObjects[i];
-            decks[i].GetComponent<Image>().sprite = decks[i].GetComponent<DeckObject>().cardPoolObject.character.image;
+            //decks[i].GetComponent<Image>().sprite = decks[i].GetComponent<DeckObject>().cardPoolObject.character.image;
+            decks[i].GetComponent<DeckObject>().iconImage.sprite = decks[i].GetComponent<DeckObject>().cardPoolObject.character.image;
             decks[i].GetComponent<DeckObject>().characterIconImage.sprite = decks[i].GetComponent<DeckObject>().cardPoolObject.character.characteristicIcon;
             decks[i].GetComponent<DeckObject>().costText.text = decks[i].GetComponent<DeckObject>().cardPoolObject.character.cost.ToString();
             //deckImage[i].sprite = deckObjects[i].cardPoolObject.character.image;
             //2020/10/25 bug修正　イゴンヒ
             //deckObjects[i].GetComponent<DeckObject>().nowSprite = deckImage[i].sprite;
-            decks[i].GetComponent<DeckObject>().nowSprite = decks[i].GetComponent<Image>().sprite;
+            decks[i].GetComponent<DeckObject>().nowSprite = decks[i].GetComponent<DeckObject>().iconImage.sprite;
         }
         deckImage.sprite = deckSetImages[countUpDeckNumber];
     }
