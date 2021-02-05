@@ -10,6 +10,12 @@ public class Triangle : MonoBehaviour
 
     private float DeleyTime = 3.0f;
     private float TempTime;
+    float HP_Magnification;
+
+    private void Awake()
+    {
+        HP_Magnification = LineController.HP_Magnification;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +30,7 @@ public class Triangle : MonoBehaviour
         if(DeleyTime < 0)
         {
             Destroy(gameObject);
-            InkAmout.increase_Gauge(HP);
+            InkAmout.increase_Gauge(HP * HP_Magnification);
         }
         DeleyTime -= Time.deltaTime;
     }

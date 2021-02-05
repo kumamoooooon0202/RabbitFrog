@@ -62,6 +62,8 @@ public class LineController : MonoBehaviour
 
     public InkModeAnim isInkModeAnim;
 
+    public static float HP_Magnification = 3.0f;
+
     void Start()
     {
         rt_temp = Set_rt.localScale;
@@ -78,7 +80,7 @@ public class LineController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        InkAmout.increase_Gauge(Time.deltaTime * 0.02f);
+        //InkAmout.increase_Gauge(Time.deltaTime * 0.02f);
     }
 
     public void OnIsDraw()
@@ -192,7 +194,7 @@ public class LineController : MonoBehaviour
                 Tri_linRenderer.SetPosition(1, Center);
                 //20-12-04 修正
 
-                InkAmout.decrease_Gauge(Tri_area * 0.1f);
+                InkAmout.decrease_Gauge(Tri_area * 0.1f * HP_Magnification); 
             }
 
             // draw circle
