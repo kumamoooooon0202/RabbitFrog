@@ -9,6 +9,8 @@ public class DeckSave : MonoBehaviour
     public static string[] cardPoolObject = new string[8];
     public static Image[] iconImage = new Image[8];
     public static Sprite[] nowSprite = new Sprite[8];
+    public static Image[] characterIcon = new Image[8];
+    public static int[] characterCost = new int[8];
 
     public static bool DeckChack()
     {
@@ -31,6 +33,8 @@ public class DeckSave : MonoBehaviour
                 cardPoolObject[i] = null;
                 iconImage[i] = null;
                 nowSprite[i] = null;
+                characterIcon[i] = null;
+                characterCost[i] = 0;
             }
         }
     }

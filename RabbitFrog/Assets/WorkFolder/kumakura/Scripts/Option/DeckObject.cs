@@ -9,6 +9,7 @@ public class DeckObject : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPo
     [SerializeField] private Sprite uiMask;
     public Image iconImage;
     public Sprite nowSprite;
+    public Image characterIcon;
     public CardPoolObject cardPoolObject;
     public PreviewManager preMana;
 

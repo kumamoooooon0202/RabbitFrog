@@ -43,6 +43,8 @@ public class DeckManager : MonoBehaviour
                 deckObjects[i].cardPoolObject = GameObject.Find(DeckSave.cardPoolObject[i]).GetComponent<CardPoolObject>();
                 deckObjects[i].GetComponent<Image>().sprite = DeckSave.iconImage[i].sprite;
                 deckObjects[i].GetComponent<DeckObject>().nowSprite = DeckSave.iconImage[i].sprite;
+                deckObjects[i].characterIcon.sprite = DeckSave.characterIcon[i].sprite;
+                deckObjects[i].costText.text = DeckSave.characterCost[i].ToString();
             }
         }
         //===============
@@ -115,6 +117,8 @@ public class DeckManager : MonoBehaviour
             //Debug.Log(deckObjects[i].name[index]);
             DeckSave.cardPoolObject[i] = deckObjects[i].cardPoolObject.name;
             DeckSave.iconImage[i] = deckObjects[i].GetComponent<Image>();
+            DeckSave.characterIcon[i] = deckObjects[i].characterIcon;
+            DeckSave.characterCost[i] = deckObjects[i].cardPoolObject.character.cost;
         }
          
          

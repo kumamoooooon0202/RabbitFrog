@@ -315,6 +315,7 @@ MonoBehaviour:
   uiMask: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   iconImage: {fileID: 5478715149971414002}
   nowSprite: {fileID: 0}
+  characterIcon: {fileID: 4145404842454977292}
   cardPoolObject: {fileID: 0}
   preMana: {fileID: 0}
   characterIconImage: {fileID: 4145404842454977292}
