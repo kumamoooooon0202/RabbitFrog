@@ -48,7 +48,7 @@ public class InkModeAnim : MonoBehaviour
     void DelayAnimMethod()
     {
         InkConceal.SetActive(true);
-        Debug.Log("呼ばれたよ！");
+        //Debug.Log("呼ばれたよ！");
     }
 
 }

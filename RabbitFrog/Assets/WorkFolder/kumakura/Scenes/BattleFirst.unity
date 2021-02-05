@@ -345,11 +345,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2493852708222708551, guid: 32187554392481846b3e1c37c43894fb,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2493852708222708551, guid: 32187554392481846b3e1c37c43894fb,
-        type: 3}
       propertyPath: m_PixelPerfect
       value: 0
       objectReference: {fileID: 0}
@@ -907,6 +902,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4247510320439784001, guid: d3f1985120186a54b8454368583430e9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -30.200012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3f1985120186a54b8454368583430e9, type: 3}
