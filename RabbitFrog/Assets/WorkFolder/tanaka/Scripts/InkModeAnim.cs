@@ -41,7 +41,7 @@ public class InkModeAnim : MonoBehaviour
         if (!modeSwitch)
         {
             anim.SetBool(isModeSwitch, false);
-            Invoke("DelayAnimMethod", 0.29f);
+            Invoke("DelayAnimMethod", 0.3f);
         }
     }
 
