@@ -20,16 +20,10 @@ public class Character : CharacterBase
 
     private int maxHp;
 
-    //// 爆発の為の変数
-    //[SerializeField] private Collider2D explosionCol;
-    //private List<CharacterBase> targetCharacter = new List<CharacterBase>();
-    //private bool explosionFlag;
-
-    // Animation変数
-    public Animator characterAnim;
     public string attackTrigger = "AttackTrigger";
     public string isMove = "IsMove";
     public string isDeath = "IsDeath";
+    public string isDamegeTrigger = "IsDamegeTrigger";
 
     private AudioSource audio;
     [SerializeField] private AudioClip attackSE;
@@ -98,12 +92,6 @@ public class Character : CharacterBase
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (myCardType == CardType.thunderGod) { return; }
-        //if (explosionFlag)
-        //{
-        //    targetCharacter.Add(GetComponent<CharacterBase>());
-        //    Debug.Log("取得");
-        //    Explosion();
-        //}
         if (serchFlag) { return; }
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
         {
@@ -127,48 +115,7 @@ public class Character : CharacterBase
         if (serchFlag == true && atackTime > attackInterval)
         {
             Debug.Log("攻撃");
-            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
-            //if (attackSE != null) { audio.PlayOneShot(attackSE); }
-            //switch (targetEnemy.myCharacteristic)
-            //{
-            //    // 敵の特徴 : 無し
-            //    // 敵の特徴 : 俊足
-            //    // 敵の特徴 : 爆発
-            //    // 敵の特徴 : 感電
-            //    case characteristic.none:
-            //    case characteristic.quickness:
-            //    case characteristic.explosion:
-            //    case characteristic.electricShock:
-            //        targetEnemy.hp -= power;
-            //        break;
-
-            //    // 敵の特徴 : 隠密
-            //    case characteristic.covert:
-            //        // 自身の攻撃方法が中距離、遠距離であれば攻撃不可
-            //        if (this.myAttackMethod == AttackMethod.longDistance || this.myAttackMethod == AttackMethod.middleDistance)
-            //        {
-            //            Debug.Log("隠密だから攻撃できないよ！");
-            //            break;
-            //        }
-            //        targetEnemy.hp -= power;
-            //        break;
-
-            //    // 敵の特徴 : 鉄壁
-            //    case characteristic.ironWall:
-            //        // 自身の特徴が俊足であれば鉄壁を無視
-            //        if (this.myCharacteristic == characteristic.quickness)
-            //        {
-            //            Debug.Log("鉄壁無視するよ！");
-            //            break;
-            //        }
-            //        targetEnemy.hp -= 1;
-            //        break;
-
-            //    default:
-            //        Debug.LogError("特徴が不適切です");
-            //        break;
-            //}
-            
+            if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }            
             atackTime = 0f;
         }
 
@@ -218,6 +165,10 @@ public class Character : CharacterBase
                 Debug.LogError("特徴が不適切です");
                 break;
         }
+        if (targetEnemy.hp >= 0)
+        {
+            targetEnemy.characterAnim.SetTrigger(isDamegeTrigger);
+        }
     }
 
     /// <summary>
@@ -225,14 +176,9 @@ public class Character : CharacterBase
     /// </summary>
     public override void Death()
     {
-        // 特徴が爆発ならばここで爆発をする
-        //if (myCharacteristic == characteristic.explosion) { explosionFlag = true;}
-
         // ここで死亡アニメーションの再生
         if (characterAnim != null) { characterAnim.SetTrigger(isDeath); }
         IsDeath = true;
-        //gameObject.SetActive(false);
-
     }
 
     public void CharacterHide()

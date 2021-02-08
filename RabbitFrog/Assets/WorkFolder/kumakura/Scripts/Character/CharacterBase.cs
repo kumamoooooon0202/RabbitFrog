@@ -15,6 +15,9 @@ public abstract class CharacterBase : MonoBehaviour
     [Header("表示するHPのText")] public Text hpText;           // HP用のText
     [Header("アイコン用のImage")] public Image iconImage;      // Icon用のImage
 
+    // Animation変数
+    public Animator characterAnim;
+
     public enum CardType
     {
         none = -1,
