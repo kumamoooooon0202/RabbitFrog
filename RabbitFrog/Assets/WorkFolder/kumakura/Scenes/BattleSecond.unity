@@ -705,6 +705,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4247510320439784001, guid: d3f1985120186a54b8454368583430e9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -30.200012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3f1985120186a54b8454368583430e9, type: 3}
 --- !u!1 &359222583
@@ -784,7 +789,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 38
+  m_SortingOrder: 45
   m_TargetDisplay: 0
 --- !u!224 &359222587
 RectTransform:
@@ -1211,7 +1216,7 @@ PrefabInstance:
     - target: {fileID: 2017838142736891891, guid: 04a9c7de82329fc4490f609d4cd2b59b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -39.65
+      value: -39.649994
       objectReference: {fileID: 0}
     - target: {fileID: 2017838142736891891, guid: 04a9c7de82329fc4490f609d4cd2b59b,
         type: 3}
