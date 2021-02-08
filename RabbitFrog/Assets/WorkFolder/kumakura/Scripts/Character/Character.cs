@@ -114,7 +114,6 @@ public class Character : CharacterBase
         atackTime += Time.deltaTime;
         if (serchFlag == true && atackTime > attackInterval)
         {
-            Debug.Log("攻撃");
             if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }            
             atackTime = 0f;
         }
@@ -123,7 +122,7 @@ public class Character : CharacterBase
         if (targetEnemy.IsDeath) { serchFlag = false; }
     }
 
-    public void Damege()
+    public virtual void Damege()
     {
         if (attackSE != null) { audio.PlayOneShot(attackSE); }
         switch (targetEnemy.myCharacteristic)

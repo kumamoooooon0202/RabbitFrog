@@ -6,6 +6,8 @@ public class EnemyTower : Enemy
 {
 
     [SerializeField] private float atackTime = 0.0f;
+
+    private List<CharacterBase> targetCharacters = new List<CharacterBase>();
     
 
 
@@ -28,6 +30,17 @@ public class EnemyTower : Enemy
                 Attack();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("------------------------");
+            foreach (var i in targetCharacters)
+            {
+                Debug.Log("name" + i);
+                Debug.Log("isDeath" + i.IsDeath);
+            }
+            Debug.Log("------------------------");
+        }
     }
 
     /// <summary>
@@ -38,7 +51,6 @@ public class EnemyTower : Enemy
         if (characterAnim != null) { characterAnim.SetTrigger(isDeath); }
         IsDeath = true;
         gameObject.SetActive(false);
-        //WGameSceneManager.LoadClearScene();
     }
 
     public override void Attack()
@@ -48,43 +60,86 @@ public class EnemyTower : Enemy
         {
             Debug.Log("攻撃");
             if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
-            //if (targetCharacter.myCharacteristic == characteristic.ironWall)
-            //{
-            //    targetCharacter.hp -= 1;
-            //}
-            //else
-            //{
-            //    targetCharacter.hp -= power;
-            //}
             atackTime = 0f;
         }
 
         // 攻撃している敵が死んだら再び索敵の開始
-        if (targetCharacter.IsDeath) { serchFlag = false; }
+        //if (targetCharacter.IsDeath) { serchFlag = false; }
+        if (targetCharacters[targetCharacters.Count - 1].IsDeath)
+        {
+            foreach (var chara in targetCharacters)
+            {
+                if (chara.IsDeath) { continue; }
+                else { return; }
+            }
+            serchFlag = false;
+        }
     }
 
     public override void Damege()
     {
-        if (targetCharacter.myCharacteristic == characteristic.ironWall)
+        foreach (var chara in targetCharacters)
         {
-            targetCharacter.hp -= 1;
+            if (chara.myCharacteristic == characteristic.ironWall)
+            {
+                if (!chara.IsDeath)
+                {
+                    chara.hp -= 1;
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            else
+            {
+                if (!chara.IsDeath)
+                {
+                    chara.hp -= power;
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
+            }
         }
-        else
-        {
-            targetCharacter.hp -= power;
-        }
+
+
+        //if (targetCharacter.myCharacteristic == characteristic.ironWall)
+        //{
+        //    targetCharacter.hp -= 1;
+        //}
+        //else
+        //{
+        //    targetCharacter.hp -= power;
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (serchFlag) { return; }
+        //if (serchFlag) { return; }
         if (collision.gameObject.tag == "Character" || collision.gameObject.tag == "Tower")
         {
             // 敵の情報を取得
-            targetCharacter = collision.GetComponent<Character>();
+            //targetCharacter = collision.GetComponent<Character>();
+            targetCharacters.Add(collision.GetComponent<Character>());
             serchFlag = true;
             characterPos = collision.transform.position;
-            Debug.Log(targetCharacter + " : " + characterPos);
         }
     }
+
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (serchFlag) { return; }
+    //    if (collision.gameObject.tag == "Character" || collision.gameObject.tag == "Tower")
+    //    {
+    //        // 敵の情報を取得
+    //        targetCharacter = collision.GetComponent<Character>();
+    //        serchFlag = true;
+    //        characterPos = collision.transform.position;
+    //        Debug.Log(targetCharacter + " : " + characterPos);
+    //    }
+    //}
 }

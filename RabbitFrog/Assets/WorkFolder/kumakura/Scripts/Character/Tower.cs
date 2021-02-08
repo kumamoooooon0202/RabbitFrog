@@ -12,7 +12,8 @@ public class Tower : CharacterBase
     private Vector2 enemyPos;
     private int maxHp;
 
-    public Animator characterAnim;
+    private List<Enemy> targetEnemies = new List<Enemy>();
+
     public string attackTrigger = "AttackTrigger";
     public string isMove = "IsMove";
     public string isDeath = "IsDeath";
@@ -54,30 +55,56 @@ public class Tower : CharacterBase
         {
             Debug.Log("攻撃");
             if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
-            //if (targetEnemy.myCharacteristic == characteristic.ironWall)
-            //{
-            //    targetEnemy.hp -= 1;
-            //}
-            //else
-            //{
-            //    targetEnemy.hp -= power;
-            //}
             atackTime = 0f;
         }
 
         // 攻撃している敵が死んだら再び索敵の開始
-        if (targetEnemy.IsDeath) { serchFlag = false; }
+        //if (targetEnemy.IsDeath) { serchFlag = false; }
+        // リストの中身のIsDeathが全部trueになったら移動再開
+        if (targetEnemies[targetEnemies.Count - 1].IsDeath)
+        {
+            foreach (var enemy in targetEnemies)
+            {
+                if (enemy.IsDeath) { continue; }
+                else { return; }
+            }
+            
+            serchFlag = false;
+        }
     }
 
     public void Damege()
     {
-        if (targetEnemy.myCharacteristic == characteristic.ironWall)
+        foreach (var targetenemy in targetEnemies)
         {
-            targetEnemy.hp -= 1;
-        }
-        else
-        {
-            targetEnemy.hp -= power;
+            if (targetenemy.myCharacteristic == characteristic.ironWall)
+            {
+                if (!targetenemy.IsDeath)
+                {
+                    targetenemy.hp -= 1;
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
+                //foreach (var enemy in targetEnemies)
+                //{
+                //}
+            }
+            else
+            {
+                if (!targetenemy.IsDeath)
+                {
+                    targetenemy.hp -= power;
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+
         }
     }
 
@@ -91,22 +118,14 @@ public class Tower : CharacterBase
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (serchFlag) { return; }
+        //if (serchFlag) { return; }
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
         {
             // 敵の情報を取得
-            targetEnemy = collision.GetComponent<Enemy>();
+            //targetEnemy = collision.GetComponent<Enemy>();
+            targetEnemies.Add(collision.GetComponent<Enemy>());
             serchFlag = true;
             enemyPos = collision.transform.position;
-            Debug.Log(targetEnemy + " : " + enemyPos);
         }
     }
-
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyTower")
-    //    {
-    //        collision.transform.position -= new Vector3(Time.deltaTime * 4, 0, 0);
-    //    }
-    //}
 }

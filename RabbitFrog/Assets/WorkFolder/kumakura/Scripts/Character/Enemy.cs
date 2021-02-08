@@ -85,12 +85,12 @@ public class Enemy : CharacterBase
         time += Time.deltaTime;
         if (serchFlag&& time > attackInterval)
         {
-            Debug.Log("攻撃");
             if (characterAnim != null) { characterAnim.SetTrigger(attackTrigger); }
             time = 0f;
         }
 
         // 攻撃している敵が死んだら再び索敵の開始
+        Debug.Log("Enemyでfalseにします");
         if (targetCharacter.IsDeath) { serchFlag = false; }
     }
 
@@ -166,14 +166,14 @@ public class Enemy : CharacterBase
 
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (serchFlag)
-        {
-            serchFlag = false;
-        }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (serchFlag)
+    //    {
+    //        serchFlag = false;
+    //    }
 
-    }
+    //}
 
     /// <summary>
     /// 感電からの回復
