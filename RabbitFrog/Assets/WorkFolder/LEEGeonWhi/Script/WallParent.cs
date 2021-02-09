@@ -31,7 +31,7 @@ public class WallParent : MonoBehaviour
         _endPos = LineController.endPos;
         Debug.Log(_startPos + "==" + _endPos);
 
-        HP_Magnification = LineController.HP_Magnification;
+        HP_Magnification = LineController.HP_Magnification / 3f;
 
 
     }
