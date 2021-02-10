@@ -1851,6 +1851,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2017838142736891891, guid: 04a9c7de82329fc4490f609d4cd2b59b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2017838142736891891, guid: 04a9c7de82329fc4490f609d4cd2b59b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -39.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113985937918969120, guid: 04a9c7de82329fc4490f609d4cd2b59b,
         type: 3}
       propertyPath: m_Name
@@ -2355,6 +2365,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4801188525283533588, guid: d8e96a076d749774981fe7cf50f0839e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bde7fe66b46778740a4bdf908b2415ba, type: 3}
     - target: {fileID: 4801188525283533589, guid: d8e96a076d749774981fe7cf50f0839e,
         type: 3}
       propertyPath: m_Name
